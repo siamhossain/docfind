@@ -1,0 +1,70 @@
+.widget-recent-post {
+    margin-bottom: 46px;
+    .post-thumb-list {
+
+    }
+    .post-area {
+        gap: 15px;
+        margin-bottom: 24px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .item-img {
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                @include transition;
+                transform-origin: right center;
+            }
+        }
+        .content {
+            flex: 1;
+            .entry-meta {
+                svg {
+                    margin-right: 3px;
+                }
+                span {
+                    font-family: $font-roboto;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 24px;
+                    color: #6B707F;
+                }
+            }
+            .title {
+                margin-top: -3px;
+                margin-bottom: 0;
+                a {
+                    font-family: $font-roboto;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $color-title;
+
+                    display: inline;
+                    padding-bottom: 0;
+                    -webkit-transition: background-size 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    transition: background-size 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    background-image: -webkit-gradient(linear, left top, left bottom, from($color-primary), color-stop(98%, $color-primary));
+                    background-image: linear-gradient(to bottom, $color-primary, $color-primary);
+                    background-size: 0 1px;
+                    background-repeat: no-repeat;
+                    background-position: left 100%;
+
+                    &:hover {
+                        color: $color-primary;
+                        background-size: 100% 1px;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .item-img {
+                img {
+                    transform: scale(1.20);
+                    transform-origin: left center;
+                }
+            }
+        }
+    }
+}

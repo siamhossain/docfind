@@ -1,0 +1,42 @@
+.contact-form {
+    .input-area {
+        input, textarea {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid #D2D2D2;
+            border-radius: 5px;
+            padding: 20px 22px;
+
+            font-family: $font-roboto;
+            font-weight: 400;
+            @include toRem(font-size, 16);
+            line-height: 19px;
+            color: #8F8F8F;
+            transition: 0.3s;
+            &::placeholder {
+                color: #8F8F8F;
+            }
+            &:focus {
+                border: 1px solid black;
+            }
+        }
+    }
+    button {
+        font-family: $font-roboto;
+        font-weight: 600;
+        @include toRem(font-size, 18);
+        line-height: 21px;
+        background: #15C590;
+        color: $color-white;
+        border-radius: 500px;
+        display: inline-block;
+        border: none;
+        width: 180px;
+        padding: 19px 30px;
+        margin-left: 16px;
+        @include transition;
+        &:hover {
+            background-color: #0b9b70;
+        }
+    }
+}

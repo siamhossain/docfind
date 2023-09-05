@@ -1,0 +1,94 @@
+
+.rt-hero-section {
+    background-color: #014A4F;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    
+    @include media-only('lg', min) {
+        // padding: 190px 0 0 0;
+    }
+    
+    &-banner-wrapper {
+        position: relative;
+        .hero-group-img {
+            position: relative;
+            top: 0;
+            right: 0;
+            z-index: -1;
+
+            @include media-only (1850px, min) {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .hero-content {
+            padding-top: 0;
+            @include media-only ('md', min) {
+                padding: 180px 0;
+            }
+            .title-wrapper {
+                margin-bottom: 40px;
+            }
+            .subtitle {
+                color:#F6B433;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: uppercase;
+                margin-bottom: 6px;
+            }
+            .hero-title {
+                color: $color-white;
+                position: relative;
+            }
+
+            .searchbox-container {
+                margin-bottom: 30px;
+            }
+
+            .para-text {
+                font-family: unset;
+                color: rgba(255, 255, 255, 0.60);
+                font-size: 18px;
+                font-weight: 300;
+                line-height: normal;
+                span {
+                    color: $color-white;
+                    font-weight: 700;
+                    position: relative;
+                    &::before {
+                        content: url("../images/hero/text-shape.svg");
+                        position: absolute;
+                        left: 5px;
+                        bottom: -15px;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+
+    .shape-parallax-list {
+        li {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                left: 352px;
+                top: 90px;
+            }
+            &:nth-child(2) {
+                left: 0;
+                bottom: 0;
+            }
+            &:nth-child(3) {
+                text-align: center;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}

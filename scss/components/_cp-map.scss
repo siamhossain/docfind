@@ -1,0 +1,11 @@
+.rt-map-section {
+    padding-top: 0;
+    .map {
+        border-radius: 50px;    
+        height: 596px;
+        overflow: hidden;
+        iframe {
+            height: 100%;
+        }
+    }
+}

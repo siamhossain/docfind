@@ -1,0 +1,92 @@
+.pay-tribute-section {
+    background-color: #002C2F;
+    // border-bottom: 1px solid white;
+    z-index: 0;
+    .content {
+        padding: 80px 0;
+        .title-wrapper {
+            margin-bottom: 35px;
+            .subtitle {
+                color: #F4A100;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: uppercase;
+                display: inline-block;
+                margin-bottom: 8px;
+                img {
+                    position: absolute;
+                    right: 0; 
+                    bottom: -8px;
+                }
+            }
+            .section-title {
+                color: $color-white;
+                margin-bottom: 16px;
+            }
+            .para-text {
+                color: #859091;
+                line-height: 26px;
+            }
+        }
+        .send-flower-btn {
+            padding: 13px 18px;
+            &::before, &::after {
+                background-color: $color-secondary;
+            }
+            svg {
+                margin-left: 10px;
+                @include transition;
+            }
+            &:hover {
+                svg {
+                    fill: $color-white;
+                }
+            }
+        }
+    }
+    .image-content {
+        position: relative;
+        .shape-parallax-img-list {
+            li {
+                position: absolute;
+                z-index: -1;
+                &:nth-child(1) {
+                    top: 35px;
+                    right: -15px;
+                }
+                &:nth-child(2) {
+                    top: 120px;
+                    left: 70px;
+                }
+            }
+        }
+    }
+    .shape-parallax-list {
+        li {
+            position: absolute;
+            z-index: -1;
+
+            &:nth-child(1) {
+                left: 0;
+                top: 0;
+            }
+            &:nth-child(2) {
+                left: 0;
+                right: 0;
+                text-align: center;
+                bottom: 0;
+            }
+            &:nth-child(3) {
+                left: 0;
+                right: 0;
+                text-align: center;
+                bottom: 0;
+            }
+            &:nth-child(4) {
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}

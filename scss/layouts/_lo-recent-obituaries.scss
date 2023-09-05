@@ -1,0 +1,38 @@
+.recent-obituaries {
+    background: #F1F8F8;
+    z-index: 0;
+
+    .row {
+        --bs-gutter-y: 40px;
+    }
+
+    .title-wrapper {
+        margin-bottom: 35px;
+        .section-title {
+            margin-bottom: 0;
+        }
+    }
+
+    .explore-btn {
+        padding: 17px 24px;
+        display: inline-block;
+        svg {
+            margin-left: 10px;
+        }
+    }
+
+    .shape-parallax-list {
+        li {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                left: 0;
+                top: 0;
+            }
+            &:nth-child(2) {
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}

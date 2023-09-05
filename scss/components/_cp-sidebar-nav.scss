@@ -1,0 +1,188 @@
+.stickyx {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15px;
+    @include media-only ('md', min) {
+        top: 115px;
+    }
+}
+.single-element-section {
+    overflow: unset;
+}
+
+.sidebar-nav {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 40px;
+    nav {
+        ul.parent-item-list {
+            .nav-item {
+                background: #F9F9F9;
+                margin: 0 0 20px;
+                cursor: pointer;
+                .nav-link {
+                    position: relative;
+                    gap: 5px;
+                    font-family: $font-roboto;
+                    font-weight: 500;
+                    @include toRem(font-size, 19);
+                    line-height: 23px;
+                    color: $color-title;
+                    padding: 10px 20px;
+                    .icon {
+                        width: 30px;
+                        height: 30px;
+                        background: #6C62CA;
+                        border-radius: 0px 50px 50px 50px;
+                        @include transition;
+                    }
+                    .arrow, .active-arrow {
+                        position: absolute;
+                        right: 20px;
+                    }
+                    .arrow {
+                        display: block;
+                    }
+                    .active-arrow {
+                        display: none;
+                    }
+
+                    &.active {
+                        // background-color: red;
+                    }
+                }
+                .dropdown_nav {
+                    background: $color-white;
+                    padding-left: 50px;
+                    transition: opacity 1s ease-out;
+                    opacity: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                    .nav-item {
+                        background: 0 0;
+                        margin: 0;
+                        padding: 0;
+                        position: relative;
+                        
+                        .nav-link { 
+                            font-family: $font-roboto;
+                            font-weight: 500;
+                            @include toRem(font-size, 15);
+                            line-height: 50px;
+                            color: #6B707F;
+                            padding: 0 0 0 0;
+                            border-bottom: 1px solid #E4E4E4;
+                            position: relative;
+
+                            .link-text {
+                                background-image: unset;
+                            }
+                            
+
+                            &.active {
+                                // color: $color-secondary;
+                                // background-image: linear-gradient(to right, $color-secondary 30%, #6B707F 50%);
+                                // .link-text {
+                                    background-clip: text;
+                                    color: transparent;
+                                // }
+                                .progress-indicator {
+                                    position: absolute;
+                                    background: $color-secondary;
+                                    width: 0;
+                                    height: 1px;
+                                    bottom: -1px;
+                                    left: 0;
+                                    z-index: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-child(1) {
+                    &.active {
+                        background-color: #f3f2ff;
+                    }
+                    .nav-link {
+                        .icon {
+                            background: #6C62CA;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    &.active {
+                        background-color: #fdf5f0;
+                    }
+                    .nav-link {
+                        .icon {
+                            background: #FF8631;
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    &.active {
+                        background-color: #fae5e5;
+                    }
+                    .nav-link {
+                        .icon {
+                            background: #FD5B5B;
+                        }
+                    }
+                }
+                &:nth-child(4) {
+                    &.active {
+                        background-color: #eff7ff;
+                    }
+                    .nav-link {
+                        .icon {
+                            background: #1D8FFA;
+                        }
+                    }
+                }
+                &:nth-child(5) {
+                    &.active {
+                        background-color: #fdefff;
+                    }
+                    .nav-link {
+                        .icon {
+                            background: #E233FE;
+                        }
+                    }
+                }
+                &:nth-child(6) {
+                    &.active {
+                        background-color: #f4ffef;
+                    }
+                    .nav-link {
+                        .icon {
+                            background: #4AD00A;
+                        }
+                    }
+                }
+                &.active {
+                    a {
+                        @include transition;
+                        .icon {
+                            border-radius: 50px 0 50px 50px;
+                            @include transition;
+                        }
+                        .arrow {
+                            display: none;
+                        }
+                        .active-arrow {
+                            display: block;
+                        }
+                    }
+                    .dropdown_nav {
+                        // display: block;
+                        transition: all 0.6s ease-in-out;
+                        opacity: 1;
+                        max-height: 260px;
+                    }
+                }
+            }
+        }
+    }
+}

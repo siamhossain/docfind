@@ -1,0 +1,44 @@
+.contact-info-box {
+    gap: 14px;
+    margin-bottom: 25px;
+    .icon {
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background: #F3FDF9;
+        @include transition;
+    }
+    .contact-info-details {
+        flex: 1;
+        .title {
+            @include toRem (font-size, 16);
+            font-family: $font-roboto;
+            font-weight: 500;
+            line-height: 21px;
+            color: $title-font;
+            margin-bottom: 6px;
+        }
+        .para-text {
+            font-family: $font-roboto;
+            font-weight: 400;
+            @include toRem (font-size, 16);
+            line-height: 26px;
+            color: #6B707F;
+            padding: 0; 
+            @include media-only("lg", min) {
+                padding-right: 155px;
+            }
+        }
+    }
+
+    &:hover {
+        .icon {
+            background: $color-secondary;
+            svg {
+                fill: $color-white;
+                @include transition;
+            }
+        }
+    }
+}

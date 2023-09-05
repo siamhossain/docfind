@@ -1,0 +1,100 @@
+
+.searchbox-container {
+    width: 100%;
+    @include media-only('md', min) {
+
+    }
+    padding: 7px 7px 7px 20px;
+    background: $color-white;
+    border-radius: 6px;
+    // gap: 33px;
+    margin: 0 auto;
+
+    .location-selector {
+        position: relative;
+        .nice-select {
+            padding-left: 10px;
+            padding-right: 50px;
+            span {
+                @include toRem(font-size, 18);
+                color: #667475;
+                font-weight: 400;
+                line-height: normal;
+            }
+            .list {
+                left: 10px;
+                top: 120%;
+            }
+
+            &::after {
+                border-bottom: 1.5px solid #A3ACAC;
+                border-right: 1.5px solid #A3ACAC;
+                height: 8px;
+                width: 8px;
+                right: -5px;
+                top: 45%;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 32px;
+            right: -34px;
+            top: 5px;
+            background: #B0D0D2;
+        }
+    }
+
+    .searchbox-textfield {
+        width: 43%;
+        .searchbox-input {
+            width: 100%;
+            border: none;
+            background: $color-white;
+            position: relative;
+            @include toRem(font-size, 18);
+            color: #667475;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .rt-searchbox-form {
+            .input-area {
+                gap: 8px;
+                svg {
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+    .searchbox-textfield {
+    }
+    .searchbox-submit {
+        .rt-searchbox-btn {
+            @include toRem(font-size, 18);
+            font-weight: 500;
+            line-height: 23px;
+            padding: 17px 25px;
+            border-radius: 6px;
+            border: none;
+            // &::before, &::after {
+            //     background-color: $color-secondary;
+            // }
+            &:hover {
+
+            }
+        }
+    }
+    &--style-1 {
+
+    }
+
+    &--style-2 {
+
+    }
+
+    &--style-3 {
+
+    }
+}

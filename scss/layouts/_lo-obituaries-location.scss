@@ -1,0 +1,25 @@
+.obituaries-location-section {
+    background-color: #F1F8F8;
+    .row {
+        --bs-gutter-y: 30px;
+    }
+    .explore-all-btn-wrapper {
+        padding-top: 40px;
+    }
+    .explore-all {
+        border-radius: 8px;
+        border: 1px solid #8ABABD;
+        display: inline-block;
+        color: #002C2F;
+        padding: 16px 18px;
+        svg {
+            margin-left: 10px;
+            @include transition;
+        }
+
+        &:hover {
+            color: $color-white;
+            border-color: transparent;
+        }
+    }
+}
