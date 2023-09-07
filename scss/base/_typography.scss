@@ -31,7 +31,10 @@ h6 {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 40px;
+    @include media-only ('sm', min) {
+      @include toRem(font-size, 48)
+    }
 }
 
 h2 {

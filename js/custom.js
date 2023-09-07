@@ -5,7 +5,7 @@
 'use strict';
 
 (function($) {
-    var rtDocfi = rtDocfi || {};
+    var rtObituary = rtObituary || {};
 
     /**
 	 * Predefined variables.
@@ -33,7 +33,7 @@
 	/**
 	 * Functions.
 	 */
-    rtDocfi.functions = {
+    rtObituary.functions = {
 		preLoaderInit: function () {
 			if (!$preLoader.elExists()) {
 				return false;
@@ -450,6 +450,8 @@
                 return false;
             });
 
+
+            
             $('.isotope-items2').isotope({
                 itemSelector: '.item',
                 layoutMode: 'fitRows'
@@ -467,6 +469,16 @@
             });
         },
 
+        scrollToTop: function() {
+            var toTop = $('.to-top');
+
+            toTop.on('click', function() {
+                $('html, body').animate({
+                scrollTop: $('html, body').offset().top,
+                });
+            });
+        },
+
 
 		bodyClass: function () {
 			$body.addClass('document-loaded');
@@ -477,20 +489,21 @@
 	 * Scripts to run on document ready event.
 	 */
 	$document.ready(function () {
-		rtDocfi.functions.scrollToTop();
-        rtDocfi.functions.counterUp();
-        rtDocfi.functions.mobileMenuDropdown();
-        rtDocfi.functions.rtTabs();
-        rtDocfi.functions.mobileToggleMenu();
-        rtDocfi.functions.searchOverlay();
-        rtDocfi.functions.mouseParallax();
-        rtDocfi.functions.niceSelect();
-        rtDocfi.functions.elementsCarousel();
-        rtDocfi.functions.activeMenu();
-        rtDocfi.functions.isotope();
-        rtDocfi.functions.dateCountdown();
-        rtDocfi.functions.marqueeElement();
-        rtDocfi.functions.fontSizeController();
+		rtObituary.functions.scrollToTop();
+        rtObituary.functions.counterUp();
+        rtObituary.functions.mobileMenuDropdown();
+        rtObituary.functions.rtTabs();
+        rtObituary.functions.mobileToggleMenu();
+        rtObituary.functions.searchOverlay();
+        rtObituary.functions.mouseParallax();
+        rtObituary.functions.niceSelect();
+        rtObituary.functions.elementsCarousel();
+        rtObituary.functions.activeMenu();
+        rtObituary.functions.isotope();
+        rtObituary.functions.dateCountdown();
+        rtObituary.functions.marqueeElement();
+        rtObituary.functions.fontSizeController();
+        rtObituary.functions.scrollToTop();
         
 	});
 
@@ -498,8 +511,8 @@
 	 * Scripts to run on window load event.
 	 */
 	$window.on('load', function() {
-        rtDocfi.functions.preLoaderInit();
-		rtDocfi.functions.bodyClass();
+        rtObituary.functions.preLoaderInit();
+		rtObituary.functions.bodyClass();
 	});
 
 	/**

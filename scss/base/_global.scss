@@ -175,6 +175,14 @@ section,
   .container {
       max-width: 1194px;
   }
+  .container-lg {
+    max-width: 1584px;
+  }
+}
+
+
+@include media-only(1400px, min) {
+  
 }
 
 

@@ -2,14 +2,22 @@
     background: #F1F8F8;
     z-index: 0;
 
-    .row {
-        --bs-gutter-y: 40px;
-    }
+    // @include media-only ('md', min) {
+        .row {
+            --bs-gutter-y: 40px;
+        }
+    // }
 
     .title-wrapper {
-        margin-bottom: 35px;
+        margin-bottom: 0;
+        @include media-only ('sm', min) {
+            margin-bottom: 35px;
+        }
         .section-title {
-            margin-bottom: 0;
+
+        }
+        .para-text {
+            line-height: 26px;
         }
     }
 

@@ -1,0 +1,22 @@
+.blog-section {
+    position: relative;
+    
+    @include media-only ('lg', min) {
+        padding-bottom: 200px;
+    }
+    .shape-parallax-list {
+        li {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                left: 0;
+                bottom: -120px;
+            }
+            &:nth-child(2) {
+                right: 0;
+                bottom: -120px;
+                opacity: 0.3;
+            }
+        }
+    }
+}

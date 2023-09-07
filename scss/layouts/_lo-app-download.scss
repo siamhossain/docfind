@@ -1,0 +1,62 @@
+.app-download-section {
+    .app-download-content-wrapper {
+        background-color: $color-secondary;
+        position: relative;
+        border-radius: 24px;
+        padding: 56px 30px;
+        margin-bottom: -80px;
+        z-index: 1;
+
+        // padding: 25px;
+        @include media-only ('md') {
+            padding: 56px 0;
+            margin-bottom: -120px;
+        }
+
+        .image-item {
+            position: absolute;
+            bottom: -48px;
+            left: 5%;
+        }
+
+        .shape-parallax-list {
+            li {
+                position: absolute;
+                z-index: -1;
+                &:nth-child(1) {
+                    left: 15px;
+                    top: 0;
+                }
+                &:nth-child(2) {
+                    left: 16%;
+                    bottom: 0;
+                }
+                &:nth-child(3) {
+                    right: 24%;
+                    bottom: 0;
+                }
+                &:nth-child(4) {
+                    right: 24%;
+                    bottom: -12px;
+                }
+                &:nth-child(5) {
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    .title-wrapper {
+        padding: 0;
+        margin: 0;
+        .section-title {
+            color: $color-white;
+            font-size: 32px;
+        }
+        .para-text {
+            color: #FEF6E6;
+            line-height: 26px;
+        }
+    }
+}

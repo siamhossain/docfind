@@ -1,0 +1,45 @@
+.social-link {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #01686F;
+    border-radius: 50%;
+    color: $color-white;
+
+    
+    &:hover {
+        color: $color-primary;
+        background-color: $color-white;
+        border-color: transparent;
+        i {
+            animation: toBottomFromTop 0.5s forwards;
+        }
+    }
+}
+
+
+// .facebook {
+//     &:hover {
+//         background-color: #4267B2;
+//         border-color: #4267B2;
+//     }
+// }
+// .twitter {
+//     &:hover {
+//         background-color: #00acee;
+//         border-color: #00acee;
+//     }
+    
+// }
+// .instagram {
+//     &:hover {
+//         background-color: #833AB4;
+//         border-color: #833AB4;
+//     }
+    
+// }
+// .pinterest {
+//     &:hover {
+//         background-color: #c8232c;
+//         border-color: #c8232c;
+//     }
+// }

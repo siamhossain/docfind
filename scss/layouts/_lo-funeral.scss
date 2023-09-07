@@ -1,7 +1,9 @@
 .funeral-section {
 
     .funeral-content {
-        padding-left: 30px;
+        @include media-only ('lg', min) {
+            padding-left: 30px;
+        }
         .icon {
             margin-bottom: 15px;
         }
@@ -24,7 +26,7 @@
             }
         }
         .section-title {
-            margin-bottom: 12px;
+            // margin-bottom: 12px;
         }
 
         .para-text {

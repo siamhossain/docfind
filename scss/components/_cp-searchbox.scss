@@ -2,13 +2,13 @@
 .searchbox-container {
     width: 100%;
     @include media-only('md', min) {
-
+        width: 770px;
     }
-    padding: 7px 7px 7px 20px;
+    padding: 7px 7px 7px 15px;
     background: $color-white;
     border-radius: 6px;
     // gap: 33px;
-    margin: 0 auto;
+    // margin: 0 auto;
 
     .location-selector {
         position: relative;
@@ -48,7 +48,7 @@
     }
 
     .searchbox-textfield {
-        width: 43%;
+        width: 40%;
         .searchbox-input {
             width: 100%;
             border: none;
@@ -91,7 +91,31 @@
     }
 
     &--style-2 {
+        .searchbox-btn-list {
+            li {
+                padding-right: 20px;
+                position: relative;
+                .filter-btn {
+                    background-color: transparent;
+                    border: none;
+                }
+                &:first-child {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: -20px;
+                        width: 1.5px;
+                        height: 32px;
+                        background-color: #D1E0E1;
+                    }
 
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
     }
 
     &--style-3 {

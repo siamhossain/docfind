@@ -3,14 +3,17 @@
 ==============================*/
 
 header {
-  padding: 0 180px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9;
-  .row {
-    --bs-gutter-y: 0;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @include media-only ('xl', min) {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .header-logo {
@@ -49,14 +52,12 @@ a.menu--link.second-level::after {
 
 // menu
 .menu {
-  padding-left: 135px;
   display: flex;
   gap: 65px;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
-  @media (max-width: 1250px) {
-    margin-right: 0;
-    justify-content: center;
+  @include media-only(1400px, min) {
+    padding-left: 135px;
   }
 
   $self: &;
@@ -77,7 +78,7 @@ a.menu--link.second-level::after {
     }
 
     &:hover {
-      // color: $color-white;
+      color: $color-primary;
 
       svg {
         // stroke: #15294B !important;
@@ -263,16 +264,42 @@ a.menu--link.second-level::after {
       &:hover {
         color: $color-secondary;
       }
+      &--style-2 {
+        width: 48px;
+        height: 48px;
+        border: 1px solid #DCE0E1;
+      }
     }  
   }
   .obitury-submit-btn {
-    // border-radius: 6px;
-    // background: $color-secondary;
-    // color: $color-white;
     padding: 14px 25px;
-    // font-size: 16px;
-    // font-weight: 500;
-    // line-height: normal;
+  }
+
+  &--style-2 {
+    .btn-list { 
+      gap: 20px;
+      li {
+        padding-right: 0;
+        .cart-btn, .login-btn {
+          width: 48px;
+          height: 48px;
+          border: 1px solid #DCE0E1;
+
+          &:hover {
+            background-color: $color-primary;
+            border-color: transparent;
+            svg {
+              fill: $color-white;
+              @include transition;
+            }
+          }
+        }
+  
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -282,7 +309,15 @@ a.menu--link.second-level::after {
   }
 
   &--style-2 {
-
+    .main-menu {
+      flex: 1;
+      .menu {
+        margin-right: 30px;
+        @include media-only(1400px, min) {
+          padding-left: 0;
+        }
+      }
+    }
   }
 }
 
@@ -306,12 +341,11 @@ a.menu--link.second-level::after {
 
   .header-content-wrap {
     box-shadow: unset !important;
-    padding: 0 180px;
+    // padding: 0 180px;
     border-radius: unset !important;
     margin-top: 0;
     background: $color-white;
     border: none;
-
     .header-logo {
       a {
         display: none;
