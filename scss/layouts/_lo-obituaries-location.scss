@@ -1,4 +1,5 @@
 .obituaries-location-section {
+    z-index: 0;
     background-color: #F1F8F8;
     .row {
         --bs-gutter-y: 30px;
@@ -20,6 +21,76 @@
         &:hover {
             color: $color-white;
             border-color: transparent;
+        }
+    }
+
+    .shape-parallax-list {
+        li {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                left: 0;
+                bottom: 0;
+            }
+            &:nth-child(2) {
+                right: 0;
+                bottom: 0;
+            }
+        }
+    } 
+
+    &--style-2 {
+        background-color: transparent;
+        z-index: 0;
+        position: relative;
+        .obituaries-location-wrapper {
+            position: relative;
+            border-radius: 36px;
+            background: #F1F8F8;
+            padding: 100px 60px 68px;
+            overflow: hidden;
+            z-index: 0;
+
+            .explore-all-btn-wrapper {
+                padding-top: 0;
+            }
+            .explore-all {
+                display: inline-block;
+                color: $color-title;
+                padding: 29px 43px;
+                border: none;
+                border-radius: 12px;
+                background-color:#FCE2B0;
+                svg {
+                    margin-left: 10px;
+                    @include transition;
+                }
+        
+                &:hover {
+                    color: $color-white;
+                    border-color: transparent;
+                }
+            }
+
+            .shape-parallax-list {
+                li {
+                    position: absolute;
+                    z-index: -1; 
+                    &:nth-child(1) {
+                        top: 0;
+                        left: 27px
+                    }
+                    &:nth-child(2) {
+                        top: 0;
+                        right: 27px
+                    }
+                }
+            }
+        }
+        .shape-parallax-list { 
+            li {
+                opacity: 0.7;
+            }
         }
     }
 }
