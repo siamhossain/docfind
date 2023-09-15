@@ -3,31 +3,30 @@
         display: flex;
         justify-content: center;
         .nav-tabs {
-            // background: $color-white;
-            outline: 1px solid #EBEBEB;
-            outline-offset: 5px;
-            border-radius: 50px;
+            border-radius: 12px;
+            border: 1px solid #E6F0F1;
+            background: #FFF;
+            padding: 8px 6px;
 
-            background: #F7F7FB;
-            border: 1px solid #EAEAF2;
-            box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.06);
-            border-radius: 50px;
             button {
-                border: none;
-                font-family: $text-font;
+                color: $color-text;
+                background-color: transparent;
+                font-size: 16px;
                 font-weight: 500;
-                @include toRem(font-size, 14);
-                line-height: 17px;
-                text-align: center;
-                text-transform: capitalize;
-                color: $color-title;
+                line-height: 28px;
                 @include transition;
-                padding: 10px 20px;
+                padding: 7px 23px;
+                &:hover {
+                    border-color: transparent;
+                }
+
             }
             .nav-link.active {
-                background: #FFCD1F;
-                border-radius: 50px;
-                color: $color-title;
+                color: $color-white;
+                border-radius: 8px;
+                background: $color-secondary;
+                box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.12);
+                border-color: transparent !important;
             }
         }
     }

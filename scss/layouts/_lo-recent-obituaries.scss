@@ -35,4 +35,39 @@
             }
         }
     }
+
+    &--style-2 {
+        padding-bottom: 238px;
+        .explore-all-button-wrapper {
+            margin-top: 60px;
+        }
+
+        .shape-parallax-list {
+            li {
+                position: absolute;
+                z-index: -1;
+                &:nth-child(1) {
+                    left: 0;
+                    right: unset;
+                    bottom: 0;
+                    top: unset;
+                }
+            }
+        }
+    }
+    &--style-3 {
+        .row {
+            --bs-gutter-y: 30px;
+        }
+        background-color: $color-white;
+        .shape-parallax-list {
+            li {
+                &:nth-child(1) {
+                    left: 0;
+                    bottom: 0;
+                    top: unset;
+                }
+            }
+        }
+    }
 }

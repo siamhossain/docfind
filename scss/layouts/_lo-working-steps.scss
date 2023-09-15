@@ -1,0 +1,73 @@
+.working-steps-section {
+    background-color: #F1F8F8;
+    .working-steps {
+        position: relative;
+        z-index: 1;
+        .workflow-progress {
+            top: -10px;
+            width: 100%;
+            height: 107px;
+            position: absolute;
+            z-index: -1;
+            &::after {
+                content: " ";
+                top: 3px;
+                left: 2%;
+                right: 0;
+                width: 100%;
+                height: 110px;
+                position: absolute;
+                background-image: url("../../images/working-steps/dashed-line-shape.svg");
+                transition: width 1.5s linear;
+                background-repeat: no-repeat;
+                z-index: -1;
+                text-align: center;
+            }
+
+            .circle-icon {
+                left: 10px;
+                bottom: -22px;
+                position: absolute;
+            }
+            .arrow-icon {
+                top: -7px;
+                right: 25px;
+                position: absolute;
+            }
+        }
+
+        .middle-item {
+            @include media-only('lg', min) {
+                padding-top: 35px;
+            }
+        }
+    }
+
+    &--style-2 {
+        background-color: $color-white;
+
+        .working-steps { 
+            .workflow-progress {
+                &::after {
+                    display: none;
+                }
+                
+            }
+        }
+
+        .parent {
+            position: relative;
+            .child {
+                &:nth-last-child(2) {
+                    .working-step-item {
+                        .icon {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

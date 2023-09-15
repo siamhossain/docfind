@@ -47,13 +47,10 @@
 
             $window.on("scroll", function () {
                 var scroll = $(window).scrollTop();
-                if (scroll < 202) {
-                    $("nav.sticky-header").removeClass("affix");
-                    $(".place-holder").css("padding-top", "0");
-                    $("#header-content-wrap").addClass(".header-content-wrap");
+                if (scroll < 200) {
+                    $("header").removeClass("affix");
                 } else {
-                    $("nav.sticky-header").addClass("affix");
-                    $(".place-holder").css("padding-top", "130px");
+                    $("header").addClass("affix");
                 }
             });
 
@@ -469,7 +466,7 @@
             });
         },
 
-        scrollToTop: function() {
+        backToTop: function() {
             var toTop = $('.to-top');
 
             toTop.on('click', function() {
@@ -503,7 +500,7 @@
         rtObituary.functions.dateCountdown();
         rtObituary.functions.marqueeElement();
         rtObituary.functions.fontSizeController();
-        rtObituary.functions.scrollToTop();
+        rtObituary.functions.backToTop();
         
 	});
 

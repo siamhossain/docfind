@@ -4,111 +4,156 @@
 
 .rt-pricing { 
     &-item {
+        border-radius: 16px;
+        border: 1px solid #E6F0F1;
         background: $color-white;
         position: relative;
-        border: 1px solid #DBDAE9;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
-        border-radius: 10px;
-        padding: 70px 47px 60px;
+        padding: 20px 20px 40px 20px;
         @include transition;
-        margin-bottom: 30px;
-        @include media-only ('lg', min) {
-            margin-bottom: 0;
-        }
-        .pricing-header {
-            transition: all ease 0.31s;
-            padding-bottom: 35px;
-            .pricing-title {
-                font-family: $font-outfit;
-                font-weight: 500;
-                @include toRem(font-size, 24);
-                line-height: 28px;
-                color: $color-title;
-                margin-bottom: 17px;
-            }
-            .para-text {
-                margin-bottom: 26px;
-            }
-            .pricing-price {
-                span.currency-type {
-                    font-family: $font-outfit;
-                    font-weight: 500;
-                    font-size: 24px;
-                    line-height: 28px;
-                    text-align: center;
-                    text-transform: capitalize;
-                    color: $color-title;
+        
+        &:hover, &.active {
+            background-color: $color-primary;
+            .rt-pricing-header {
+                border: 1px solid #34868C;
+                background: #015F65;
+                .pricing-title {
+                    color: #B0D0D2;
                 }
-
-                font-family: $font-outfit;
-                font-weight: 700;
-                @include toRem(font-size, 40);
-                line-height: 28px;
-                color: $color-title;
-
-                span.price-unit {
-                    font-family: $font-outfit;
-                    font-weight: 400;
-                    @include toRem(font-size, 20);
-                    line-height: 28px;
-                    color: #4F536C;
+                .price-amount {
+                    color: $color-white;
+                }
+                .price-duration {
+                    color: #8ABABD;
+                }
+                .pricing-header-text {
+                    color: #8ABABD;
                 }
             }
-        }
-        &:hover {
-
+            .feature-list-title {
+                color: #8ABABD;
+            }
+            
+            .rt-pricing-features-list {
+                li {
+                    color: #E6F0F1;
+                    &:before {
+                        background-color: #559A9F;
+                    }
+                }
+            }
+            .pricing-btn {
+                background-color: $color-secondary;
+                border-color: transparent;
+                color: $color-white;
+                i {
+                    color: $color-white;
+                }
+            }
         }
     }
-    &-item-btn {
-        text-align: center;
-        line-height: 0;
-        margin-bottom: 35px;
-        .pricing-btn {
-            background: #F3F1FF;
-            border-radius: 50px;
-            padding: 15px 30px;
-
-            font-family: $font-outfit;
-            font-weight: 600;
-            font-size: 18px;
-            letter-spacing: 0.01em;
-            text-transform: capitalize;
-            line-height: 24px;
+    &-header {
+        border-radius: 12px;
+        background: #F1F8F8;
+        padding: 24px 30px;
+        margin-bottom: 30px;
+        position: relative;
+        border: 1px solid transparent; 
+        @include transition;
+        .pricing-title {
             color: $color-primary;
-            width: 100%;
-            gap: 10px;
-            @include flex-position(flex, center, center);
+            line-height: normal;
             @include transition;
-            &:hover {
-                background: $color-primary;
-                color: $color-white;
-                svg {
-                    fill: $color-white;
+        }
+        .pricing-price {
+            margin-bottom: 5px;
+            .price-amount {
+                color: $color-black;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: normal;
+                @include transition;
+            }       
+            .price-duration {
+                @include transition;
+            }
+        }
+        .pricing-header-text {
+            font-size: 14px;
+            line-height: 24px;
+            @include transition;
+        }  
+        
+        .pricing-shape-list {
+            li {
+                position: absolute;
+                &:nth-child(1) {
+                    right: 0;
+                    top: 43px;
                 }
+            }
+        }
+    }
+
+    &-body {
+        padding: 0 20px;
+    }
+
+    &-features {
+        margin-bottom: 30px;
+        .feature-list-title {
+            color:#949E9E;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .rt-pricing-features-list {
+            li {
+                position: relative;
+                padding-left: 36px;
+                margin-bottom: 12px;
+                @include transition;
+                &::before {
+                    content: '\e80d';
+                    font-family: 'rt-obituary';
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    left: 0;
+                    top: 3px;
+                    border-radius: 50%;
+                    color: $color-white;
+                    background-color: $color-primary;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 12px;
+                    padding-top: 2px;
+                    @include transition;
+                }
+            }
+        }
+    }
+
+    &-btn {
+        text-align: center;
+        line-height: normal;
+        .pricing-btn {
+            border-radius: 8px;
+            border: 1px solid #DCE0E1;
+            font-weight: 500;
+            width: 100%;
+            padding: 8px 0;
+            @include transition;
+            i {
+                margin-left: 10px;
+                font-size: 23px;
+                @include transition;
             }
         }
         .pricing-btn.active {
-            background: $color-primary;
-            color: $color-white;
-            svg {
-                fill: $color-white;
-            }
-        }
-    }
-    &-features {
-        .rt-pricing-features-list {
-            li {
-                font-family: $font-outfit;
-                font-weight: 400;
-                @include toRem(font-size, 16);
-                line-height: 46px;
-                color: #4F536C;
-                position: relative;
-
-                &:hover {
-                    color: $color-primary;
-                }
-            }
+            
         }
     }
 }

@@ -1,0 +1,19 @@
+.counter-section {
+    background:#002C2F;
+    z-index: 0;
+    .shape-parallax-list {
+        li {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                left: 0;
+                top: 0;
+            }
+            &:nth-child(2) {
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+    
+}

@@ -84,4 +84,19 @@
 
         }
     }
+
+    &--style-2 {
+        .obituries-location-content {
+            padding: 15px 30px;
+        }
+        .obituries-location-content {
+            .title {
+                &:hover {
+                    a {
+                        color: $color-secondary !important;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,28 @@
+.contact-section {
+    padding: 40px 0;
+    background-color: #01393D;
+
+    .parent {
+        .item {
+            &:first-child {
+                .contact-info-box {
+                    &::before {
+                        right: 70px;
+                    }
+                }
+            }
+            &:last-child {
+                .contact-info-box {
+                    // padding-left: 65px;
+                    &::before {
+                        display: none;
+                    }
+                    
+                    @include media-only ("lg", min) {
+                        padding-left: 65px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -57,10 +57,12 @@
             .explore-all {
                 display: inline-block;
                 color: $color-title;
-                padding: 29px 43px;
+                padding: 27px 33px;
                 border: none;
                 border-radius: 12px;
                 background-color:#FCE2B0;
+                font-size: 18px;
+                font-weight: 600;
                 svg {
                     margin-left: 10px;
                     @include transition;

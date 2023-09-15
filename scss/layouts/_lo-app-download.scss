@@ -59,4 +59,96 @@
             line-height: 26px;
         }
     }
+
+    &--style-2 {
+        .app-download-content-wrapper {
+            background-color: $color-primary;
+            // padding: 35px;
+            // overflow: hidden;
+            padding: 0;
+            margin-bottom: -50px;
+            @include media-only ('md') {
+                padding: 0;
+                margin-bottom: -50px;
+            }
+
+            @include media-only ('lg') {
+                // padding: 40px 0 0 96px;
+                margin-bottom: -150px;
+            }
+
+            .image-item {
+                position: relative;
+                bottom: unset;
+                left: unset;
+                right: 0;
+                // right: -46px;
+                @include media-only ('xl', min) {
+                }
+                .img-shape-parallax-list {
+                    li {
+                        position: absolute;
+                        top: 25%;
+                        left: -4%;
+                    }
+                }
+            }
+        }
+        .title-wrapper {
+            padding: 40px;
+            @include media-only('lg') {
+                padding: 41px 0 58px 96px;
+            }
+            .section-title {
+                line-height: 54px;
+                margin-bottom: 0;
+            }
+            .para-text {
+                color: #B0D0D2;
+                margin-bottom: 35px;
+            }
+        }
+
+        .shape-parallax-list {
+            li {
+                position: absolute;
+                z-index: -1;
+                &:nth-child(1) {
+                    left: unset !important;
+                    right: 0;
+                    top: -12px !important;
+                }
+                &:nth-child(2) {
+                    bottom: unset !important;
+                    transform: rotate(180deg);
+                    top: 0 ;
+                    left: 15px !important;
+                }
+                &:nth-child(3) {
+                    right: 0 !important;
+                    left: 0;
+                    bottom: 0;
+                    text-align: center;
+                }
+                &:nth-child(4) {
+                    right: unset !important;
+                    bottom: 0 !important;
+                    left: -134px;
+                    top: 0;
+                    display: none;
+                    @include media-only (1450px, min) {
+                        display: block;
+                    }
+                }
+                &:nth-child(5) {
+                    right: -134px !important;
+                    // top: 0;
+                    display: none;
+                    @include media-only (1450px, min) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
 }

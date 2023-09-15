@@ -1,0 +1,85 @@
+.working-step-item {
+    position: relative;
+    z-index: 0;
+    .icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        background: $color-secondary;
+        margin-bottom: 35px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: #f3c976;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            transform: rotate(20deg);
+            z-index: -1;
+            @include transition;
+        }
+    }
+    .item-title {
+        margin-bottom: 14px;
+    }
+
+    &:hover {
+        .icon {
+            &::before {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &--style-2 {
+        .icon {
+            border-radius: 50%;
+            background-color: #FEF6E6;
+            position: relative;
+            @include transition;
+            &::before {
+                display: none;
+            }
+
+            span {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background-color: #F4A100;
+                border: 2px solid $color-white;
+                box-shadow: -4px 7px 12px rgba(180, 110, 0, 0.16);
+
+                color: $color-white;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: normal;
+
+                position: absolute;
+                top: -8px;
+                right: -5px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 320px;
+                border-top: 1px dashed #BFC5C6;;
+                top: 40px;
+                left: 100%;
+                display: none;
+                @include media-only('md', min) {
+                    display: block;
+                }
+            }
+        }
+
+        &:hover {
+            .icon {
+                // background-color: $color-secondary;
+            }
+        }
+    }
+}

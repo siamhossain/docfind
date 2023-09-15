@@ -1,0 +1,16 @@
+.header-topbar {
+    background-color: #F1F8F8;
+    padding: 10px 0;
+    .contact-info-list {
+        .contact-info-item {
+            svg {
+                margin-right: 8px;
+            }
+        }
+        
+        .para-text {
+            font-size: 15px;
+            line-height: normal;
+        }
+    }
+}

@@ -14,7 +14,10 @@
         position: relative;
         .nice-select {
             padding-left: 10px;
-            padding-right: 50px;
+            padding-right: 30px;
+            @include media-only ('lg', min) {
+                padding-right: 50px;
+            }
             span {
                 @include toRem(font-size, 18);
                 color: #667475;

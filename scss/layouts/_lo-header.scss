@@ -204,7 +204,7 @@ a.menu--link.second-level::after {
         @include toRem(font-size, 15);
         color: black;
         font-weight: 400;
-        padding: 15px 15px 15px 26px;
+        padding: 0 15px 0 26px;
         display: block;
         width: 100%;
         overflow: hidden;
@@ -317,6 +317,11 @@ a.menu--link.second-level::after {
           padding-left: 0;
         }
       }
+    }
+  }
+  .menu--item--has-child { 
+    .menu--link {
+      padding: 44px 0;
     }
   }
 }

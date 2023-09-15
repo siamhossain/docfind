@@ -1,44 +1,49 @@
 .contact-info-box {
-    gap: 14px;
-    margin-bottom: 25px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        right: 5px;
+        width: 1px;
+        height: 60px;
+        background-color: #015F65;
+        display: none;
+        @include media-only ('lg', min) {
+            display: block;
+        }
+    }
     .icon {
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
         overflow: hidden;
         position: relative;
-        background: #F3FDF9;
+        background: #00474B;
         @include transition;
     }
-    .contact-info-details {
-        flex: 1;
-        .title {
-            @include toRem (font-size, 16);
-            font-family: $font-roboto;
-            font-weight: 500;
-            line-height: 21px;
-            color: $title-font;
-            margin-bottom: 6px;
+    .content {
+        .info-text {
+            color: #8ABABD;
         }
-        .para-text {
-            font-family: $font-roboto;
-            font-weight: 400;
-            @include toRem (font-size, 16);
-            line-height: 26px;
-            color: #6B707F;
-            padding: 0; 
-            @include media-only("lg", min) {
-                padding-right: 155px;
+        .number {
+            a {
+                color: $color-white;
+                font-size: 22px;
+                font-weight: 500;
+                line-height: normal;
             }
         }
-    }
 
+    }
+    
     &:hover {
         .icon {
-            background: $color-secondary;
+            background-color: $color-secondary;
             svg {
                 fill: $color-white;
                 @include transition;
             }
         }
     }
+
 }
+
