@@ -1,9 +1,7 @@
 .blog-section {
     position: relative;
+
     
-    @include media-only ('lg', min) {
-        padding-bottom: 200px;
-    }
 
     .shape-parallax-list {
         li {
@@ -11,13 +9,20 @@
             z-index: -1;
             &:nth-child(1) {
                 left: 0;
-                bottom: -120px;
+                bottom: 0;
             }
             &:nth-child(2) {
                 right: 0;
-                bottom: -120px;
-                opacity: 0.3;
+                bottom: 0;
             }
+        }
+    }
+
+    &--style-1 {
+        padding-bottom: 150px;
+
+        @include media-only ('lg', min) {
+            padding-bottom: 294px;
         }
     }
 
@@ -30,5 +35,13 @@
             padding-top: 270px;
             padding-bottom: 120px;
         }
+    }
+}
+
+
+.blogs-section {
+    background-color: #F1F8F8;
+    .row {
+        --bs-gutter-y: 1.875rem;
     }
 }

@@ -12,9 +12,15 @@
 
     .location-selector {
         position: relative;
+        i {
+            font-size: 20px;
+            color: $color-primary;
+        }
         .nice-select {
             padding-left: 10px;
             padding-right: 30px;
+            display: flex;
+            align-items: center;
             @include media-only ('lg', min) {
                 padding-right: 50px;
             }
@@ -65,6 +71,10 @@
         .rt-searchbox-form {
             .input-area {
                 gap: 8px;
+                i {
+                    color: $color-primary;
+                    font-size: 20px;
+                }
                 svg {
                     margin-top: -3px;
                 }
@@ -101,6 +111,11 @@
                 .filter-btn {
                     background-color: transparent;
                     border: none;
+
+                    i {
+                        font-size: 25px;
+                        color: #758283;
+                    }
                 }
                 &:first-child {
                     &::before {

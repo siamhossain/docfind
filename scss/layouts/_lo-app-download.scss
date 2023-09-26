@@ -60,6 +60,10 @@
         }
     }
 
+    &--style-1 {
+        transform: translateY(-120px);
+    }
+
     &--style-2 {
         .app-download-content-wrapper {
             background-color: $color-primary;

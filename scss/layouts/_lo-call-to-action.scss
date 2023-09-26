@@ -18,8 +18,9 @@
             a.button {
                 padding: 14px 20px;
                 color: $color-title;
-                svg {
-                    margin-left: 9px;
+                i {
+                    // font-size: 22px;
+                    margin-left: 8px;
                 }
                 
                 &::before, &::after {

@@ -60,6 +60,11 @@
             --bs-gutter-y: 30px;
         }
         background-color: $color-white;
+
+        .explore-all-button-wrapper {
+            margin-top: 60px;
+        }
+        
         .shape-parallax-list {
             li {
                 &:nth-child(1) {

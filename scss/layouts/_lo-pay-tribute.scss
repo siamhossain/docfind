@@ -29,17 +29,19 @@
             }
         }
         .send-flower-btn {
-            padding: 13px 18px;
+            padding: 10px 23px;
             &::before, &::after {
                 background-color: $color-secondary;
             }
-            svg {
-                margin-left: 10px;
+            i {
+                // margin-left: 10px;
                 @include transition;
+                font-size: 22px;
+                color: $color-title;
             }
             &:hover {
-                svg {
-                    fill: $color-white;
+                i {
+                    color: $color-white;
                 }
             }
         }

@@ -2,7 +2,6 @@
     position: relative;
     z-index: 0;
     border-radius: 16px;
-    border: 1px solid #D1E0E1;
     background: $color-white;
     padding: 40px 30px 50px;
     @include transition;
@@ -15,11 +14,15 @@
         overflow: hidden;
         @include transition;
         display: inline-block;
+        
     }
     .title {
         margin-bottom: 19px;
         a {
             color: $color-title;
+            &:hover {
+                color: $color-primary;
+            }
         }
         line-height: normal;
     }
@@ -32,22 +35,38 @@
         margin-bottom: 25px;
     }
     .card-btn {
-        padding: 14px 22px;
-        svg {
-            margin-left: 10px;
+        padding: 10px 22px;
+        i {
+            font-size: 22px;
+            color: $color-primary;
+            margin-left: 8px;
+            @include transition;
         }
         &:hover {
             color: $color-white;
-            svg {
-                fill: $color-white;
+            i {
+                color: $color-white;
             }
         }
     }
 
     &:hover {
-        background: $color-white;
-        border: 1px solid transparent;
+        .card-btn { 
+            i {
+                
+            }
+        }
+    }
+
+    &--style-1 {
         box-shadow: 8px 8px 48px 0px rgba(1, 104, 111, 0.12);
+        &:hover {
+            .icon {
+                img {
+                    animation: zoomIn 0.5s forwards
+                }
+            }
+        }
     }
 
     &--style-2 {
@@ -109,9 +128,18 @@
     }
     &--style-3 {
         padding: 20px;
+        background: $color-white;
+        box-shadow: 8px 8px 48px 0px rgba(1, 74, 79, 0.12);
+        border: none;
+        position: relative;
+        z-index: 0;
         .image-item {
             border-radius: 12px;
             overflow: hidden;
+            width: 100%;
+            @include media-only ('sm', min) {
+                width: unset;
+            }
             img {
                 width: 100%;
                 @include transition;
@@ -119,9 +147,15 @@
             margin-bottom: 15px;
         }
         .content {
-            padding: 0 10px;
+            padding: 0 10px 10px 10px;
             .meta-data {
                 margin-bottom: 11px;
+                .meta-item {
+                    i {
+                        margin-right: 4px;
+                        color: $color-secondary;
+                    }
+                }
             }
             .title {
                 margin-bottom: 8px;
@@ -131,12 +165,37 @@
             }
 
         }
+        .card-btn {
+            padding: 10px 22px;
+        }
         &:hover {
-            box-shadow: 8px 8px 48px 0px rgba(1, 74, 79, 0.12);
-            
+            // box-shadow: 8px 8px 48px 0px rgba(1, 74, 79, 0.12);
+            border: none;
             .image-item {
                 img {
                     transform: scale(1.15);
+                }
+            }
+
+            .shape-parallax-list {
+                li {
+                    svg {
+                        fill: $color-primary;
+                    }
+                }
+            }
+        }
+
+        .shape-parallax-list {
+            li {
+                position: absolute;
+                z-index: -1;
+                svg {
+                    @include transition;
+                }
+                &:nth-child(1) {
+                    right: 10px;
+                    bottom: 0;
                 }
             }
         }
@@ -264,8 +323,10 @@
     }
     &--style-6 { 
         padding: 45px 30px 35px;
-        border: 1px solid #E6F0F1;
         border-radius: 16px;
+        background-color: $color-white;
+        box-shadow: 8px 8px 48px 0px rgba(1, 104, 111, 0.12);
+        z-index: 0;
         .icon {
             width: 104px;
             height: 104px;
@@ -273,8 +334,28 @@
             outline-offset: 4px;
             img {
                 width: 100%;
+                border-radius: 50%;
+                @include transition;
             }
             margin-bottom: 33px;
+            overflow: visible;
+
+            .quote-icon {
+                position: absolute;
+                right: -5px;
+                bottom: -2px;            
+                width: 36px;
+                height: 36px;
+                z-index: 1;
+                background-color: $color-primary;
+                border-radius: 50%;
+                border: 2px solid $color-white;
+                box-shadow: 4px 4px 16px rgba(1, 104, 111, 0.10);
+                @include transition;
+                i {
+                    color: $color-white;
+                }
+            }
         }
         .card-info {
             padding: 0 20px;
@@ -290,26 +371,39 @@
                 font-weight: 700;
                 line-height: 28px;
                 text-transform: uppercase;
+                &:hover {
+                    color: $color-secondary;
+                }
             }
         }
 
         &:hover {
-            box-shadow: 8px 8px 48px 0px rgba(1, 104, 111, 0.12);
-            background-color: $color-white;
+            .icon {
+                img {
+                    filter: grayscale(100%);
+                }
+            }
+            .quote-icon { 
+                transform: rotate(180deg);
+                
+            }
         }
     }
 
     &--style-7 {
         gap: 30px;
         border-radius: 16px;
-        border: 1px solid #DCE0E1;
         background: $color-white;
+        box-shadow: 8px 8px 48px 0px rgba(1, 74, 79, 0.08);
         padding: 20px;
         .icon {
             width: 180px;
             height: 180px;
             border-radius: 10px;
             margin-bottom: 0;
+            img {
+                @include transition;
+            }
         }
         .content {
             .id {
@@ -345,8 +439,11 @@
         }
 
         &:hover {
-            box-shadow: none;
-            border: 1px solid $color-primary;
+            .icon {
+                img {
+                    filter: grayscale(100%);
+                }
+            }
             .rose-shape {
                 svg {
                     fill: #01686F !important;
@@ -407,5 +504,89 @@
             box-shadow: none;
         }
     }
+
+    &--style-9 {
+        gap: 30px;
+        padding: 20px;
+        .img-content {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .content {
+            flex: 1;
+            .title {
+                margin-bottom: 15px;
+            }
+            .date {
+                margin-bottom: 21px;
+                span {
+                    border-radius: 6px;
+                    padding: 6px 12px;
+                }
+                &:hover {
+                    span {
+                        background-color: $color-primary;
+                        color: $color-white;
+                    }
+                }
+            }
+            .card-text {
+                margin-bottom: 25px;
+            }
+            .card-bottom {
+                .visit-obituary-btn {
+                    background-color: $color-secondary;
+                    color: $color-white;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: normal;
+                    padding: 11px 16px;
+                    border-radius: 6px;
+                }
+                .card-info {
+                    margin-bottom: 0;
+                    i {
+                        color: $color-primary;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+
+        .shape-parallax-list {
+            li {
+                position: absolute;
+                z-index: -1;
+                svg {
+                    @include transition;
+                }
+                &:nth-child(1) {
+                    right: 0;
+                    top: 20px;
+                    bottom: unset;
+                }
+            }
+        }
+
+        &:hover {
+            .shape-parallax-list { 
+                li {
+                    svg {
+                        fill: $color-primary;
+                    }
+                } 
+            }
+        }
+    }
 }
 
+
+.card-list-view {
+    gap: 20px;
+    .image-item {
+        margin-bottom: 0;
+    }
+    .content {
+        flex: 1;
+    }
+}

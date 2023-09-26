@@ -1,12 +1,17 @@
 .search-filter-section {
+
     .search-filter-content-wrapper {
         border-radius: 18px;
         border: 1px solid rgba(176, 208, 210, 0.50);
         background: $color-white;
         padding: 43px 50px;
         position: relative;
-        margin-top: -95px;
-        overflow: hidden;
+        z-index: 5;
+        margin-top: 30px;
+        
+        @include media-only ('lg', min) {
+            margin-top: -95px;
+        }
 
 
         .searchbox-container {
@@ -61,18 +66,25 @@
                 border: 1px solid #DCE0E1;
                 padding: 18px;
                 @include transition;
+                i {
+                    font-size: 28px;
+                    color: $color-primary;
+                    @include transition;
+                }
                 &:hover {
-                    // background-color: $color-primary;
-                    // border-color: transparent;
+                    background-color: $color-primary;
+                    border-color: transparent;
+                    i {
+                        color: $color-white;
+                    }
                 }
             }
             .searchbox-submit {
                 border-radius: 8px;
-                svg {
+                i {
                     margin-left: 5px;
                 }
             }
         }
-        
     }
 }

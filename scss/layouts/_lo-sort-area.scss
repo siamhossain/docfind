@@ -1,0 +1,40 @@
+.sort-area {
+    margin-bottom: 21px;
+    .item-found-text {
+        @include toRem(font-size, 20);
+        line-height: normal;
+
+        @include media-only (445px, min) {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .sorting-dropdown {
+        gap: 12px;
+        .sort-by-text {
+            line-height: normal;
+        }
+
+        .nice-select {
+            border-radius: 6px;
+            border: 1px solid #DCE0E1;
+            padding-right: 50px;
+            span {
+                @extend .para-text;
+                line-height: normal;
+            }
+            &::after {
+                width: 8px;
+                height: 8px;
+                border-bottom: 1px solid #859091;
+                border-right: 1px solid #859091;
+                top: 45%;
+                right: 16px;
+            }
+
+            .list {
+                width: 100%;
+            }
+        }
+    }
+}

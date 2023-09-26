@@ -1,0 +1,43 @@
+.experience-card {
+    border-radius: 12px;
+    background: $color-white;
+    box-shadow: 8px 8px 24px 0px rgba(1, 104, 111, 0.25);
+    padding: 15px 10px 9px 16px;
+    position: absolute;
+    left: 130px;
+    bottom: 40px;
+    margin: auto;
+    z-index: 0;
+
+    .icon {
+        width: 65px;
+        height: 65px;
+        background-color: #E6F0F1;
+    }
+    .content {
+        .years {
+            color: $color-primary;
+            font-size: 40px;
+            font-weight: 800;
+            line-height: normal;
+        }
+        .para-text {
+            line-height: normal;
+        }
+    }
+    
+    .shape-parallax-ball-list {
+        li {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                left: 22px;
+                top: 0;
+            }
+            &:nth-child(2) {
+                left: 10px;
+                bottom: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+
+
+
+
+.sidebar-widget-layout {
+    padding-bottom: 20px;
+    @include media-only ('lg', min) {
+        
+    }
+    .side-widget {
+        // border-bottom: 1px solid #D6E2E2;
+        padding: 30px;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .widget-title {
+        position: relative;
+        margin-bottom: 40px;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            border-radius: 100px;
+            background-color: $color-primary;
+            left: 0;
+            bottom: -16px;
+        }
+    }
+}

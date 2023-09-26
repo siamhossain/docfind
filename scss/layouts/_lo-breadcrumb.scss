@@ -1,0 +1,46 @@
+.breadcrumb-banner {
+    padding-top: 215px;
+    background-color: #01686F;
+    z-index: 0;
+
+    .breadcrumbs-area {
+        .heading-title {
+            color: $color-white;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: capitalize;
+            margin-bottom: 6px;
+        }
+        .entry-breadcrumb {
+            .item-list-element {
+                .item {
+                    color: #8ABABD;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: capitalize;
+                    
+                    &.current-item {
+                        color: $color-white;
+                    }
+                }
+            }
+            .dvdr {
+                color: #8ABABD;
+                padding: 0 8px;
+            }
+        }
+    }
+
+    &::before {
+        content: url("../../images/breadcrumb/breadcrumb-bg-texture.png");
+        position: absolute;
+        height: 219px;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+

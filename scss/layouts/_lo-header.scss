@@ -53,11 +53,11 @@ a.menu--link.second-level::after {
 // menu
 .menu {
   display: flex;
-  gap: 65px;
+  gap: 28px;
   justify-content: end;
   align-items: center;
   @include media-only(1400px, min) {
-    padding-left: 135px;
+    // padding-left: 135px;
   }
 
   $self: &;
@@ -67,14 +67,16 @@ a.menu--link.second-level::after {
     padding: 34px 0;
     @include toRem(font-size, 16);
     text-transform: capitalize;
-    // font-family: 'Roboto';
     font-weight: 500;
     line-height: normal;
     color: $color-title;
 
+    i {
+      color: #A3ACAC;
+    }
+
     &--active {
-      // font-weight: 500;
-      // color: #0D0D0D;
+
     }
 
     &:hover {
@@ -261,6 +263,10 @@ a.menu--link.second-level::after {
       span {
         color: #859091;
       }
+      i {
+        color: #758283;
+        font-size: 20px;
+      }
       &:hover {
         color: $color-secondary;
       }
@@ -285,11 +291,15 @@ a.menu--link.second-level::after {
           height: 48px;
           border: 1px solid #DCE0E1;
 
+          i {
+            color: $color-primary;
+          }
+
           &:hover {
             background-color: $color-primary;
             border-color: transparent;
-            svg {
-              fill: $color-white;
+            i {
+              color: $color-white;
               @include transition;
             }
           }
@@ -312,16 +322,16 @@ a.menu--link.second-level::after {
     .main-menu {
       flex: 1;
       .menu {
-        margin-right: 30px;
+        margin-right: 40px;
         @include media-only(1400px, min) {
           padding-left: 0;
         }
       }
-    }
-  }
-  .menu--item--has-child { 
-    .menu--link {
-      padding: 44px 0;
+
+      .parent-link {
+        padding: 44px 0;
+      }
+      
     }
   }
 }

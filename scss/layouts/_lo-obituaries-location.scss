@@ -18,6 +18,11 @@
             @include transition;
         }
 
+        i {
+            font-size: 22px;
+            margin-left: 10px;
+        }
+
         &:hover {
             color: $color-white;
             border-color: transparent;
@@ -58,6 +63,8 @@
                 display: inline-block;
                 color: $color-title;
                 padding: 27px 33px;
+                height: 86px;
+                width: 100%;
                 border: none;
                 border-radius: 12px;
                 background-color:#FCE2B0;
@@ -92,6 +99,45 @@
         .shape-parallax-list { 
             li {
                 opacity: 0.7;
+            }
+        }
+    }
+
+    &--style-3 {
+        background-color: $color-white;
+        z-index: 0;
+
+        .explore-all-btn-wrapper {
+            padding-top: 0;
+        }
+        .explore-all {
+            display: inline-block;
+            color: $color-title;
+            padding: 27px 33px;
+            height: 86px;
+            width: 100%;
+            border: none;
+            border-radius: 12px;
+            background-color:#FCE2B0;
+            font-size: 18px;
+            font-weight: 600;
+            svg {
+                margin-left: 10px;
+                @include transition;
+            }
+    
+            &:hover {
+                color: $color-white;
+                border-color: transparent;
+            }
+        }
+
+        .shape-parallax-list { 
+            li {
+                &:nth-child(1) {
+                    right: 20px;
+                    left: unset;
+                }
             }
         }
     }

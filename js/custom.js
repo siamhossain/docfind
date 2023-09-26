@@ -577,9 +577,7 @@
     })
 
 
-    //video-player
-        
-    
+    //sidebar-filter-accordion
 
 
 })(jQuery);

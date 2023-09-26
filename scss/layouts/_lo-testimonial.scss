@@ -1,0 +1,13 @@
+.testimonials-section {
+    .row {
+        --bs-gutter-y: 1.875rem;
+    }
+    background-color: #F1F8F8;
+    .rt-card {
+        border: 1px solid #DCE0E1;
+        &:hover {
+            border-color: $color-primary;
+            box-shadow: none;
+        }
+    }
+}

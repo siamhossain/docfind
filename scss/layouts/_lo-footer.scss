@@ -38,7 +38,7 @@
                             line-height: 36px;
                             display: flex;
                             align-items: center;
-                            svg {
+                            i {
                                 margin-right: 7px;
                             }
                             margin-left: -24px;
@@ -54,7 +54,7 @@
             .newsletter-form {
                 border-radius: 8px;
                 background: #01393D;
-                padding: 20px;
+                padding: 15px 20px;
                 svg {
                     margin-right: 8px;
                 }
@@ -72,6 +72,10 @@
                 .submit-btn {
                     background-color: transparent;
                     border: none;
+                    color: $color-white;
+                    i {
+                        font-size: 21px;
+                    }
                 }
             }
         }
@@ -86,17 +90,26 @@
             .rt-footer-copyright-text {
                 color: #809597;
                 a {
-                    color: $color-secondary;
+                    color: $color-white;
                     &:hover {
-                        color: $color-white;
+                        color: $color-secondary;
                     }
                 }
             }
             .to-top {
                 background-color: transparent;
                 border: none;
-                color: #567476;
+                color: #809597;
                 line-height: 36px;
+
+
+                i {
+                    background-color: $color-secondary;
+                    color: $color-white;
+                    border-radius: 50%;
+                    padding: 6px 8px;
+                    margin-left: 10px;
+                }
             }
         }
     }
@@ -106,13 +119,17 @@
             z-index: -1;
             &:nth-child(1) {
                 left: 40px;
-                bottom: 90px;
+                bottom: 0;
             }
             &:nth-child(2) {
                 right: 15px;
-                bottom: 82px;
+                bottom: -8px;
             }
         }
+    }
+
+    &--style-1 {
+        padding-top: 0;
     }
 }
 

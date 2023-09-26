@@ -1,9 +1,34 @@
 .pricing-section {
     background-color: #F1F8F8;
+    z-index: 0;
 
     .title-wrapper {
         .subtitle {
             margin-bottom: 35px;
+        }
+    }
+
+    .shape-parallax-list {
+        li {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    &--style-2 {
+        .shape-parallax-list {
+            li {
+                position: absolute;
+                z-index: -1;
+                &:nth-child(1) {
+                    left: unset;
+                    right: 0;
+                }
+            }
         }
     }
 }

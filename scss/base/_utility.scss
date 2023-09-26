@@ -46,6 +46,10 @@
   @extend %title-color;
 }
 
+.rt-title-color-bg {
+  @extend %title-color-bg;
+}
+
 .rt-white-color-bg {
 	@extend %white-color-bg;
 }

@@ -1,5 +1,4 @@
 .contact-section {
-    padding: 40px 0;
     background-color: #01393D;
 
     .parent {
@@ -23,6 +22,30 @@
                     }
                 }
             }
+        }
+    }
+
+    &--style-1 {
+        padding: 40px 0;
+    }
+    &--style-2 {
+        background-color: $color-white;
+        z-index: 0;
+        .shape-parallax-list {
+            li {
+                position: absolute;
+                z-index: -1;
+                &:nth-child(1) {
+                    right: 20px;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+    &--style-3 { 
+        background-color: #F1F8F8;
+        .contact-info-box {
+            border-color: transparent;
         }
     }
 }

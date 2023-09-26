@@ -1,3 +1,16 @@
 .popular-product-section {
     background-color: #E6F0F1;
+    padding-bottom: 257px;
+    z-index: 0;
+
+    .shape-parallax-list {
+        li {
+            position: absolute;
+            z-index: -1;
+            &:nth-child(1) {
+                right: 40px;
+                bottom: 0;
+            }
+        }
+    }
 }

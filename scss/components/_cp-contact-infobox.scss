@@ -13,11 +13,8 @@
         }
     }
     .icon {
-        width: 55px;
-        height: 55px;
         overflow: hidden;
         position: relative;
-        background: #00474B;
         @include transition;
     }
     .content {
@@ -34,16 +31,64 @@
         }
 
     }
-    
-    &:hover {
+
+    &--style-1 {
         .icon {
-            background-color: $color-secondary;
-            svg {
-                fill: $color-white;
-                @include transition;
+            width: 55px;
+            height: 55px;
+            background-color: #00474B;
+        }
+
+        &:hover {
+            .icon {
+                background-color: $color-secondary;
+                svg {
+                    fill: $color-white;
+                    @include transition;
+                }
             }
         }
     }
 
+    &--style-2 {
+        background-color: $color-white;
+        border-radius: 16px;
+        border: 1px solid #DCE0E1;
+        padding: 30px;
+        @include transition;
+        &::before {
+            display: none;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            color: $color-white;
+            i {
+                font-size: 26px;
+            }
+        }
+
+        .content {
+            .info-text {
+                color: $color-text;
+            }
+            .number {
+                a {
+                    color: $color-title;
+                }
+            }
+    
+        }
+
+        &:hover {
+            border-color: $color-secondary;
+            .icon {
+                i {
+                    animation: forwards 0.5s toBottomFromTop;
+                }
+            }
+        }
+    }
 }
 

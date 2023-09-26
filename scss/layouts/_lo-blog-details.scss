@@ -1,0 +1,17 @@
+.blogs-details-section {
+    background-color: #F1F8F8;
+    .blog-article {
+        background-color: $color-white;
+        border-radius: 12px;
+
+        .single-blog-thumb {
+            padding: 20px;
+            img {
+                border-radius: 12px;
+            }
+        }
+        .single-content-wrap {
+            padding: 30px;
+        }
+    }
+}
