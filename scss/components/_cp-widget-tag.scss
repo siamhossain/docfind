@@ -18,20 +18,6 @@
         ul.tag-list {
             gap: 12px;
             flex-wrap: wrap;
-            li {
-                .tag-link {
-                    border-radius: 6px;
-                    padding: 9px 15px;
-                    line-height: normal;
-                    border: 1px solid #DCE0E1;
-
-                    &:hover {
-                        background: $color-primary;
-                        color: $color-white;
-                        border-color: transparent;
-                    }
-                }
-            }
         }
     }
     

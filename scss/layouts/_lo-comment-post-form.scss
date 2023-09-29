@@ -1,0 +1,70 @@
+.comment-post-form-wrapper {
+    border-radius: 16px;
+    border: 1px solid #DCE0E1;
+    background: $color-white;
+    padding: 30px;
+
+    .title {
+        font-size: 22px;
+        line-height: normal;
+        position: relative;
+        margin-bottom: 40px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            background-color: $color-primary;
+            left: 0;
+            bottom: -15px;
+            border-radius: 50px;
+        }
+    }
+
+    .form-container {
+        .input-area {
+            border-radius: 6px;
+            background: #F1F8F8;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            input {
+                background-color: transparent;
+                border: none;
+                width: 100%;
+
+                color: $color-text;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+                
+                &::placeholder {
+                    color: $color-text;
+                }
+            }
+
+            i {
+                color: $color-primary;
+                margin-right: 8px;
+            }
+        }
+
+        .text-area-wrapper {
+            textarea {
+                border-radius: 6px;
+                background: #F1F8F8;
+                border: none;
+                height: 170px;
+                padding: 20px;
+                width: 100%;
+                line-height: normal;
+            }
+        }
+
+        .rt-form-submit-btn {
+            margin-top: 15px;
+            border-radius: 6px;
+            padding: 18px 40px
+        }
+    }
+}

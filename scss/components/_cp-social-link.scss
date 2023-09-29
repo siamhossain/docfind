@@ -14,6 +14,30 @@
             animation: toBottomFromTop 0.5s forwards;
         }
     }
+
+    &--style-2 {
+        color: #667475;
+        border-color: #DCE0E1;
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+
+    &--style-3 {
+        color: #B0D0D2;
+        border: none;
+        width: unset;
+        height: unset;
+
+        i {
+            font-size: 17px;
+        }
+        
+        &:hover {
+            color: $color-primary;
+        }
+    }
 }
 
 

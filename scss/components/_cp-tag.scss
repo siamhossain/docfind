@@ -1,42 +1,12 @@
-.tag {
-    display: inline-block;
-    a {
-        font-family: $font-outfit;
-        font-weight: 400;
-        @include toRem(font-size, 14);
-        text-transform: capitalize;
-        border-radius: 5px;
-        padding: 3px 12px 2px 12px;
-        &:hover {
-            background: $color-primary;
-            color: $color-white;
-        }
-    }
-    &--style-1 {
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        a {
-            color: $color-shade1;
-            background: $color-white;
-        }
-    }
-    &--style-2 {
-        a {
-            color: $color-primary;
-            background: rgba(84, 62, 232, 0.1);
-        }
-    }
-    &--style-3 {
-        a {
-            color: $color-white;
-            background: linear-gradient(122.96deg, #56AB2F 11.09%, #A8E063 90.59%);
-        }
-    }
-    &--style-4 {
-        a {
-            color: $color-white;
-            background: $color-primary;
-        }
+.tag-link {
+    border-radius: 6px;
+    padding: 9px 15px;
+    line-height: normal;
+    border: 1px solid #DCE0E1;
+
+    &:hover {
+        background: $color-primary;
+        color: $color-white;
+        border-color: transparent;
     }
 }
