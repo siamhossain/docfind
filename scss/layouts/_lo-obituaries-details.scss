@@ -1,0 +1,65 @@
+.obituaries-section {
+    background-color: #01686F;
+    z-index: 0;
+    padding-top: 223px;
+    padding-bottom: 65px;
+
+    .avatar {
+        overflow: hidden;
+        background-color: $color-white;
+        padding: 10px;
+        width: 270px;
+        height: 270px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        .title {
+            color: $color-white;
+            margin-bottom: 6px;
+        }
+        .date {
+            color:#DCE0E1;
+            font-size: 18px;
+            line-height: normal;
+            margin-bottom: 30px;
+        }
+
+        .obituary-service-btn-list {
+            li {
+                a {
+                    border-radius: 8px;
+                    border: 1px solid $color-white;
+                    padding: 14px 22px;
+
+                    color: $color-white;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: normal;
+
+                    &:hover, &.active {
+                        background-color: $color-secondary;
+                        color: $color-white;
+                        border-color: $color-secondary;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    &::before {
+        content: "";
+        background-image: url("../images/obituaries-details/obituary-bg-grain.png");
+        @include background-content;
+        position: absolute;
+        height: 400px;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+    }
+}

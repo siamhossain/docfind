@@ -1,0 +1,18 @@
+.tab-menu-section {
+
+    .tab-menu-area {
+        background: $color-white;
+        box-shadow: 8px 8px 32px 0px rgba(1, 74, 79, 0.06);
+        padding: 20px 0;
+        .social-list {
+            // padding: 20px 0;
+
+            span {
+                color: $color-text;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 26px;
+            }
+        }
+    }
+}

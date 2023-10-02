@@ -1,0 +1,73 @@
+.tab-content-section {
+    padding: 60px 0 120px 0;
+    background-color: #F1F8F8;
+
+    .about-content {
+        border-radius: 12px;
+        background: $color-white;
+        padding: 50px 30px;
+
+        .about-text {
+            margin-bottom: 38px;
+        }
+
+        .title {
+            position: relative;
+            padding-bottom: 16px;
+            margin-bottom: 25px;
+            line-height: normal;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 4px;
+                background-color: $color-primary;
+                border-radius: 50px;
+                left: 0;
+                bottom: 0;
+
+            }
+        }
+
+
+        .contact-details {
+            .contact-map-wrapper {
+                gap: 36px;
+                .contact-area {
+                    flex: 1;
+                }
+
+                .graveyard-name {
+                    color: var(--untitled-green-500, #01686F);
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin-bottom: 25px;
+                }
+                .direction-btn {
+                    background-color: $color-secondary;
+                    color: $color-white;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: normal;
+
+                    padding: 10px 21px;
+
+                    i {
+                        font-size: 22px;
+                        margin-left: 10px;
+                    }
+                }
+            }       
+            .map-wrapper {
+                border-radius: 8px;
+                background: $color-white;
+                box-shadow: 0px 0px 24px 0px rgba(1, 104, 111, 0.12);
+                padding: 10px;
+                img {
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
