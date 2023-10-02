@@ -3,6 +3,10 @@
     border: 1px solid #DCE0E1;
     background: $color-white;
     padding: 30px;
+    margin-bottom: 30px;
+    @include media-only ('lg', min) {
+        margin-bottom: 0;
+    }
 
     .title {
         font-size: 22px;

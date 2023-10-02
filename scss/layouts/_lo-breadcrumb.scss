@@ -34,12 +34,15 @@
     }
 
     &::before {
-        content: url("../images/breadcrumb/breadcrumb-bg-texture.png");
+        content: "";
+        background-image: url("../images/breadcrumb/breadcrumb-bg-texture.png");
+        @include background-content;
         position: absolute;
         height: 219px;
         left: 0;
         bottom: 0;
         z-index: -1;
+        width: 100%;
     }
 }
 
