@@ -207,7 +207,6 @@
         .img-item {
             img {
                 width: 100%;
-                filter: grayscale(100%);
                 @include transition;
             }
         }
@@ -234,6 +233,7 @@
             }
             .tag-list {
                 li {
+                    line-height: normal;
                     a {
                         border-radius: 6px;
                         border: 1px solid $color-secondary;
@@ -242,7 +242,6 @@
                         color: $color-secondary;
                         font-size: 16px;
                         font-weight: 400;
-                        line-height: normal;
 
                         &:hover {
                             background-color: $color-secondary;
@@ -260,7 +259,7 @@
 
             .img-item {
                 img {
-                    filter: grayscale(0);
+                    filter: grayscale(100%);
                     transform: scale(1.07);
                 }
             }

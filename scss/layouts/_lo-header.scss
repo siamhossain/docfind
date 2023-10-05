@@ -8,9 +8,6 @@ header {
   left: 0;
   right: 0;
   z-index: 9;
-
-  padding-top: 15px;
-  padding-bottom: 15px;
   @include media-only ('xl', min) {
     padding-top: 0;
     padding-bottom: 0;
@@ -25,6 +22,13 @@ header {
     }
     .sticky-header-logo {
       display: none;
+    }
+  }
+
+  .header-content-wrap {
+    padding-bottom: 15px;
+    @include media-only ('lg', min) {
+      padding-bottom: 0;
     }
   }
 }
@@ -53,7 +57,7 @@ a.menu--link.second-level::after {
 // menu
 .menu {
   display: flex;
-  gap: 28px;
+  gap: 26px;
   justify-content: end;
   align-items: center;
   @include media-only(1400px, min) {
@@ -155,7 +159,6 @@ a.menu--link.second-level::after {
       min-width: 250px;
       max-width: 250px;
       background-color: $color-white;
-      color: red;
       border-top: none;
       border-radius: 0;
       border-bottom-left-radius: 5px;
@@ -203,10 +206,10 @@ a.menu--link.second-level::after {
       }
 
       #{$self}--link {
-        @include toRem(font-size, 15);
-        color: black;
+        @include toRem(font-size, 16);
+        color: $color-title;
         font-weight: 400;
-        padding: 0 15px 0 26px;
+        padding: 15px 15px 15px 26px;
         display: block;
         width: 100%;
         overflow: hidden;
@@ -233,7 +236,7 @@ a.menu--link.second-level::after {
 }
 
 .navbar-action-area {
-  gap: 24px;
+  gap: 20px;
   .btn-list {
     gap: 20px;
     li {
@@ -283,7 +286,7 @@ a.menu--link.second-level::after {
 
   &--style-2 {
     .btn-list { 
-      gap: 20px;
+      gap: 10px;
       li {
         padding-right: 0;
         .cart-btn, .login-btn {
@@ -315,14 +318,17 @@ a.menu--link.second-level::after {
 
 .header {
   &--style-1 {
-      
+    // padding-top: 15px;
+    // padding-bottom: 15px;
   }
 
   &--style-2 {
     .main-menu {
       flex: 1;
+      margin-left: 70px;
+
       .menu {
-        margin-right: 40px;
+        float: left;
         @include media-only(1400px, min) {
           padding-left: 0;
         }

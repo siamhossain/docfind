@@ -20,12 +20,16 @@
                 .accordion-item { 
                     background-color: $color-primary;
                     .accordion-header {
+
+                        .accordion-button {
+                            background-color: $color-white;
+                        }
                         .accordion-button:not(.collapsed) {
-                            color: $color-white;
+                            // color: $color-white;
                         } 
                     }
                     .accordion-body {
-                        color: $color-white;
+                        // color: red;
                     }
                 }
             }
@@ -51,7 +55,7 @@
             border-color: #D9D9D9;
             margin-bottom: 20px;
             border-radius: 12px;
-            background-color: #F1F8F8;
+            background-color: $color-primary;
             border: none;
             .accordion-header {
                 .accordion-button {
@@ -60,7 +64,9 @@
                     line-height: 150%;
                     padding: 20px 30px;
                     border-radius: 10px;
-                    border: 1px solid #E6F0F1;
+                    color: $color-primary;
+                    // border: 1px solid #E6F0F1;
+                    background-color: #F1F8F8;
 
                     @include media-from-to(992px, min, 1200px, max) {
                     }
@@ -78,11 +84,12 @@
                         box-shadow: none;
                     }
                     &::after {
-                        background-image: url("../images/faq/gray-angle-down.svg");
+                        background-image: url("../images/accordion-icon/down-angle.svg");
+                        height: 0.7rem;
                     }
                 }
                 .accordion-button:not(.collapsed) {
-                    color: $color-primary;
+                    color: $color-white;
                     background-color: transparent;
                     box-shadow: none;
                     border-color: transparent;
@@ -92,14 +99,16 @@
                     }
 
                     &::after {
-                        background-image: url("../images/faq/primary-angle-down.svg");
+                        background-image: url("../images/accordion-icon/up-angle.svg");
+                        transform: rotate(0deg);
                     }
                 } 
             }
             .accordion-body {
                 padding: 22px 0 30px 0; 
-                border-top: 1px solid #B0D0D2;
+                border-top: 1px solid #34868C;
                 margin: 0 30px;
+                color: #E6F0F1;
                 ul {
                     list-style: disc;
                 }
@@ -112,6 +121,33 @@
     }
 
     &--style-2 {
+        
+    }
+}
 
+
+
+
+
+.draw-arrow {
+    stroke-width: 3;
+    stroke: black;
+    fill: none;
+    stroke-dashoffset: 300;
+    stroke-dasharray: 300;
+    animation-duration: 9s;
+    animation-fill-mode: both;
+    animation-name: rt-draw;
+    &.tail-1 {
+        animation-delay: 1.2s;
+    }
+    &.tail-2 {
+        animation-delay: 1s;
+    }
+}
+
+@keyframes rt-draw {
+    to {
+        stroke-dashoffset: 0;
     }
 }

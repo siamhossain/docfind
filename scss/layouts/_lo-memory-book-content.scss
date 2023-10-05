@@ -1,0 +1,12 @@
+.memory-book-content {
+    .title {
+        font-size: 20px;
+        line-height: normal;
+        color: $color-title;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+    
+}

@@ -165,11 +165,16 @@
 
 
 
-section,
-.section {
+section, .section {
     position: relative;
     overflow: hidden;
 }
+
+
+.wow {
+  visibility: hidden;
+}
+
 
 @media (min-width: 1400px) {
   .container {

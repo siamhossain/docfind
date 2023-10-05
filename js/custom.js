@@ -535,6 +535,7 @@
 
 
 
+
     // Menu expand on scroll and active/remove class on scroll content height
 
     var sections = $('.single-element-section .content-wrapper section');

@@ -1,7 +1,15 @@
 .breadcrumb-banner {
-    padding-top: 215px;
-    background-color: #01686F;
+    padding-top: 150px;
+    background-color: $color-primary;
     z-index: 0;
+    
+    @include media-from-to (992px, min, 1200px, max) {
+        padding-top: 290px;
+    }
+    
+    @include media-only ('lg', min) {
+        padding-top: 225px;
+    }
 
     .breadcrumbs-area {
         .heading-title {

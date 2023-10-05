@@ -2,15 +2,12 @@
     padding: 60px 0 120px 0;
     background-color: #F1F8F8;
 
+    
     .about-content {
         border-radius: 12px;
         background: $color-white;
         padding: 50px 30px;
-
-        .about-text {
-            margin-bottom: 38px;
-        }
-
+        
         .title {
             position: relative;
             padding-bottom: 16px;
@@ -25,9 +22,13 @@
                 border-radius: 50px;
                 left: 0;
                 bottom: 0;
-
             }
         }
+
+        .about-text {
+            margin-bottom: 38px;
+        }
+
 
 
         .contact-details {
@@ -66,6 +67,46 @@
                 padding: 10px;
                 img {
                     border-radius: 8px;
+                }
+            }
+        }
+    }
+
+    .gallery-content {
+        border-radius: 12px;
+        border: 1px solid #DCE0E1;
+        background: $color-white;
+        padding: 50px 48px 60px 48px;
+
+        .title {
+            position: relative;
+            padding-bottom: 16px;
+            margin-bottom: 25px;
+            line-height: normal;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 4px;
+                background-color: $color-primary;
+                border-radius: 50px;
+                left: 0;
+                bottom: 0;
+            }
+        }
+
+        .gallery-images {
+            gap: 10px;
+            .img-item {
+                border-radius: 8px;
+                overflow: hidden;
+                img {
+                    @include transition;
+    
+                    &:hover {
+                        filter: grayscale(100%);
+                        transform: scale(1.15);
+                    }
                 }
             }
         }

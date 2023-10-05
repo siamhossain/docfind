@@ -27,4 +27,7 @@
 .icon-phone:before { content: '\e81a'; } /* '' */
 .icon-arrow-2:before { content: '\e81d'; } /* '' */
 .icon-ei_user:before { content: '\e81e'; } /* '' */
+.icon-image:before { content: '\e823'; } /* '' */
+.icon-video:before { content: '\e824'; } /* '' */
+.icon-share:before { content: '\e826'; } /* '' */
 .icon-youtube:before { content: '\f315'; } /* '' */

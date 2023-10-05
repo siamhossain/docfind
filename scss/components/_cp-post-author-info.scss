@@ -18,9 +18,14 @@
     }
     .title {
         line-height: normal;
-        margin-bottom: 5px;
+        margin-bottom: 5px !important;
+        padding-bottom: 0 !important; 
         a {
             color: $title-font;
+        }
+
+        &::before {
+            display: none;
         }
     }
     .membership {

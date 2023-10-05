@@ -47,6 +47,8 @@
     }
     
     &--style-2 {
+        width: 100%;
+        margin-top: 30px;
         .pagination {
             .active {
                 background-color: $color-secondary;

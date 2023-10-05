@@ -1,8 +1,16 @@
 .obituaries-section {
     background-color: #01686F;
     z-index: 0;
-    padding-top: 223px;
+    padding-top: 150px;
     padding-bottom: 65px;
+
+    @include media-from-to (992px, min, 1200px, max) {
+        padding-top: 290px;
+    }
+
+    @include media-only ('lg', min) {
+        padding-top: 225px;
+    }
 
     .avatar {
         overflow: hidden;
@@ -56,10 +64,15 @@
         background-image: url("../images/obituaries-details/obituary-bg-grain.png");
         @include background-content;
         position: absolute;
-        height: 400px;
         left: 0;
         bottom: 0;
         z-index: -1;
         width: 100%;
+        height: 100%;
+        
+        @include media-only ('lg', min) {
+            height: 400px;
+
+        }
     }
 }
