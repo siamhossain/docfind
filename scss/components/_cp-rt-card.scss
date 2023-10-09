@@ -494,10 +494,17 @@
         }
         .content {
             .title {
-                font-size: 20px;
-                font-weight: 400;
-                color: $color-text;
-                margin-bottom: 7px;
+                line-height: normal;
+                margin-bottom: 0;
+                .title-link {
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: $color-text;
+                    margin-bottom: 7px;
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
             }
             .price {
                 color: $color-title;

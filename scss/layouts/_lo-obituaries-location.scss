@@ -1,6 +1,7 @@
 .obituaries-location-section {
     z-index: 0;
     background-color: #F1F8F8;
+    
     .row {
         --bs-gutter-y: 30px;
     }
@@ -48,6 +49,7 @@
         background-color: transparent;
         z-index: 0;
         position: relative;
+        padding-top: 0;
         .obituaries-location-wrapper {
             position: relative;
             border-radius: 36px;
