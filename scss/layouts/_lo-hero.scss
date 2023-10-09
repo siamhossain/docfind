@@ -72,10 +72,15 @@
                 font-size: 18px;
                 font-weight: 300;
                 line-height: normal;
+
+                z-index: -1;
+                position: relative;
+
                 span {
                     color: $color-white;
                     font-weight: 700;
                     position: relative;
+                    z-index: -1;
                     &::before {
                         content: url("../images/hero/text-shape.svg");
                         position: absolute;

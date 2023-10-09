@@ -6,10 +6,39 @@
         position: relative;
         z-index: 0;
         .icon {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 50%, rgba(255, 255, 255, 0.00) 100%);
+            
             width: 80px;
             height: 80px;
             @include transition;
+            position: relative;
+            z-index: 10;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 50%, rgba(255, 255, 255, 0.00) 100%);
+                opacity: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -10;
+                transition: opacity 0.5s;
+                border-radius: 50%;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 50%, rgba(255, 255, 255, 0.00) 100%);
+                opacity: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -10;
+                transition: opacity 0.5s;
+                border-radius: 50%;
+            }
         }
     }
 
@@ -33,7 +62,12 @@
 
     &:hover {
         .icon {
-            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 50%, rgba(255, 255, 255, 0.00) 100%);
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 1;
+            }
         }
     }
 }

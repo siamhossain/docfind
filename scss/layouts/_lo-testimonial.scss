@@ -4,9 +4,8 @@
     }
     background-color: #F1F8F8;
     .rt-card {
-        border: 1px solid #DCE0E1;
+        box-shadow: none;
         &:hover {
-            border-color: $color-primary;
             box-shadow: none;
         }
     }

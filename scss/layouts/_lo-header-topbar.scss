@@ -1,10 +1,35 @@
 .header-topbar {
     background-color: #F1F8F8;
-    padding: 10px 0;
     .contact-info-list {
         .contact-info-item {
+            position: relative;
+            padding: 12px 0;
+            gap: 6px;
+            a {
+                gap: 6px;
+            }
+            i {
+                font-size: 19px;
+                color: $color-primary;
+            }
             svg {
                 margin-right: 8px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: #DCE0E1;
+                width: 1px;
+                height: 100%;
+                top: 0;
+                right: -24px;
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
             }
         }
         

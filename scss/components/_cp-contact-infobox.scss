@@ -16,6 +16,10 @@
         overflow: hidden;
         position: relative;
         @include transition;
+        i {
+            font-size: 24px;
+            color: #8ABABD;
+        }
     }
     .content {
         .info-text {
@@ -42,8 +46,8 @@
         &:hover {
             .icon {
                 background-color: $color-secondary;
-                svg {
-                    fill: $color-white;
+                i {
+                    color: $color-white;
                     @include transition;
                 }
             }
@@ -65,7 +69,8 @@
             height: 60px;
             color: $color-white;
             i {
-                font-size: 26px;
+                font-size: 24px;
+                color: $color-white;
             }
         }
 

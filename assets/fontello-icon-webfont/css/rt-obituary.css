@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'rt-obituary';
-  src: url('../font/rt-obituary.eot?5398372');
-  src: url('../font/rt-obituary.eot?5398372#iefix') format('embedded-opentype'),
-       url('../font/rt-obituary.woff2?5398372') format('woff2'),
-       url('../font/rt-obituary.woff?5398372') format('woff'),
-       url('../font/rt-obituary.ttf?5398372') format('truetype'),
-       url('../font/rt-obituary.svg?5398372#rt-obituary') format('svg');
+  src: url('../font/rt-obituary.eot?37372801');
+  src: url('../font/rt-obituary.eot?37372801#iefix') format('embedded-opentype'),
+       url('../font/rt-obituary.woff2?37372801') format('woff2'),
+       url('../font/rt-obituary.woff?37372801') format('woff'),
+       url('../font/rt-obituary.ttf?37372801') format('truetype'),
+       url('../font/rt-obituary.svg?37372801#rt-obituary') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'rt-obituary';
-    src: url('../font/rt-obituary.svg?5398372#rt-obituary') format('svg');
+    src: url('../font/rt-obituary.svg?37372801#rt-obituary') format('svg');
   }
 }
 */
@@ -28,7 +28,7 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  /* margin-right: .2em; */
+  margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
 
@@ -41,7 +41,7 @@
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  /* margin-left: .2em; */
+  margin-left: .2em;
 
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -85,4 +85,6 @@
 .icon-image:before { content: '\e823'; } /* '' */
 .icon-video:before { content: '\e824'; } /* '' */
 .icon-share:before { content: '\e826'; } /* '' */
+.icon-icon-location-2:before { content: '\e827'; } /* '' */
+.icon-location-3:before { content: '\e828'; } /* '' */
 .icon-youtube:before { content: '\f315'; } /* '' */

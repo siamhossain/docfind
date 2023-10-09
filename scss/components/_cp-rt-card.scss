@@ -112,6 +112,10 @@
         .card-info {
             padding: 0;
             margin: 0;
+            gap: 6px;
+            i {
+                color: $color-primary
+            }
             svg {
                 margin-right: 5px;
             }
@@ -276,7 +280,7 @@
             z-index: 0;
             img {
                 width: 100%;
-                filter: grayscale(100%);
+                
                 @include transition;
             }
         }
@@ -299,6 +303,10 @@
             }
             .card-info {
                 margin-bottom: 0;
+                gap: 6px;
+                i {
+                    color: $color-secondary;
+                }
                 svg {
                     margin-right: 5px;
                 }
@@ -316,6 +324,7 @@
                 img {
                     filter: grayscale(0);
                     transform: scale(1.12);
+                    filter: grayscale(100%);
                 }
             }
         }
