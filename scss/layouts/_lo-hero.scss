@@ -45,7 +45,7 @@
                 padding: 180px 0 178px 70px;
             }
             .title-wrapper {
-                margin-bottom: 15px;
+                margin-bottom: 40px;
             }
             .subtitle {
                 color:#F6B433;
@@ -66,6 +66,11 @@
                 margin-bottom: 30px;
             }
 
+            .sub-text {
+                z-index: -1;
+                position: relative;
+            }
+
             .para-text {
                 font-family: unset;
                 color: rgba(255, 255, 255, 0.60);
@@ -73,8 +78,6 @@
                 font-weight: 300;
                 line-height: normal;
 
-                z-index: -1;
-                position: relative;
 
                 span {
                     color: $color-white;
@@ -124,6 +127,9 @@
 
         .hero-content {
             padding: 135px 0;
+            .title-wrapper {
+                margin-bottom: 30px;
+            }
             .subtitle {
                 color: #B0D0D2;
                 font-weight: 400;
@@ -201,6 +207,10 @@
 
         .hero-content {
             padding: 0;
+
+            .title-wrapper {
+                margin-bottom: 15px;
+            }
             .subtitle {
                 color: #B0D0D2;
                 font-weight: 400;

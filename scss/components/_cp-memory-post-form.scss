@@ -48,6 +48,11 @@
             .icon-video {
                 margin-right: 14px;
             }
+            a {
+                &:hover {
+                    color: $color-primary;
+                }
+            }
         }
     }
 

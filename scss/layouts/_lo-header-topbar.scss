@@ -7,6 +7,9 @@
             gap: 6px;
             a {
                 gap: 6px;
+                &:hover {
+                    color: $color-primary;
+                }
             }
             i {
                 font-size: 19px;
