@@ -1,63 +1,52 @@
 .call-to-action-section {
-    &-content-wrapper {
-        position: relative;
-        padding: 41px 80px;
-        background: url("../images/call-to-action/call-bg.jpg");
-        @include background-content;
-        border-radius: 20px;
-        // overflow: hidden;
-        z-index: 0;
-        margin-top: -118px;
-        .title-wrapper {
+    background-color: #3014B9;
+    padding: 91px 0;
+    z-index: 0;
+    // overflow: hidden;
+    .title-wrapper {
+        .section-title, p {
+            color: $color-white;
             margin-bottom: 0;
-            .section-title {
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .section-title {
+            font-weight: 600;
+        }
+        .para-text {
+            font-weight: 500;
+        }
+    }
+
+    .call-btn-list {
+        gap: 15px;
+        li {
+            a {
+                border-radius: 8px;
+                border: 1px solid #CFCFCF;
                 color: $color-white;
-                font-size: 30px;
-                margin-bottom: 23px;
-            }
-            a.button {
-                padding: 14px 20px;
-                color: $color-title;
-                i {
-                    // font-size: 22px;
-                    margin-left: 8px;
-                }
-                
-                &::before, &::after {
+                padding: 15px 30px;
+
+                &:hover, &.active {
                     background-color: $color-white;
+                    border-color: $color-white;
+                    color: $color-primary;
                 }
             }
         }
+    }
 
-        &::before {
-            content: "";
-            position: absolute;
-            border-radius: 50px;
-            left: 50%;
-            bottom: 0;
-            opacity: 0.3;
-            background: #002C2F;
-            filter: blur(36px);
-            height: 50px;
-            width: 90%;
-            transform: translateX(-50%);
-        }
-
-        .shape-parallax-list {
-            li {
-                position: absolute;
-                z-index: -1;
-                &:nth-child(1) {
-                    top: 0;
-                    left: 0;
-                }
-                &:nth-child(2) {
-                    left: 0;
-                    right: 0;
-                    text-align: center;
-                    bottom: 0;
-                }
-            }
-        }
+    &::before {
+        content: url("../../images/call-to-action/call-shape-1.svg");
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
     }
 }

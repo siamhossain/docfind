@@ -1,27 +1,9 @@
 .social-list {
     gap: 15px;
     li {
-        
-    }
-
-    &--style-2 {
-        gap: 10px;
-        .social-item {
-            a {
-                width: 28px;
-                height: 28px;
-                border-color: transparent;
-                border-radius: 50%;
-                background-color: $color-primary;
-                color: $color-white;
-
-                i {
-                    font-size: 12px;
-                }
-            }
+        .para-text {
+            color: $color-white;
+            line-height: normal;
         }
-    }
-    &--style-3 {
-        gap: 24px;
     }
 }

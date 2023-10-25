@@ -1,12 +1,19 @@
-.testimonials-section {
+
+
+.testimonial-section {
+    background-color: #FAF9FF;
+    z-index: 0;
     .row {
         --bs-gutter-y: 1.875rem;
     }
-    background-color: #F1F8F8;
-    .rt-card {
-        box-shadow: none;
-        &:hover {
-            box-shadow: none;
-        }
+
+    &::before {
+        content: url("../images/testimonial/testimonial-bg-shape.png");
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
     }
+    
 }

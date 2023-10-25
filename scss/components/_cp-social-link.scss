@@ -1,55 +1,11 @@
 .social-link {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #01686F;
-    border-radius: 50%;
-    color: $color-white;
-
-    
+    color: #8A8989;
     &:hover {
         color: $color-primary;
         background-color: $color-white;
         border-color: transparent;
         i {
             animation: toBottomFromTop 0.5s forwards;
-        }
-    }
-
-    &--style-2 {
-        color: #667475;
-        border-color: #DCE0E1;
-        &:hover {
-            background-color: $color-primary;
-            color: $color-white;
-        }
-    }
-
-    &--style-3 {
-        color: #B0D0D2;
-        border: none;
-        width: unset;
-        height: unset;
-
-        i {
-            font-size: 17px;
-        }
-        
-        &:hover {
-            color: $color-primary;
-        }
-    }
-
-    &--style-4 {
-        background-color: #014A4F;
-        color: #E6F0F1;
-        border: none;
-        i {
-            font-size: 17px;
-        }
-        
-        &:hover {
-            background-color: $color-white;
-            color: $color-primary;
         }
     }
 }

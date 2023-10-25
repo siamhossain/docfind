@@ -1,0 +1,33 @@
+.doctor-categories-section {
+    background-color: #FAF9FF;
+    padding-top: 100px;
+
+    .row {
+        --bs-gutter-y: 24px;
+    }
+
+    .title-wrapper {
+        .section-title {
+            margin-bottom: 0;
+        }
+    }
+    .see-all-btn {
+        padding: 16px 29px;
+    }
+
+    &--style-2 {
+        background-color: #190B61;
+
+        .subtitle {
+            color: #B6B2C5;
+        }
+
+        .section-title {
+            color: $color-white;
+        }
+
+        .doctor-categories-wrapper {
+            
+        }
+    }
+}

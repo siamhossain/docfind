@@ -1,7 +1,7 @@
 .footer-section {
     position: relative;
     overflow: hidden;
-    background-color: #002C2F;
+    background-color: #08031D;
     padding-top: 100px;
     z-index: 0;
     .rt-footer-content-wrapper {
@@ -10,51 +10,70 @@
             padding: 120px 0 76px 0;
         }
         .rt-footer-logo {
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
         .rt-footer-content {
             .text {
+                font-size: 18px;
                 margin-bottom: 25px;
-                color: #809597;
-                line-height: 26px;
+                color: #8A8989;
+                line-height: 28px;
             }
             .para-text {
                 // margin-bottom: 30px;
             }
+
+            .subscribe-heading {
+                margin-bottom: 18px !important;
+            }
             .rt-footer-link-list-wrapper {
                 .rt-footer-link-heading {
                     color: $color-white;
-                    line-height: 36px;
-                    margin-bottom: 20px;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-bottom: 30px;
                 }
                 ul.rt-footer-link-list {
                     li {
                         position: relative;
                         overflow: hidden;
                         a {
-                            @extend .para-text;
                             position: relative;
-                            color: #809597;
-                            line-height: 36px;
+                            color: #8A8989;
+                            line-height: 44px;
                             display: flex;
                             align-items: center;
-                            i {
-                                margin-right: 7px;
-                            }
-                            margin-left: -24px;
                             &:hover {
                                 color: $color-white;
-                                margin-left: 0;
                             }
                         }
                     }
                 }
             }
+            .contact-info-list {
+                li, a {
+                    color: #8A8989;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22px;
+
+                    i {
+                        font-size: 24px;
+                        margin-right: 12px;
+                    }
+                }
+                li {
+                    margin-bottom: 15px;
+                    &:last-child {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
             // Newsletter
             .newsletter-form {
-                border-radius: 8px;
-                background: #01393D;
-                padding: 15px 20px;
+                border-radius: 5px;
+                border: 1px solid #3E3E41;
+                padding: 5px 5px 5px 20px;
                 svg {
                     margin-right: 8px;
                 }
@@ -62,15 +81,18 @@
                     background-color: transparent;
                     border: none;
                     flex: 1;
-                    color: #567476;
+                    color: #717171;
                     @extend .para-text;
                     
                     &::placeholder {
-                        color: #567476;
+                        color: #717171;
                     }
                 }
                 .submit-btn {
-                    background-color: transparent;
+                    background-color: $color-primary;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 5px;
                     border: none;
                     color: $color-white;
                     i {
@@ -82,8 +104,8 @@
     }
 
     .rt-footer-bottom {
-        padding: 27px 0 26px 0;
-        border-top: 1px solid #014A4F;
+        background-color: #0F0B22;
+        padding: 20px 0 20px 0;
         position: relative;
         .rt-footer-copyright-area {
             flex-wrap: wrap;

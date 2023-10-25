@@ -1,56 +1,119 @@
 .rt-card {
     position: relative;
-    z-index: 0;
-    border-radius: 16px;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
     background: $color-white;
-    padding: 40px 30px 50px;
+    overflow: hidden;
+    z-index: 0;
     @include transition;
-    .icon {
-        width: 120px;
-        height: 120px;
-        background-color: #E6F0F1;
-        margin-bottom: 25px;
+    
+    .item-img {
         position: relative;
         overflow: hidden;
-        @include transition;
-        display: inline-block;
+        z-index: 0;
         
-    }
-    .title {
-        margin-bottom: 19px;
         a {
-            color: $color-title;
-            &:hover {
-                color: $color-primary;
-            }
-        }
-        line-height: normal;
-    }
-    .card-info {
-        color: $color-text;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 26px;
-        padding: 0 30px;
-        margin-bottom: 25px;
-    }
-    .card-btn {
-        padding: 10px 22px;
-        i {
-            font-size: 22px;
-            color: $color-primary;
-            margin-left: 8px;
+            width: 100%;
             @include transition;
-        }
-        &:hover {
-            color: $color-white;
-            i {
-                color: $color-white;
+            img {
+                width: 100%;
+                @include transition;
             }
         }
     }
 
+    .item-action {
+        .doctor-category {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            a {
+                color: #928DA9;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 20px;
+                padding: 5px 14px;
+                border-radius: 50px;
+                background-color: $color-white;
+
+                &:hover {
+                    background-color: $color-primary;
+                    color: $color-white;
+                }
+            }
+        }
+        .favourite {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            a {
+                width: 36px;
+                height: 36px;
+                background-color: $color-white;
+                color: #928DA9;
+                &:hover {
+                    background-color: $color-primary;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    .item-content {
+        padding: 24px 24px 19px;
+        .title {
+            margin-bottom: 10px;
+            line-height: normal;
+            a {
+                color: #41396A;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+        .designation {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 120%;
+            margin-bottom: 15px;
+        }
+        .meta-list {
+            margin-bottom: 20px;
+            li, a {
+                color: $color-text;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 14px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .card-btn {
+        gap: 10px;
+        padding: 15px 20px 16px 36px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        i {
+            
+        }
+    }
+
     &:hover {
+        .item-img {
+            img {
+                transform: scale(1.18);
+                transform-origin: top;
+            }
+        }
         .card-btn { 
             i {
                 
@@ -59,403 +122,314 @@
     }
 
     &--style-1 {
-        box-shadow: 8px 8px 48px 0px rgba(1, 104, 111, 0.12);
-        &:hover {
-            .icon {
-                img {
-                    animation: zoomIn 0.5s forwards
-                }
-            }
-        }
     }
 
     &--style-2 {
-        border: 1px solid transparent;
-        padding: 36px 46px 30px;
+        border-radius: 10px;
+        background: $color-white;
+        padding: 10px 30px 10px 10px;
+        border-color: transparent;
         .icon {
-            width: 150px;
-            height: 150px;
-            background-color: transparent;
-            margin-bottom: 50px;
-            overflow: visible;
+            background-color: $color-secondary;
+            border-radius: 10px;
+            width: 120px;
+            height: 130px;
             @include transition;
-            display: inline-block;
-
-            .obituary-img {
-                // filter: grayscale(100%);
-                width: 100%;
-                height: 100%;
+            svg {
                 @include transition;
             }
-            .obituaries-icon-shape {
-                position: absolute;
-                bottom: -33px;
-            }
         }
-        .date {
-            span {
-                border-radius: 6px;
-                border: 1px solid #B0D0D2;
-                padding: 0 0;
-                display: inline-block;
-                color: $color-primary;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: normal;
-                padding: 6px 12px;
-                margin-bottom: 17px;
-            }
-        }
-        .title {
-            margin-bottom: 4px;
-        }
-        .card-info {
+        .item-content {
             padding: 0;
-            margin: 0;
-            gap: 6px;
-            i {
-                color: $color-primary
+            flex: 1;
+
+            .title {
+                margin-bottom: 14px;
+                a {
+                    color: $color-title;
+                }
             }
-            svg {
-                margin-right: 5px;
+            .para-text {
+                font-size: 15px;
+                font-weight: 500;
+                color: #928DA9;
+                line-height: normal;
+            }
+
+            .arrow-icon {
+                width: 40px;
+                height: 40px;
+                border: 1px solid #E4E4E4;
+                @include transition;
+                i {
+                    font-size: 12px;
+                }
+                &:hover {
+                    background-color: $color-primary;
+                    color: $color-white;
+                    border-color: transparent;
+                }
             }
         }
 
         &:hover {
-            box-shadow: 8px 8px 48px 0px rgba(1, 104, 111, 0.12);
+            box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
             .icon {
-                .obituary-img {
-                    filter: grayscale(100%);
+                background-color: $color-primary;
+                svg {
+                    fill: $color-white;
                 }
             }
         }
     }
+
     &--style-3 {
-        padding: 20px;
-        background: $color-white;
-        box-shadow: 8px 8px 48px 0px rgba(1, 74, 79, 0.12);
-        border: none;
-        position: relative;
-        z-index: 0;
-        .image-item {
-            border-radius: 12px;
-            overflow: hidden;
-            width: 100%;
-            @include media-only ('sm', min) {
-                width: unset;
+        .item-action {
+            .favourite {
+                position: absolute;
+                right: unset;
+                left: 20px;
+                top: 20px;
             }
-            img {
-                width: 100%;
-                @include transition;
-            }
-            margin-bottom: 15px;
         }
-        .content {
-            padding: 0 10px 10px 10px;
-            .meta-data {
-                margin-bottom: 11px;
-                .meta-item {
-                    i {
-                        margin-right: 4px;
-                        color: $color-secondary;
-                    }
+
+        .item-img {
+            a {
+                height: 100%;
+                img {
+                    height: 100%;
                 }
+            }
+        }
+        
+        .item-content {
+            flex: 1;
+            padding: 22px 45px 27px 24px;
+            @include media-from-to (1200px, min, 1400px, max) {
+                padding: 22px 15px 27px 24px;
             }
             .title {
-                margin-bottom: 8px;
-            }
-            .card-info { 
-                padding: 0 0;
-            }
-
-        }
-        .card-btn {
-            padding: 10px 22px;
-        }
-        &:hover {
-            // box-shadow: 8px 8px 48px 0px rgba(1, 74, 79, 0.12);
-            border: none;
-            .image-item {
-                img {
-                    transform: scale(1.15);
+                a {
+                    color: $color-title;
                 }
             }
+            .card-text {
+                margin-bottom: 19px;
+            }
 
-            .shape-parallax-list {
+            .meta-list {
+                margin-bottom: 28px;
                 li {
-                    svg {
-                        fill: $color-primary;
+                    margin-bottom: 0;
+                    color: $color-title;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: capitalize;
+                    i {
+                        color: $color-primary;
                     }
                 }
             }
-        }
 
-        .shape-parallax-list {
-            li {
-                position: absolute;
-                z-index: -1;
-                svg {
-                    @include transition;
-                }
-                &:nth-child(1) {
-                    right: 10px;
-                    bottom: 0;
-                }
+            .card-btn {
+                padding: 12px 13px;
             }
         }
     }
     &--style-4 {
-        padding: 0;
         border: none;
-        overflow: hidden;
-        .img-item {
+        .item-img {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 40px;
             img {
-                width: 100%;
                 @include transition;
             }
         }
-        .content {
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4.87%, #000 100%);
-            opacity: 0.9;
-            position: absolute;
-            padding: 150px 30px 30px 30px;
-            bottom: 0;
-            left: 0;
-            right: 0;
+        .item-content {
+            padding: 0;
+            padding-right: 20px;
+
             .title {
-                margin-bottom: 5px;
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 45px;
+                margin-bottom: 13px;
                 a {
-                    color: $color-white;
-                    &:hover {
-                        color: $color-secondary;
+                    color: $color-title;
+                }
+            }
+
+            .para-text {
+                margin-bottom: 30px;
+            }
+
+            .meta-list {
+                gap: 40px;
+                li, a {
+                    margin-bottom: 0;
+                    font-size: 18px;
+                    i {
+                        margin-right: 3px;
                     }
                 }
             }
-            .date {
-                color: $color-white;
-                margin-bottom: 11px;
-            }
-            .tag-list {
-                li {
-                    line-height: normal;
-                    a {
-                        border-radius: 6px;
-                        border: 1px solid $color-secondary;
-                        background: rgba(244, 161, 0, 0.15);
-                        padding: 3px 10px;
-                        color: $color-secondary;
-                        font-size: 16px;
-                        font-weight: 400;
-
-                        &:hover {
-                            background-color: $color-secondary;
-                            color: $color-white;
-                        }
-                    }
-                }
-            }
-        }
-
-        &:hover {
-            background: none;
-            border: none;
-            box-shadow: none;
-
-            .img-item {
-                img {
-                    filter: grayscale(100%);
-                    transform: scale(1.07);
-                }
+            .read-more {
+                padding: 13px 24px;
             }
         }
     }
     &--style-5 {
-        padding: 15px 15px 0 15px;
-        .icon {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            margin-bottom: 0;
-            position: relative;
-            z-index: 0;
+        border: none;
+        border-radius: 0;
+        gap: 24px;
+        padding-bottom: 35px;
+        margin-bottom: 35px;
+        border-bottom: 1px solid #D9D9D9;;
+        .item-img {
+            border-radius: 10px;
+            overflow: hidden;
+            display: inline-block;
             img {
-                width: 100%;
-                
                 @include transition;
             }
         }
-        .content {
-            position: relative;
-            z-index: 2;
-            top: -32px;
-            .date {
-                margin-bottom: 15px;
-                padding-top: 10px;
-                span {
-                    color: $color-text;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: normal;
-                }
-            }
+        .item-content {
+            padding: 0;
+            flex: 1;
+
             .title {
-                margin-bottom: 7px;
+                font-weight: 600;
+                line-height: 30px;
+                margin-bottom: 13px;
+                a {
+                    color: $color-title;
+                }
             }
-            .card-info {
+
+            .para-text {
                 margin-bottom: 0;
-                gap: 6px;
-                i {
-                    color: $color-secondary;
+            }
+
+            .meta-list {
+                gap: 20px;
+                @include media-only ('md', min) {
+                    gap: 40px;
                 }
-                svg {
-                    margin-right: 5px;
+                li {
+                    margin-bottom: 0;
+                    // font-size: 16px;
+                    i {
+                        margin-right: 3px;
+                    }
                 }
             }
-            .date-shape {
-                position: absolute;
-                top: 1px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: -1;
-            }
-        }
-        &:hover {
-            .icon {
-                img {
-                    filter: grayscale(0);
-                    transform: scale(1.12);
-                    filter: grayscale(100%);
-                }
+            .read-more {
+                padding: 13px 24px;
             }
         }
     }
-    &--style-6 { 
-        padding: 45px 30px 35px;
-        border-radius: 16px;
-        background-color: $color-white;
-        box-shadow: 8px 8px 48px 0px rgba(1, 104, 111, 0.12);
-        z-index: 0;
-        .icon {
-            width: 104px;
-            height: 104px;
-            outline: 1px solid #E6F0F1;
-            outline-offset: 4px;
-            img {
-                width: 100%;
-                border-radius: 50%;
-                @include transition;
-            }
-            margin-bottom: 33px;
-            overflow: visible;
+    &--style-6 {
+        margin-left: 49px;
+        position: relative;
+        border: none;
+        overflow: visible;
+        
+        .item-img {
+            width: 98px;
+            height: 98px;
+            position: absolute;
+            top: 24px;
+            left: -49px;
+            border: 4px solid #C3B8F8;
+            background-color: #EDEDED;
+        }
 
-            .quote-icon {
-                position: absolute;
-                right: -5px;
-                bottom: -2px;            
-                width: 36px;
-                height: 36px;
-                z-index: 1;
-                background-color: $color-primary;
-                border-radius: 50%;
-                border: 2px solid $color-white;
-                box-shadow: 4px 4px 16px rgba(1, 104, 111, 0.10);
-                @include transition;
-                i {
-                    color: $color-white;
-                }
-            }
-        }
-        .card-info {
-            padding: 0 20px;
-            border-bottom: 1px solid #E6F0F1;
-            padding-bottom: 25px;
-            margin-bottom: 18px;
-        }
-        .title {
-            margin-bottom: 0;
-            a {
-                color: $color-primary;
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 28px;
-                text-transform: uppercase;
-                &:hover {
-                    color: $color-secondary;
-                }
+        .item-content {
+            background-color: #FAFAFA; 
+            border-radius: 10px 10px 0 0;
+            padding: 24px 23px 20px 69px;
+            .meta-list {
+                margin-bottom: 0;
             }
         }
 
-        &:hover {
-            .icon {
-                img {
-                    filter: grayscale(100%);
+        .item-action {
+            margin-bottom: 10px;
+            .doctor-category {
+                position: relative;
+                left: unset;
+                top: unset;
+                a {
+                    color: $color-primary;
+                    background-color: #ECE8FD;
+                    &:hover {
+                        background-color: $color-primary;
+                        color: $color-white;
+                    }
                 }
             }
-            .quote-icon { 
-                transform: rotate(180deg);
-                
+            .favourite {
+                position: relative;
+                right: unset;
+                top: unset;
+                a {
+                    color: $color-primary;
+                    background-color: #ECE8FD;
+                    &:hover {
+                        background-color: $color-primary;
+                        color: $color-white;
+                    }
+                }
             }
+        }
+
+        
+
+        .card-btn {
+            border-radius: 0px 0px 6px 6px;
         }
     }
 
     &--style-7 {
-        gap: 30px;
-        border-radius: 16px;
+        width: 244px;
+        height: 236px;
+        flex: 1;
+        border-radius: 15px;
+        border: 1px solid var(--blue-blue-50, #E7E6EC);
         background: $color-white;
-        box-shadow: 8px 8px 48px 0px rgba(1, 74, 79, 0.08);
-        padding: 20px;
+        margin-bottom: -114px;
+        z-index: 1;
         .icon {
-            width: 180px;
-            height: 180px;
-            border-radius: 10px;
-            margin-bottom: 0;
-            img {
-                @include transition;
-            }
+            width: 80px;
+            height: 80px;
+            background-color: $color-secondary;
+            margin-bottom: 16px;
+            @include transition;
         }
-        .content {
-            .id {
-                margin-bottom: 15px;
-                span {
-                    border-radius: 6px;
-                    padding: 6px;
-
-                    &:hover {
-                        color: $color-white;
-                        background-color: $color-primary;
-                        cursor: pointer;
+        .item-content {
+            padding: 0;
+            .title-content {
+                .title {
+                    font-size: 20px;
+                    margin-bottom: 4px;
+                    a {
+                        color: $color-title;
                     }
                 }
-            }
-            .title {
-                margin-bottom: 10px;
-            }
-            .text-content {
-                li {
-                    span {
-                        width: 68px;
-                        display: inline-block;
-                    }                
+                .para-text {
+                    font-size: 14px;
+                    font-weight: 500;
                 }
             }
-        }
-
-        .rose-shape {
-            position: absolute;
-            top: 34px;
-            right: 0;
         }
 
         &:hover {
             .icon {
-                img {
-                    filter: grayscale(100%);
-                }
-            }
-            .rose-shape {
+                background-color: $color-primary;
                 svg {
-                    fill: #01686F !important;
-                    @include transition;
+                    fill: $color-white;
                 }
             }
         }
@@ -463,145 +437,104 @@
 
     &--style-8 {
         border: none;
-        padding: 20px;
-        .image-item {
-            position: relative;
+        position: relative;
+        padding-top: 76px;
+        overflow: visible;
+        @include transition;
+        .item-img {
+            display: inline-block;
+            position: absolute;
+            top: -20px;
+            text-align: center;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            @include transition;
             img {
-                width: 100%;
-            }
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 20px;
-
-            .meta-entry {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                z-index: 1;
-                li {
-                    a {
-                        width: 34px;
-                        height: 34px;
-                        background-color: $color-white;
-                        color: $color-text;
-                        &:hover {
-                            background-color: $color-primary;
-                            color: $color-white;
-                        }
-                    }
-                }
+                @include transition;
+                border: 10px solid $color-white;
             }
         }
-        .content {
+        .item-content {
+            padding: 100px 20px 34px 20px;
+            border-radius: 30px 30px 10px 10px;
+            background: #F7F5FF;
+            @include transition;
             .title {
-                line-height: normal;
-                margin-bottom: 0;
-                .title-link {
-                    font-size: 20px;
-                    font-weight: 400;
-                    color: $color-text;
-                    margin-bottom: 7px;
-                    &:hover {
-                        color: $color-primary;
-                    }
+                font-weight: 600;
+                a {
+                    color: $color-title;
                 }
             }
-            .price {
-                color: $color-title;
-                font-size: 20px;
-                font-weight: 700;
-                line-height: normal;
+            p {
+                font-size: 15px;
+                color: #41396A;
+                @include transition;
             }
         }
 
         &:hover {
-            border: none;
-            box-shadow: none;
+            .item-img { 
+                img {
+                    transform: unset;
+                    box-shadow: (0px 0px 50px rgba(0, 0, 0, 0.10));
+                }
+            }
+            .item-content { 
+                background-color:  $color-primary;
+                .title {
+                    a {
+                        color: $color-white;
+                    }
+                }
+                p {
+                    color: #E7E6EC;
+                }
+            }
         }
     }
 
     &--style-9 {
-        gap: 30px;
-        padding: 20px;
-        .img-content {
-            border-radius: 10px;
-            overflow: hidden;
+        border-radius: 8px;
+        background: $color-white;
+        box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.10);
+        padding: 41px 34px 50px 34px;
+
+        .icon {
+            margin-bottom: 25px;
         }
-        .content {
-            flex: 1;
-            .title {
-                margin-bottom: 15px;
-            }
-            .date {
-                margin-bottom: 21px;
-                span {
-                    border-radius: 6px;
-                    padding: 6px 12px;
-                }
-                &:hover {
-                    span {
-                        background-color: $color-primary;
-                        color: $color-white;
-                    }
-                }
-            }
-            .card-text {
-                margin-bottom: 25px;
-            }
-            .card-bottom {
-                .visit-obituary-btn {
-                    background-color: $color-secondary;
-                    color: $color-white;
-                    font-size: 14px;
-                    font-weight: 500;
+
+        .text {
+            font-size: 18px;
+            line-height: 28px;
+            color: $color-title;
+            margin-bottom: 32px;
+        }
+
+        .card-bottom {
+            .commentor-info {
+                .title {
+                    font-weight: 600;
                     line-height: normal;
-                    padding: 11px 16px;
-                    border-radius: 6px;
+                    margin-bottom: 3px;
                 }
-                .card-info {
-                    margin-bottom: 0;
-                    i {
-                        color: $color-primary;
-                        margin-right: 3px;
-                    }
+                .designation {
+                    font-size: 15px;
                 }
             }
-        }
-
-        .shape-parallax-list {
-            li {
-                position: absolute;
-                z-index: -1;
-                svg {
-                    @include transition;
-                }
-                &:nth-child(1) {
-                    right: 0;
-                    top: 20px;
-                    bottom: unset;
-                }
-            }
-        }
-
-        &:hover {
-            .shape-parallax-list { 
-                li {
-                    svg {
-                        fill: $color-primary;
-                    }
-                } 
+    
+            .avatar {
+                width: 60px;
+                height: 60px;
             }
         }
     }
 }
 
 
-.card-list-view {
-    gap: 20px;
-    .image-item {
-        margin-bottom: 0;
-    }
-    .content {
-        flex: 1;
+
+.doctor-listing-section {
+    .row {
+        --bs-gutter-y: 24px;
     }
 }

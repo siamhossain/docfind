@@ -1,0 +1,72 @@
+.selector {
+    border-radius: 10px;
+    background-color: #EEECFB;
+    padding: 13px 24px 12px 17px;
+    height: 55px;
+
+    .select2 {
+        width: 199px !important;
+        span {
+            border: none;
+            background-color: transparent;
+        }
+
+        &-selection__rendered {
+
+        }
+
+        .select2-selection__arrow {
+            b {
+                border: none;
+                &::after {
+                    content: '\e80e';
+                    position: absolute;
+                    font-family: "rt-docfind";
+                    color: #5D4CB1;
+                    top: -6px;
+                    font-size: 15px;
+                    transition: .2s;
+                    line-height: 15px;
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
+
+    .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow b:after {
+        transform: rotate(180deg);
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: #706A8F;
+        line-height: 28px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    i {
+        font-size: 20px;
+        color: $color-primary;
+    }
+
+    &--style-2 {
+        background-color: #F5F5F5;
+
+        i {
+            color: #928DA9;
+        }
+        
+        .select2 {
+            width: 288px !important;
+        }
+    }
+}
+
+.select2-dropdown {
+    border: none;
+    top: 15px;
+    left: -12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+

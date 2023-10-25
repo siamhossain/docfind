@@ -1,72 +1,28 @@
 
 .searchbox-container {
     width: 100%;
-    @include media-only('md', min) {
-        width: 770px;
-    }
-    padding: 7px 7px 7px 15px;
+    padding: 12px 14px;
     background: $color-white;
-    border-radius: 6px;
-    // gap: 33px;
-    // margin: 0 auto;
+    border-radius: 15px;
+    gap: 10px;
 
-    .location-selector {
-        position: relative;
-        i {
-            font-size: 20px;
-            color: $color-primary;
-        }
-        .nice-select {
-            padding-left: 10px;
-            padding-right: 30px;
-            display: flex;
-            align-items: center;
-            @include media-only ('lg', min) {
-                padding-right: 50px;
-            }
-            span {
-                @include toRem(font-size, 18);
-                color: #667475;
-                font-weight: 400;
-                line-height: normal;
-            }
-            .list {
-                left: 10px;
-                top: 120%;
-            }
-
-            &::after {
-                border-bottom: 1.5px solid #A3ACAC;
-                border-right: 1.5px solid #A3ACAC;
-                height: 8px;
-                width: 8px;
-                right: -5px;
-                top: 45%;
-            }
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: 32px;
-            right: -34px;
-            top: 5px;
-            background: #B0D0D2;
-        }
-    }
+    
 
     .searchbox-textfield {
-        width: 40%;
         .searchbox-input {
             width: 100%;
             border: none;
-            background: $color-white;
             position: relative;
-            @include toRem(font-size, 18);
-            color: #667475;
+            @include toRem(font-size, 15);
             font-weight: 400;
             line-height: normal;
+            background-color: transparent;
+            color: #706A8F;;
+            padding: 0 24px;
+            height: 55px;
+            &::placeholder {
+                color: #706A8F;
+            }
         }
         .rt-searchbox-form {
             .input-area {
@@ -85,12 +41,12 @@
     }
     .searchbox-submit {
         .rt-searchbox-btn {
-            @include toRem(font-size, 18);
-            font-weight: 500;
-            line-height: 23px;
-            padding: 17px 25px;
-            border-radius: 6px;
+            gap: 4px;
+            padding: 15px 30px;
+            border-radius: 12px;
             border: none;
+            text-transform: uppercase;
+            height: 55px;
             // &::before, &::after {
             //     background-color: $color-secondary;
             // }

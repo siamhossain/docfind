@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   color: $color-title;
@@ -33,17 +33,19 @@ h6 {
 h1 {
     font-size: 40px;
     @include media-only ('sm', min) {
-      @include toRem(font-size, 48)
+        @include toRem(font-size, 48)
     }
+    line-height: 65px;
 }
 
 h2 {
     font-size: 36px;
-    line-height: normal;
+    line-height: 60px;
 }
 
 h3 {
     font-size: 24px;
+    line-height: normal;
 }
 
 h4 {
@@ -52,11 +54,11 @@ h4 {
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 p {
@@ -67,6 +69,9 @@ p {
   padding: 0;
   margin: 0;
 }
+
+
+/*** Global style ***/
 
 ol {
   padding-left: 1rem;

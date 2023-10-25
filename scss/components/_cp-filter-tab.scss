@@ -1,0 +1,90 @@
+.filter-tab {
+    .nav {
+        .nav-item {
+            margin-right: 25px;
+            .nav-link {
+                background-color: transparent;
+                padding: 0;
+                
+                input[type="radio"] {
+                    /* remove standard background appearance */
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    /* create custom radiobutton appearance */
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    padding: 3px;
+                    /* background-color only for content */
+                    background-clip: content-box;
+                    border: 2px solid #7C66EC;;
+                    background-color: transparent;
+                    border-radius: 50%;
+                  }
+                  
+                  /* appearance for checked radiobutton */
+                  input[type="radio"]:checked {
+                    // background-color: #93e026;
+                    background-color: $color-white;
+                  }
+
+                label {
+                    color: $color-white;
+                    font-weight: 600;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &-style--2 {
+        margin-top: -132px;
+        .searchbox-container {
+            background-color: #190B61;
+            border-radius: 0px 10px 10px 10px;
+            background: var(--purple-purple-900, #190B61);
+            box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);;
+            padding: 32px 32px 33px 40px;
+
+            .searchbox-textfield .searchbox-input {
+                width: 344px;
+                border-radius: 10px;
+                background-color: #F5F5F5;
+            }
+
+            .searchbox-submit .rt-searchbox-btn {
+                padding: 15px 45px;
+                &:hover {
+                    background-color: #F5F5F5;
+                    color: #190B61;
+                }
+            }
+
+        }
+
+        .nav {
+            .nav-item {
+                margin-right: 3px;
+                .nav-link {
+                    background-color: $color-white;
+                    border-radius: 6px 6px 0px 0px;
+                    padding: 9.5px 32px;
+
+                    color: #190B61;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 26px;
+
+                    &.active {
+                        background-color: #190B61;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,25 +4,21 @@
 
 :root {
     // Fonts
-    --font-body: 'Outfit', sans-serif;
-    --font-roboto: 'Roboto', sans-serif;
-    --font-lato: 'Lato', sans-serif;
-
-    --font-outfit: 'Outfit', sans-serif;
+    --font-body: 'Urbanist', sans-serif;
 
     --font-awesome: "Font Awesome 5 Free";
 
     // Colors
-    --color-primary: #01686F;
-    --color-secondary: #F4A100;
+    --color-primary: #3C19E8;
+    --color-secondary: #ECE8FD;
 
     --color-white: #fff;
     --color-black: #000;
     --colorOverlay: #242424;
 
     --color-hero-title: #1E1E2F;
-    --color-title: #001819;
-    --color-text: #667475;
+    --color-title: #120745;;
+    --color-text: #605982;
 
     --footer-bg: #292940;
     --footer-text-color: #BFBFC6;
@@ -176,16 +172,6 @@ section, .section {
 }
 
 
-@media (min-width: 1400px) {
-  .container {
-      max-width: 1194px;
-  }
-  .container-lg {
-    max-width: 1584px;
-  }
-}
-
-
 @include media-only(1400px, min) {
   
 }
@@ -206,4 +192,4 @@ section, .section {
     51% {
       opacity: 1;
     }
-  }
+}

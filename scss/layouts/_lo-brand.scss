@@ -1,0 +1,31 @@
+.brand-section {
+    background-color: #FAF9FF;
+    padding: 65px 0;
+
+    .brand-list-wrapper {
+
+    }
+
+    .brand-list {
+        row-gap: 30px;
+        column-gap: 25px;
+        .brand-item {
+            svg {
+                @include transition;
+            }
+
+            &:hover {
+                svg {
+                    fill: #3C19E8;
+                }
+            }
+        }
+    }
+
+    &--style-2 {
+        background-color: $color-white;
+        padding: 80px 0;
+    }
+
+}
+

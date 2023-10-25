@@ -5,7 +5,7 @@
 'use strict';
 
 (function($) {
-    var rtObituary = rtObituary || {};
+    var rtDocfind = rtDocfind || {};
 
     /**
 	 * Predefined variables.
@@ -33,7 +33,7 @@
 	/**
 	 * Functions.
 	 */
-    rtObituary.functions = {
+    rtDocfind.functions = {
 		preLoaderInit: function () {
 			if (!$preLoader.elExists()) {
 				return false;
@@ -215,9 +215,9 @@
         },
 
         //nice-select
-        niceSelect: function () {
-            $('select').niceSelect();
-        },
+        // niceSelect: function () {
+        //     $('select').niceSelect();
+        // },
 
         dateCountdown: function () {
 
@@ -486,21 +486,20 @@
 	 * Scripts to run on document ready event.
 	 */
 	$document.ready(function () {
-		rtObituary.functions.scrollToTop();
-        rtObituary.functions.counterUp();
-        rtObituary.functions.mobileMenuDropdown();
-        rtObituary.functions.rtTabs();
-        rtObituary.functions.mobileToggleMenu();
-        rtObituary.functions.searchOverlay();
-        rtObituary.functions.mouseParallax();
-        rtObituary.functions.niceSelect();
-        rtObituary.functions.elementsCarousel();
-        rtObituary.functions.activeMenu();
-        rtObituary.functions.isotope();
-        rtObituary.functions.dateCountdown();
-        rtObituary.functions.marqueeElement();
-        rtObituary.functions.fontSizeController();
-        rtObituary.functions.backToTop();
+		rtDocfind.functions.scrollToTop();
+        rtDocfind.functions.counterUp();
+        rtDocfind.functions.mobileMenuDropdown();
+        rtDocfind.functions.rtTabs();
+        rtDocfind.functions.mobileToggleMenu();
+        rtDocfind.functions.searchOverlay();
+        rtDocfind.functions.mouseParallax();
+        rtDocfind.functions.elementsCarousel();
+        rtDocfind.functions.activeMenu();
+        rtDocfind.functions.isotope();
+        rtDocfind.functions.dateCountdown();
+        rtDocfind.functions.marqueeElement();
+        rtDocfind.functions.fontSizeController();
+        rtDocfind.functions.backToTop();
         
 	});
 
@@ -508,8 +507,8 @@
 	 * Scripts to run on window load event.
 	 */
 	$window.on('load', function() {
-        rtObituary.functions.preLoaderInit();
-		rtObituary.functions.bodyClass();
+        rtDocfind.functions.preLoaderInit();
+		rtDocfind.functions.bodyClass();
 	});
 
 	/**
@@ -580,5 +579,7 @@
 
     //sidebar-filter-accordion
 
+    //select2 initialize
+    $('.select').select2();
 
 })(jQuery);

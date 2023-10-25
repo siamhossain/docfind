@@ -4,10 +4,10 @@
 
 // Button 
 .button {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   line-height: normal;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 // Primnary Button
@@ -16,26 +16,40 @@
     background-color: $color-primary;
     color: $color-white;
     @include transition;
-
-    &::before, &::after {
-      background-color: $color-secondary !important;
+    i {
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover {
+      background-color: #1e00af;
       color: $color-white;
+      i {
+        scale: 1.2 !important;
+      }
     }
 }
 
 // Secondary Button
-
 .button-secondary {
     background-color: $color-secondary;
-    color: $color-white;
+    color: $color-primary;
     @include transition;
     &:hover {
-
+      background-color: $color-primary;
+      color: $color-white;
     }
 }
+
+//see-all button
+
+.see-all-btn {
+  background-color: #ECE8FD;
+  padding: 16px 31px;
+  &:hover {
+      background-color: $color-primary;
+  }
+}
+
 
 // Transparent Button
 
