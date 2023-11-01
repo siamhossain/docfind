@@ -76,3 +76,46 @@
 .animate-flicker4 {
      animation: flickerAnimation 2s infinite;
 }
+
+//rotating
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 10s linear infinite;
+}
+
+
+
+
+@keyframes test {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate3d(-100%, 100%, 0);
+        transform: translate3d(-100%, 100%, 0);
+            // -webkit-transform: translateZ(0);
+            // transform: translateZ(0)
+    }
+
+    // 50% {
+    //     opacity: 1;
+    // }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(100%, -100%, 0);
+        transform: translate3d(100%, -100%, 0);
+    }
+}
+
+.animate__test {
+    -webkit-animation-name: test;
+    animation-name: test
+}

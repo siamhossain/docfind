@@ -1,0 +1,56 @@
+// Newsletter
+.newsletter-form {
+    border-radius: 5px;
+    border: 1px solid #3E3E41;
+    padding: 5px 5px 5px 20px;
+    svg {
+        margin-right: 8px;
+    }
+    .newsletter-input {
+        background-color: transparent;
+        border: none;
+        flex: 1;
+        color: #717171;
+        @extend .para-text;
+        
+        &::placeholder {
+            color: #717171;
+        }
+    }
+    .submit-btn {
+        background-color: $color-primary;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        color: $color-white;
+        i {
+            font-size: 21px;
+        }
+    }
+
+    &--style-2 {
+        border-radius: 500px;
+        background: #191625;
+        padding: 0px 0px 0px 38px;
+        border: none;
+        .submit-btn { 
+            width: unset;
+            height: unset;
+            text-transform: uppercase;
+            border-radius: 500px;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 32px;
+            padding: 7px 15px;
+            i {
+                font-size: 17px;
+                margin-left: 3px;
+            }
+
+            @include media-only (600px, min) {
+                padding: 18px 31px;
+            }
+        }
+    }
+}

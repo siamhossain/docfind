@@ -1,9 +1,16 @@
 .hospital-city-section {
     .row {
-        --bs-gutter-y: 24px;
+        --bs-gutter-y: 44px;
     }
 
     .title-wrapper {
         margin-bottom: 105px;
+    }
+
+
+    &--style-3 {
+        .title-wrapper { 
+            margin-bottom: 0;
+        }
     }
 }

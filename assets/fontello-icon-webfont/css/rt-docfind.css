@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'rt-docfind';
-  src: url('../font/rt-docfind.eot?8406016');
-  src: url('../font/rt-docfind.eot?8406016#iefix') format('embedded-opentype'),
-       url('../font/rt-docfind.woff2?8406016') format('woff2'),
-       url('../font/rt-docfind.woff?8406016') format('woff'),
-       url('../font/rt-docfind.ttf?8406016') format('truetype'),
-       url('../font/rt-docfind.svg?8406016#rt-docfind') format('svg');
+  src: url('../font/rt-docfind.eot?33282661');
+  src: url('../font/rt-docfind.eot?33282661#iefix') format('embedded-opentype'),
+       url('../font/rt-docfind.woff2?33282661') format('woff2'),
+       url('../font/rt-docfind.woff?33282661') format('woff'),
+       url('../font/rt-docfind.ttf?33282661') format('truetype'),
+       url('../font/rt-docfind.svg?33282661#rt-docfind') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'rt-docfind';
-    src: url('../font/rt-docfind.svg?8406016#rt-docfind') format('svg');
+    src: url('../font/rt-docfind.svg?33282661#rt-docfind') format('svg');
   }
 }
 */
@@ -27,7 +27,7 @@
 
   display: inline-block;
   text-decoration: inherit;
-  /* width: 1em; */
+  width: 1em;
   /* margin-right: .2em; */
   text-align: center;
   /* opacity: .8; */
@@ -37,7 +37,7 @@
   text-transform: none;
 
   /* fix buttons height, for twitter bootstrap */
-  /* line-height: 1em; */
+  line-height: 1em;
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
@@ -76,6 +76,7 @@
 .icon-down-arrow:before { content: '\e813'; } /* '' */
 .icon-tree:before { content: '\e814'; } /* '' */
 .icon-email:before { content: '\e815'; } /* '' */
+.icon-play:before { content: '\e816'; } /* '' */
 .icon-cart:before { content: '\e817'; } /* '' */
 .icon-clock:before { content: '\e818'; } /* '' */
 .icon-phone:before { content: '\e81a'; } /* '' */

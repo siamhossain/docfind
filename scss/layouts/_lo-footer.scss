@@ -69,37 +69,7 @@
                     }
                 }
             }
-            // Newsletter
-            .newsletter-form {
-                border-radius: 5px;
-                border: 1px solid #3E3E41;
-                padding: 5px 5px 5px 20px;
-                svg {
-                    margin-right: 8px;
-                }
-                .newsletter-input {
-                    background-color: transparent;
-                    border: none;
-                    flex: 1;
-                    color: #717171;
-                    @extend .para-text;
-                    
-                    &::placeholder {
-                        color: #717171;
-                    }
-                }
-                .submit-btn {
-                    background-color: $color-primary;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 5px;
-                    border: none;
-                    color: $color-white;
-                    i {
-                        font-size: 21px;
-                    }
-                }
-            }
+            
         }
     }
 
@@ -171,6 +141,144 @@
             }
         }
         
+    }
+
+    &--style-2 {
+
+        .rt-footer-content-wrapper {
+            padding: 60px 0 40px 0;
+            @include media-only ('md', min) {
+                padding: 60px 0 106px 0;
+            }
+        }
+
+        .subscription-area {
+            padding-bottom: 50px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #454546;
+            @include media-only ('lg', min) {
+                padding-bottom: 70px;
+                margin-bottom: 50px;
+
+            }
+            .title-wrapper {
+                .section-title {
+                    margin-bottom: 0;
+                    color: $color-white;
+                }
+                .subtitle {
+                    color: #B6B2C5;
+                }
+            }
+        }
+
+        .contact-info-list {
+
+            .contact-info-heading {
+                color: $color-white;
+                font-weight: 600;
+                line-height: 40px;
+                margin-bottom: 5px;
+            }
+
+            li {
+                gap: 10px;
+                border-bottom: 1px solid #2A2832;
+                padding-bottom: 22px;
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    background-color: #2A2832;
+                    @include transition;
+                    i {
+                        margin-right: 0 !important;
+                        color: $color-white;
+                        font-size: 18px !important;
+                    }
+                }
+                span, a {
+                    flex: 1;
+                    color: #AEB3BA;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0 !important;
+                }
+
+                &:hover {
+                    .icon {
+                        background-color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    &--style-3 {
+        background-image: url("../../images/footer/footer-bg-1.jpg");
+        @include background-content;
+        position: relative;
+        z-index: 0;
+
+        .rt-footer-link-list-wrapper {
+            ul.rt-footer-link-list {
+                li {
+                    a {
+                        color: #AEB3BA !important;
+                        line-height: 40px !important;
+                    }
+                }
+            }
+        }
+
+        .rt-footer-content-wrapper {
+            .rt-footer-content {
+                .text {
+                    margin-bottom: 12px;
+                    color: #AEB3BA;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .rt-footer-bottom {
+            background-color: transparent;
+            border-top: 1px solid #3A3843;
+
+            .rt-footer-copyright-area {
+                .rt-footer-copyright-text {
+                    color: #AEB3BA;
+                }
+            }
+
+            .social-item {
+                a {
+                    i {
+                        color: #AEB3BA;
+                    }
+                }
+            }
+        }
+
+        .email {
+            color: #E7E6EC;
+            display: block;
+        }
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.9;
+            background: var(--blue-blue-900, #08031D);
+            z-index: -1;
+        }
     }
 }
 

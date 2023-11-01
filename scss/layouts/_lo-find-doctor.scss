@@ -1,0 +1,79 @@
+.find-doctor-section {
+    background-color: $color-primary;
+    z-index: 0;
+    padding: 77px 0;
+
+
+    .item-img {
+        padding-right: 25px;
+    }
+
+    .item-content {
+        position:  relative;
+
+        @include media-only ('lg', min) {
+            padding-left: 25px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -70px;
+            bottom: 0;
+            margin: auto;
+            width: 2px;
+            height: 250px;
+            background: #6347ED;
+            display: none;
+            @include media-only ('lg', min) {
+                display: block;
+            }
+        }
+    }
+
+    .title-wrapper {
+        margin-bottom: 33px;
+        .subtitle {
+            color: $color-white;
+            margin-bottom: 15px;
+        }
+        .section-title {
+            color: $color-white;
+            margin-bottom: 15px;
+            line-height: 42px;
+        }
+        p {
+            color: #E7E6EC;
+            @include media-only ('lg', min) {
+                padding-right: 75px;
+            }
+        }
+    }
+
+    .find-doctor-btn {
+        padding: 17px 26px;
+        border: 1px solid transparent;
+
+        i {
+            margin-right: 7px;
+            font-size: 16px;
+        }
+
+        &:hover {
+            background-color: transparent;
+            border-color: $color-white;
+            color: $color-white;
+        }
+    }
+
+
+    &::before {
+        content: url("../../images/find-doctor/bg-shape.png");
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}

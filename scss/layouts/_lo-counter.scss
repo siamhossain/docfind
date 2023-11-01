@@ -1,21 +1,31 @@
 .counter-section {
-    z-index: 0;
+    z-index: 1;
+    margin-bottom: -100px;
     
     .counter-content-wrapper {
         background: $color-primary;
         padding: 62px 10px;
         border-radius: 10px;
-        margin: 0 60px;
         position: relative;
         z-index: 0;
+        
+        @include media-only ('lg', min) {
+            margin: 0 60px;
+        }
 
         &::before {
             content: url("../images/counter/counter-bg-shape.png");
+            @include background-content;
             position: absolute;
             left: 0;
             top: 0;
             width: 100%;
             z-index: -1;
+            display: none;
+            overflow: hidden;
+            @include media-only ('md', min) {
+                display: block;
+            }
         }
     }
     

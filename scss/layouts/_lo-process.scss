@@ -1,0 +1,76 @@
+.process-section {
+    background-image: url("../images/process/process-dection-bg.jpg");
+    @include background-content;
+    width: 100%;
+
+    .subtitle {
+        color: #ECE8FD;
+    }
+    .section-title {
+        color: $color-white;
+    }
+
+    .rt-card {
+        border: none;
+        background-color: transparent;
+        .icon {
+            margin-bottom: 20px;
+            svg {
+                @include transition;
+            }
+        }
+        .item-content {
+            @include media-only ('lg', min) {
+                padding: 0 35px;
+            }
+            .title {
+                a {
+                    color: $color-white;
+                }
+            }
+            p {
+                color: $color-white;
+            }
+        }
+
+        &:hover {
+            .icon {
+                svg {
+                    fill: $color-white;
+                }
+            }
+        }
+    }
+
+    .parent {
+        .child {
+            position: relative;
+            z-index: 0;
+            &::after {
+                display: none;
+                @include media-only ('lg', min) {
+                    display: block;
+                }
+            }
+            &:nth-child(1) {
+                &::after {
+                    content: url("../images/process/arrow-1.svg");
+                    position: absolute;
+                    right: -13%;
+                    top: 20%;
+                    z-index: -1;
+                }
+            }
+            &:nth-child(2) {
+                &::after {
+                    content: url("../images/process/arrow-2.svg");
+                    position: absolute;
+                    right: -13%;
+                    top: 20%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+}

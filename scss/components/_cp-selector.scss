@@ -5,7 +5,9 @@
     height: 55px;
 
     .select2 {
-        width: 199px !important;
+        @include media-only ('lg', min) {
+            width: 199px !important;
+        }
         span {
             border: none;
             background-color: transparent;
@@ -58,7 +60,9 @@
         }
         
         .select2 {
-            width: 288px !important;
+            @include media-only ('lg', min) {
+                width: 288px !important;
+            }
         }
     }
 }

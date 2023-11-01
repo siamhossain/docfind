@@ -36,4 +36,30 @@
             }
         }
     }
+
+    &--style-2 {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 10px;
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border: 1px dashed #fff;
+            i {
+                font-size: 15px;
+            }
+        }
+
+        .content {
+            .call-number {
+                font-size: 18px;
+            }
+        }
+        
+
+        &:hover {
+            background-color: unset;
+        }
+    }
 }

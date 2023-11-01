@@ -2167,8 +2167,8 @@ print {
 
     to {
         opacity: 1;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0)
+        -webkit-transform: translateZ(50%);
+        transform: translateZ(-50%)
     }
 }
 

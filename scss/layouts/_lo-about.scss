@@ -1,7 +1,11 @@
 .about-section {
-    padding-top: 233px;
     padding-bottom: 157px;
     background: #FAFAFA;
+    
+    @include media-only ('lg', min) {
+        padding-top: 233px;
+
+    }
 }
 
 .about-content-wrapper {
@@ -13,9 +17,11 @@
         border: 10px solid $color-white;
         box-shadow: -10px 15px 20px 0px rgba(0, 0, 0, 0.05);
         display: inline-block;
+        margin-bottom: 45px;
         
         @include media-only ('lg', min) {
             margin-left: 63px;
+            margin-bottom: 0;
         }
 
         img {
