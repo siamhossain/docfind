@@ -24,6 +24,14 @@
                 margin-bottom: 35px;
             }
         }
-    }
-    
+    }    
 }
+
+
+.all-blogs-section {
+    .row {
+        --bs-gutter-y: 1.5rem;
+    }
+}
+
+

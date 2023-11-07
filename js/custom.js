@@ -317,7 +317,21 @@
                         spaceBetween: slideSpace,
                         speed: slideSpeed,
                         loop: slideLoop,
-                        // effect: slideEffect,
+
+                        // effect:'coverflow',
+                        // coverflowEffect: {
+                        //     rotate: 0,
+                        //     stretch: 0,
+                        //     depth: 100,
+                        //     modifier: 10,
+                        //     initialSlide: 3,
+                        //     slideShadows: true
+                        // },
+                        // centeredSlides: true,
+                        // initialSlide: 2,
+                        // grabCursor: true,
+                        // centeredSlides: true,
+
                         observer: true,
                         observeParents: true,
                         watchSlidesProgress: true,

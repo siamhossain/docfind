@@ -1,33 +1,17 @@
 .comment-section {
-    border-radius: 16px;
-    border: 1px solid #DCE0E1;
     background: $color-white;
-    padding: 30px;
     margin-bottom: 30px;
-
+    
     .title {
-        position: relative;
-        font-size: 22px;
-        margin-bottom: 24px;
-        line-height: normal;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 30px;
-            height: 4px;
-            background-color: $color-primary;
-            left: 0;
-            bottom: -15px;
-            border-radius: 50px;
-        }
+        line-height: 30px;
+        margin-bottom: 42px;
     }
 
     .comment-wrapper {
         &:last-child {
             .comment-content {
                 border-bottom: none;
-                padding-bottom: 0;
+                margin-bottom: 0;
             }
         }
     }
@@ -37,7 +21,9 @@
 
 .comment-wrapper {
     gap: 20px;
-    padding-top: 20px;
+    border-bottom: 1px solid #D6DCE9;
+    padding-bottom: 30px;
+    margin-bottom: 33px;
     .avatar {
         img {
             border-radius: 12px;
@@ -46,45 +32,42 @@
     }
     .comment-content {
         flex: 1;
-        border-bottom: 1px solid #DCE0E1;
-        padding-bottom: 30px;
+        .comment-top {
+            margin-bottom: 15px;
+        }
+
         .commentor-name {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
+            a {
+                font-weight: 600;
+                color: $color-title;
+            }
         }
         ul.comment-meta {
-            margin-bottom: 18px;
             li {
-                color: #3B4D4E;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: normal;
-                i {
-                    color: $color-primary;
-                    margin-right: 4px;
-                }
+                color: #999;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px; 
             }
         }
         .comment {
-            line-height: 28px;
-            margin-bottom: 14px;
+            line-height: 26px;
+            padding-right: 30px;
         }
         .reply-btn {
-            font-size: 18px;
+            background: #F1F0FF;
+            border-radius: 4px;
+            font-size: 14px;
             font-weight: 500;
-            line-height: 26px;
-            color: $color-title;
-            i {
-                font-size: 20px;
-                margin-right: 6px;
-                color: $color-primary;
-            }
+            line-height: 20px;
+            color: $color-primary;
+            padding: 5px 13px;
         }
     }
 
     &.comment-reply {
-        margin-left: 70px;
+        padding-left: 149px;
     }
     
 }

@@ -1,9 +1,11 @@
 .comment-post-form-wrapper {
-    border-radius: 16px;
-    border: 1px solid #DCE0E1;
     background: $color-white;
-    padding: 30px;
+    padding: 62px 83px ;
     margin-bottom: 30px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+
     @include media-only ('lg', min) {
         margin-bottom: 0;
     }
@@ -12,38 +14,33 @@
         font-size: 22px;
         line-height: normal;
         position: relative;
-        margin-bottom: 40px;
+        margin-bottom: 5px;
+    }
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: 30px;
-            height: 4px;
-            background-color: $color-primary;
-            left: 0;
-            bottom: -15px;
-            border-radius: 50px;
-        }
+    .text {
+        margin-bottom: 15px;
     }
 
     .form-container {
         .input-area {
-            border-radius: 6px;
-            background: #F1F8F8;
-            padding: 16px 20px;
+            padding: 15px 15px;
             margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #E1E4E7;
+            background: $color-white;
+
             input {
                 background-color: transparent;
                 border: none;
                 width: 100%;
 
-                color: $color-text;
-                font-size: 16px;
+                color: #B6B2C5;
+                font-size: 15px;
                 font-weight: 400;
-                line-height: normal;
+                line-height: 28px;
                 
                 &::placeholder {
-                    color: $color-text;
+                    color: #B6B2C5;
                 }
             }
 
@@ -55,13 +52,20 @@
 
         .text-area-wrapper {
             textarea {
-                border-radius: 6px;
-                background: #F1F8F8;
-                border: none;
-                height: 170px;
+                height: 130px;
                 padding: 20px;
                 width: 100%;
-                line-height: normal;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 28px;
+                &::placeholder {
+                    color: #B6B2C5;
+                }
+                border-radius: 5px;
+                border: 1px solid #E1E4E7;
+                background: $color-white;
+
+
             }
         }
 
@@ -70,5 +74,39 @@
             border-radius: 6px;
             padding: 18px 40px
         }
+
+
+
+        &.row>* {
+            padding-right: 7px;
+            padding-left: 7px;
+        }
+
+        .check-box-area {
+            gap: 12px;
+            margin-bottom: 8px;
+            .form-check-input[type=checkbox] {
+                border-radius: 50px;
+            }
+
+            .form-check-input {
+                width: 18px;
+                height: 18px;
+                margin-top: 0;
+            }
+
+            label {
+                color: #41396A;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                text-transform: capitalize;
+            }
+        }
+
+        textarea {
+            margin-bottom: 20px;
+        }
+
     }
 }

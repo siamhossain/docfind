@@ -732,4 +732,111 @@
             }
         }
     }
+    &--style-13 {
+        background-color: transparent;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, .2);;
+        gap: 15px;
+        padding: 29px 30px;
+        .item-img {
+            height: 60px;
+            height: 60px;
+            img {
+                @include transition;
+            }
+        }
+        .item-content {
+            padding: 0;
+            flex: 1;
+            .title {
+                font-weight: 600;
+                a {
+                    color: $color-white;
+                }
+            }
+            p {
+                color: $color-white;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: normal;
+                @include transition;
+            }
+        }
+
+        &:hover {
+            background-color: $color-white;
+            box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+            transform: translateY(-10px);
+            .item-content {
+                padding: 0;
+                flex: 1;
+
+                .title {
+                    a {
+                        color: $color-title;
+                    }
+                }
+                p {
+                    color: $color-title;
+                }
+            }
+        }
+    }
+
+    &--style-14 {
+        border: none;
+        border-radius: 10px;
+        background: #FAF9FF;
+        padding: 74px 38px;
+        position: relative;
+        .icon {
+            width: 80px;
+            height: 80px;
+            background-color: #F3F0FF;
+            margin-bottom: 15px;
+        }
+        .item-content {
+            padding: 0;
+            .title {
+                margin-bottom: 13px;
+                .title-link {
+                    &:hover {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $color-primary;
+            transition: .5s;
+            transform-origin: top;
+            transform: perspective(2000px) rotateY(-90deg);
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        &:hover {
+            .title {
+                .title-link {
+                    color: $color-white;
+                }
+            }
+            .para-text {
+                color: $color-white;
+                @include transition;
+            }
+
+
+            &::before { 
+                transform: perspective(2000px) rotateY(0deg);
+            }
+        }
+    }
 }

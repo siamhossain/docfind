@@ -14,14 +14,15 @@
     <!-- Dependency Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/animate/animate.min.css">
     <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/hover/css/hover-min.css">
     <link rel="stylesheet" type="text/css" href="assets/odometer/css/odometer-theme-default.css">
-    <link rel="stylesheet" type="text/css" href="assets/jquery-nice-select/css/nice-select.css">
-    <link rel="stylesheet" type="text/css" href="assets/fontello-icon-webfont/css/rt-obituary.css">
+    <link rel="stylesheet" type="text/css" href="assets/select2/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello-icon-webfont/css/rt-docfind.css">
     <link rel="stylesheet" type="text/css" href="assets/video/video-js.css">
     <link rel="stylesheet" type="text/css" href="assets/popup/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="assets/swiper/css/swiper.min.css">
@@ -176,64 +177,14 @@
                 <!-- end header mobile menu  -->
 
                 <!-- start header -->
-                <header class="header header--style-2 d-none d-lg-block rt-white-color-bg" id="insureti-header">
+                <header class="header header--style-1 d-none d-lg-block rt-white-color-bg" id="insureti-header">
                     <!-- Place Holder Start --> <!-- d-lg-block -->
                     <!-- <div class="place-holder"></div> -->
                     <!-- Header Main -->
                     <nav class="sticky-header">
-                        <div class="header-topbar">
-                            <div class="container">
-                                <div class="header-topbar-wrapper d-flex justify-content-between align-items-center">
-                                    <ul class="contact-info-list d-flex gap-5">
-                                        <li class="contact-info-item para-text">
-                                            <a href="tel:+ 0800 24 66 721" class="para-text d-inline-flex align-items-center">
-                                                <i class="icon-phone"></i>
-                                                + 0800 24 66 721
-                                            </a>
-                                        </li>
-                                        <li class="contact-info-item para-text d-inline-flex align-items-center">
-                                            <i class="icon-location-3"></i>
-                                            First Avenue, London
-                                        </li>
-                                        <li class="contact-info-item para-text">
-                                            <a href="mailto:memoir@gmail.com" class="para-text d-inline-flex align-items-center">
-                                                <i class="icon-email"></i>
-                                                memoir@gmail.com
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                    <ul class="social-list social-list--style-2 d-flex align-items-center">
-                                        <span class="para-text">Follow us :</span>
-                                        <li class="social-item">
-                                            <a href="" class="social-link facebook circle-radius d-flex justify-content-center align-items-center ">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social-item">
-                                            <a href="" class="social-link twitter circle-radius d-flex justify-content-center align-items-center ">
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social-item">
-                                            <a href="" class="social-link instagram circle-radius d-flex justify-content-center align-items-center ">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social-item">
-                                            <a href="" class="social-link instagram circle-radius d-flex justify-content-center align-items-center ">
-                                                <i class="fab fa-linkedin-in"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="container">
+                        <!-- <div class="container"> -->
                             <div class="row">
-                                <div id="header-content-wrap" class="header-content-wrap d-flex align-items-center justify-content-between navbar-wrap flex-wrap "
-                                    >
+                                <div id="header-content-wrap" class="header-content-wrap d-flex align-items-center justify-content-between navbar-wrap flex-wrap">
                                     <div class="header-logo">
                                         <a href="index.html">
                                             <img src="images/logo/logo-1.svg" alt="header-logo" width="191" height="52">
@@ -248,7 +199,7 @@
                                             <li class="menu--item menu--item--has-child parent-menu">
                                                 <a href="javascript:void(0)" class="menu--link parent-link">
                                                     Home
-                                                    <i class="icon-down-arrow"></i>
+                                                    <i class="icon-chevron-down"></i>
                                                 </a>
                                                 <ul class="menu menu--sub" id="navMenus">
                                                     <li class="menu--item second-level">
@@ -266,12 +217,17 @@
                                                             Home 3
                                                         </a>
                                                     </li>
+                                                    <li class="menu--item second-level">
+                                                        <a href="index-4.html" class="menu--link">
+                                                            Home 4
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li class="menu--item menu--item--has-child parent-menu">
                                                 <a href="javascript:void(0)" class="menu--link parent-link">
-                                                    Obituaries
-                                                    <i class="icon-down-arrow"></i>
+                                                    Listings
+                                                    <i class="icon-chevron-down"></i>
                                                 </a>
                                                 <ul class="menu menu--sub" id="navMenus">
                                                     <li class="menu--item second-level">
@@ -294,43 +250,16 @@
                                                     
                                                 </ul>
                                             </li>
-                                            <li class="menu--item menu--item--has-child parent-menu">
+                                            <!-- <li class="menu--item menu--item--has-child parent-menu">
                                                 <a href="about.html" class="menu--link parent-link">
                                                     About Us
                                                 </a>
-                                            </li>
-                                            <li class="menu--item menu--item--has-child parent-menu">
-                                                <a href="javascript:void(0)" class="menu--link has-sub-menu parent-link">
-                                                    Blog
-                                                    <i class="icon-down-arrow"></i>
-                                                </a>
-                                                <ul class="menu menu--sub">
-                                                    <li class="menu--item">
-                                                        <a href="blog.html" class="menu--link">
-                                                            All Blog
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu--item">
-                                                        <a href="blog-grid-view.html" class="menu--link">
-                                                            Blog Grid View
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu--item">
-                                                        <a href="blog-list-view.html" class="menu--link">
-                                                            Blog List View
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu--item">
-                                                        <a href="blog-details.html" class="menu--link">
-                                                            Blog Details
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
+                                            </li> -->
+                                            
                                             <li class="menu--item menu--item--has-child parent-menu">
                                                 <a href="javascript:void(0)" class="menu--link has-sub-menu parent-link">
                                                     Pages
-                                                    <i class="icon-down-arrow"></i>
+                                                    <i class="icon-chevron-down"></i>
                                                 </a>
                                                 <ul class="menu menu--sub">
                                                     <li class="menu--item">
@@ -360,6 +289,35 @@
                                                     </li>
                                                 </ul>
                                             </li>
+
+                                            <li class="menu--item menu--item--has-child parent-menu">
+                                                <a href="javascript:void(0)" class="menu--link has-sub-menu parent-link">
+                                                    Blogs
+                                                    <i class="icon-chevron-down"></i>
+                                                </a>
+                                                <ul class="menu menu--sub">
+                                                    <li class="menu--item">
+                                                        <a href="blog.html" class="menu--link">
+                                                            All Blog
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu--item">
+                                                        <a href="blog-grid-view.html" class="menu--link">
+                                                            Blog Grid View
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu--item">
+                                                        <a href="blog-list-view.html" class="menu--link">
+                                                            Blog List View
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu--item">
+                                                        <a href="blog-details.html" class="menu--link">
+                                                            Blog Details
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             
                                             <li class="menu--item parent-menu">
                                                 <a href="contact.html" class="menu--link parent-link">Contact</a>
@@ -367,110 +325,99 @@
                                         </ul>
                                     </div>
                                 
-                                    <div class="navbar-action-area navbar-action-area--style-2 d-flex align-items-center">    
+                                    <div class="navbar-action-area d-flex align-items-center">    
                                         <ul class="btn-list d-flex align-items-center">
                                             <li>
-                                                <a href="" class="cart-btn d-flex align-items-center justify-content-center circle-radius">
-                                                    <i class="icon-cart"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="login-btn d-flex align-items-center justify-content-center circle-radius">
-                                                    <i class="icon-user"></i>
+                                                <a href="" class="login-btn d-flex align-items-center gap-2">
+                                                    <i class="icon-lock"></i>
+                                                    <span>
+                                                        Login / Sign Up
+                                                    </span>
                                                 </a>
                                             </li>
                                         </ul>
 
-                                        <a href="" class="obitury-submit-btn button button-secondary btn-animation">
-                                            Submit Obitury
+                                        <a href="" class="obitury-submit-btn button d-flex align-items-center">
+                                            <div class="icon d-flex justify-content-center align-items-center">
+                                                <i class="icon-plus"></i>
+                                            </div>
+                                            Add Listing
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <!-- </div> -->
                         <!-- container end -->
                     </nav>
                 </header>
                 <!-- end header -->
                 
                 <!-- Start breadcrumb-banner Section -->
-                <section class="breadcrumb-banner section-padding--3">
+                <section class="breadcrumb-banner">
                     <div class="container">
                         <div class="breadcrumbs-area text-center">
-                            <h1 class="heading-title">Contact</h1>
+                            <h2 class="heading-title">Contact Us</h2>
                             <div class="entry-breadcrumb">
                                 <span class="item-list-element">
                                     <a href="index.html" class="item home">
                                         Home
                                     </a>
                                 </span>
-
-                                <span class="dvdr"> <i class="icon-arrow"></i> </span>
+                                
+                                <span class="dvdr">/</span>
 
                                 <span class="item-list-element">
                                     <a href="contact.html" class="item current-item">
-                                        Contact
+                                        Contact Us
                                     </a>
                                 </span>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- End breadcrumb-banner Section -->
+                 <!-- End breadcrumb-banner Section -->
 
                 <!-- Start Contact section -->
-                <section class="contact-section contact-section--style-3 section-padding">
+                <section class="contact-section section-padding">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-6">
-                                <div class="title-wrapper text-center">
-                                    <h2 class="section-title wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-                                        Our Affordable Packages
-                                    </h2>
-                                    <p class="subtitle wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="500ms">
-                                        Exploring obituaries by location typically involves using online platforms that specialize in publishing obituaries notices.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row gutters-30 justify-content-center">
+                        <div class="row">
                             <div class="col-md-6 col-lg-6 col-xl-4 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="600ms">
-                                <div class="contact-info-box contact-info-box--style-2 d-flex align-items-center flex-column gap-3 mb-4 mb-lg-0">
-                                    <div class="icon rt-primary-color-bg d-flex justify-content-center align-items-center circle-radius">
-                                        <i class="icon-phone"></i>
+                                <div class="rt-contact-info-wrapper rt-mb-30">
+                                    <div class="title-area">
+                                        <h3 class="title">Our Locations</h3>
+                                        <p class="para-text">Seorem Ipsum is simply text of the printing as Fereedy Ipsumimply dummy text.</p>
                                     </div>
-                                    <div class="content text-center">
-                                        <h3 class="number">
-                                            <a href="tel:+ 0800 24 66 721">+ 0800 24 66 721</a>
-                                        </h3>
-                                        <p class="para-text info-text">Dedicated support team</p>
-
+    
+                                    <div class="rt-contact-item d-flex align-items-center">
+                                        <div class="rt-contact-icon circle-radius">
+                                            <i class="icon-location"></i>
+                                        </div>
+                                        <div class="rt-contact-item-content text-start">
+                                            <h5 class="contact-item-content-heading text-start">Address</h5>
+                                            <p class="para-text text-start">The Queen's Walk, Bishop's, London SE1 7PB, United Kingdom.</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="700ms">
-                                <div class="contact-info-box contact-info-box--style-2 d-flex flex-column align-items-center gap-3 mb-4 mb-lg-0">
-                                    <div class="icon rt-secondary-color-bg d-flex justify-content-center align-items-center circle-radius">
-                                        <i class="icon-email"></i>
+    
+                                    <div class="rt-contact-item d-flex align-items-center">
+                                        <div class="rt-contact-icon circle-radius">
+                                            <i class="icon-phone-2"></i>
+                                        </div>
+                                        <div class="rt-contact-item-content text-start">
+                                            <h4 class="contact-item-content-heading text-start">Phone</h4>
+                                            <p class="para-text text-start">+1 (800) 123 456 789</p>
+                                            <p class="para-text text-start">+1 (800) 123 456 789</p>
+                                        </div>
                                     </div>
-                                    <div class="content text-center">
-                                        <h3 class="number">
-                                            <a href="mailto:example@memoir.com">example@memoir.com</a>
-                                        </h3>
-                                        <p class="para-text info-text">The faster way to get reply.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="800ms">
-                                <div class="contact-info-box contact-info-box--style-2 d-flex flex-column align-items-center gap-3">
-                                    <div class="icon rt-title-color-bg d-flex justify-content-center align-items-center circle-radius">
-                                        <i class="icon-location"></i>
-                                    </div>
-                                    <div class="content text-center">
-                                        <h3 class="number">
-                                            <a href="mailto:example@memoir.com">First Avenue, London-1247</a>
-                                        </h3>
-                                        <p class="para-text info-text">We are always happy to help.</p>
+    
+                                    <div class="rt-contact-item d-flex align-items-center">
+                                        <div class="rt-contact-icon circle-radius">
+                                            <i class="icon-email"></i>
+                                        </div>
+                                        <div class="rt-contact-item-content text-start">
+                                            <h4 class="contact-item-content-heading text-start">E-mail</h4>
+                                            <p class="para-text text-start">info@gmail.com</p>
+                                            <p class="para-text text-start">info@gmail.com</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

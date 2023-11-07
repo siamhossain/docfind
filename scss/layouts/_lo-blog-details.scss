@@ -1,38 +1,40 @@
 .blogs-details-section {
-    background-color: #F1F8F8;
     .blog-article {
         .blog-article-content-wrapper{
             background-color: $color-white;
-            border-radius: 16px;
-            border: 1px solid #DCE0E1;
             margin-bottom: 30px;
         }
     
         .single-blog-thumb {
-            padding: 20px;
+            margin-bottom: 35px;
+            border-radius: 10px;
+            overflow: hidden;
             img {
-                border-radius: 12px;
                 width: 100%;
             }
         }
         .single-content-wrap {
-            padding: 0 29px 30px 29px;
+            // padding: 0 29px 30px 29px;
             .title {
-                line-height: 26px;
-                margin-bottom: 6px;
-                a {
-                    color: $color-black;
-                    font-size: 28px;
-                    font-weight: 500;
-                }
+                line-height: 40px;
+                font-weight: 600;
+                margin-bottom: 16px;
             }
             .single-blog-entry {
-                margin-bottom: 25px;
+                margin-bottom: 12px;
                 ul.entry-meta {
                     gap: 30px;
                     row-gap: 5px;
+                    
+                    .entry-admin {
+                        span {
+                            i {
+                                font-size: 18px;
+                            }                  
+                        }
+                    }
                     li, a {
-                        color: $color-title;
+                        color: $color-primary;
                         font-size: 16px;
                         font-weight: 400;
                         line-height: 32px;
@@ -56,19 +58,18 @@
                 padding-bottom: 10px;
                 border-bottom: 1px solid #DCE0E1;
                 p {
-                    line-height: 28px;
                     margin-bottom: 25px;
                 }
                 .block-quote {
-                    border-radius: 12px;
-                    background: #E6F0F1;
+                    background: #F6F5FF;
                     overflow: hidden;
-                    padding: 20px 36px 30px 44px;
+                    padding: 35px 56px;
                     position: relative;
-                    margin-bottom: 30px;
+                    gap: 42px;
+                    margin: 32px 44px 34px 0;
                     
                     @include media-only ('sm', min) {
-                        margin: 0 30px 25px 30px;
+
                     }
 
                     i {
@@ -77,11 +78,11 @@
                     }
 
                     p {
-                        color: $color-title;
-                        font-size: 22px;
-                        font-style: normal;
+                        font-size: 20px;
+                        font-style: italic;
                         font-weight: 500;
-                        line-height: 32px;
+                        line-height: 30px;
+                        margin-bottom: 0;
                     }
 
                     &::before {
@@ -103,13 +104,33 @@
                         border-radius: 8px;
                     }
                 }
+
+                .feature-list {
+                    columns: 2;
+                }
             }
 
             .single-blog-footer {
-                padding-top: 30px;
+                padding-top: 20px;
+                .small-head {
+                    color: $color-title;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 28px;
+                }
                 .tag-list-wrapper {
                     .tag-list {
-                        gap: 10px;
+                        gap: 12px;
+                        .tag-link {
+                            font-size: 15;
+                            color: $color-primary;
+                        }
+                    }
+                }
+                .social-link {
+                    i {
+                        color: #B6B2C5;
+                        font-size: 19px;
                     }
                 }
             }

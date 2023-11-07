@@ -6,12 +6,11 @@
     margin-left: 12px;
     gap: 12px;
     .grid-view, .list-view {
-        border-radius: 6px;
-        border: 1px solid #DCE0E1;
-        background: $color-white;
+        border-radius: 2px;
+        background-color: #EAE8FA;
         padding: 5px 8px;
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
         color: #292D32;
         i {
             font-size: 19px;
@@ -23,6 +22,11 @@
             i {
                 color: $color-white;
             }
+        }
+    }
+    .list-view {
+        i {
+            font-size: 23px;
         }
     }
 }

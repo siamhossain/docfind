@@ -1,0 +1,21 @@
+.listing-section {
+    .row {
+        --bs-gutter-y: 24px
+    }
+
+    .list-view-card {
+        border-radius: 10px;
+        border: 1px solid #E8E8E8;
+        background: $color-white;
+        box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+        .item-img {
+            border-radius: 10px 0px 0px 10px;
+        }
+        .item-content {
+            flex: 1;
+            padding: 35px;
+        }
+    }
+
+    
+}

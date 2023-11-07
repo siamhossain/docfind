@@ -1,21 +1,27 @@
 .widget-search {
-    background-color: $color-white;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    border-radius: 10px;
+    background: $color-white;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    padding: 54px 43px;
     .searchbox-wrapper {
         overflow: hidden;
+        border-radius: 4px;
+        border: 1px solid #E0E3E7;
+        background: #FFF;
         .searchbox-textfield {
             flex: 1;
             .rt-searchbox-form {
                 input {
                     width: 100%;
                     border: none;
-                    padding: 5px 10px;
+                    padding: 12px 20px;
                     background-color: transparent;
-                    @extend .para-text;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 26px;
+                    color: #999;
                     &::placeholder {
-                        color: #A3ACAC;
+                        color: #999;
                     }
                 }
             }
@@ -23,11 +29,11 @@
     
         .searchbox-submit {
             .rt-searchbox-btn {
-                background: $color-secondary;
-                border-radius: 6px;
+                background: $color-primary;
+                border-radius: 0px 4px 4px 0px;
                 border: none;
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 51px;
                 @include transition;
                 color: $color-white;
                 i {

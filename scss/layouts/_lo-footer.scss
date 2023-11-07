@@ -217,7 +217,7 @@
     }
 
     &--style-3 {
-        background-image: url("../../images/footer/footer-bg-1.jpg");
+        background-image: url("../images/footer/footer-bg-1.jpg");
         @include background-content;
         position: relative;
         z-index: 0;
@@ -279,6 +279,76 @@
             background: var(--blue-blue-900, #08031D);
             z-index: -1;
         }
+    }
+
+    &--style-4 {
+        .rt-footer-content-wrapper {
+            padding-top: 0;
+            padding-bottom: 50px;
+        }
+        .rt-footer-content {
+            padding: 0;
+            .rt-footer-logo {
+                margin-bottom: 35px;
+            }
+            .footer-navigation-menu {
+                gap: 65px;
+                li {
+                    line-height: 30px;
+                    a {
+                        color: #8A8989;
+                        font-size: 16px;
+                        font-weight: 500;
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+            .rt-footer-link-heading {
+                margin-bottom: 8px !important;
+            }
+            .text {
+                color: #8A8989;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 25px;
+            }
+            .newsletter-form {
+                border: none;
+                padding: 0;
+                gap: 10px;
+                input {
+                    border-radius: 5px;
+                    border: 1px solid #30343D;
+                    padding: 17px 20px;
+                    color: #58575A;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+                .submit-btn {
+                    width: unset;
+                    height: unset;
+                    padding: 11px 31px;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    border: 1px solid transparent;
+                    @include transition;
+                    &:hover {
+                        color: $color-white;
+                        background-color: transparent;
+                        border-color: #30343D;
+                    }
+                }
+            }
+        }
+        .rt-footer-bottom {
+            border-top: 1px solid #30343D;
+            background-color: transparent;
+        } 
     }
 }
 

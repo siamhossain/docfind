@@ -1,29 +1,47 @@
 .sidebar-filter {
-    border-radius: 12px;
-    border: 1px solid #DCE0E1;
-    background: $color-white;
-    padding: 30px 0;
+    padding: 24px 30px;
     // position: sticky;
     // top: 176px;
-
+    border-radius: 10px;
+    background: $color-white;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
     .search-filter {
-        padding: 0 30px;
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 30px;
-            height: 4px;
-            background-color: $color-primary;
-            left: 30px;
-            top: 36px;
-            border-radius: 100px;
-        }
         .title {
-            font-size: 20px;
-            line-height: normal;
-            margin-bottom: 36px;
+            line-height: 26px;
+            margin-bottom: 10px;
         }
+
+        
+        
+        .widget-search {
+            box-shadow: none;
+            border: none;
+            background-color: transparent;
+            .searchbox-wrapper {
+                border-radius: 5px;
+                border: 1px solid #E0E3E7;
+                background: $color-white;
+                input {
+                    &::placeholder {
+                        color: #B6B2C5;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 26px;
+                    }
+                }
+                
+                .rt-searchbox-btn {
+                    i {
+                        color: #B6B2C5;
+                    }
+                }
+            }
+        }
+    }
+
+    .filter-title {
+        line-height: 26px;
+        margin-bottom: 24px;
     }
 
     .widget-search { 
@@ -50,79 +68,8 @@
         }
     }
 
-    .accordion {
-        .accordion-item {
-            padding: 10px 30px;
-            .accordion-header {
-                .accordion-button {
-                    color: #2E4242;
-                    font-size: 17px;
-                    font-weight: 500;
-                    line-height: normal;
-                    padding: 20px 0;
-                    span {
-
-                    }
-
-                    &:focus {
-                        border-color: none;
-                        outline: unset;
-                        box-shadow: none;
-                    }
-                    &::after {
-                        background-image: url("../images/accordion-icon/plus_icon.svg");
-                        background-size: unset;
-                    }
-                }
-                .accordion-button:not(.collapsed) {
-                    background-color: transparent;
-                    box-shadow: none;
-                    // padding-bottom: 0;
-                    span {
-                        
-                    }
-
-                    &::after {
-                        background-image: url("../images/accordion-icon/minus_icon.svg");
-                        height: 0.25rem;
-                        transform: rotate(0);
-                    }
-                } 
-            }
-            .accordion-body {
-                padding: 0 0 20px 0;
-
-                .form-check {
-                    margin-bottom: 10px;
-                    &-input {
-                        width: 18px;
-                        height: 18px;
-                        border: 1.5px solid #B0D0D2;
-
-                        &:checked {
-                            background-image: url("../images/accordion-icon/white-check-mark.svg");
-                            background-color: $color-primary;
-                            border: transparent;
-                        }
-                        &:focus {
-                            box-shadow: none;
-                        }
-                    }
-                    &-label {
-                        padding-left: 2px;
-                        line-height: normal;
-                    }
-                }
-            }
-            .para-text {
-                
-            }
-        }        
-    }
-
     .filter-btn-list {
         padding: 30px 30px 0 30px;        
-        border-top: 1px solid #DCE0E1;;
         gap: 10px;
         button {
             border: none;

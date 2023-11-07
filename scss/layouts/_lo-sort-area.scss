@@ -1,40 +1,54 @@
 .sort-area {
-    margin-bottom: 21px;
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    background: $color-white;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+    padding: 16px 34px;
+    margin-bottom: 6px;
     .item-found-text {
-        @include toRem(font-size, 20);
-        line-height: normal;
-
-        @include media-only (445px, min) {
-            margin-bottom: 0 !important;
-        }
+        font-weight: 600;
+        line-height: 26px;
+        color: $color-title;
     }
 
     .sorting-dropdown {
-        gap: 12px;
+        gap: 6px;
         .sort-by-text {
-            line-height: normal;
+            color: $color-title;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
         }
 
-        .nice-select {
-            border-radius: 6px;
-            border: 1px solid #DCE0E1;
-            padding-right: 50px;
+        .select2 {
             span {
-                @extend .para-text;
-                line-height: normal;
-            }
-            &::after {
-                width: 8px;
-                height: 8px;
-                border-bottom: 1px solid #859091;
-                border-right: 1px solid #859091;
-                top: 45%;
-                right: 16px;
+                border: none;
+                color: $color-primary;
+                font-size: 14px;
+                font-weight: 500;
+                // line-height: 20px;
             }
 
-            .list {
-                width: 100%;
+            .select2-selection__arrow {
+                right: 7px;
+                b {
+                    border: none;
+                    &::after {
+                        content: '\e80e';
+                        position: absolute;
+                        font-family: "rt-docfind";
+                        color: #120745;
+                        top: -6px;
+                        font-size: 10px;
+                        transition: .2s;
+                        line-height: 15px;
+                        display: inline-block;
+                    }
+                }
             }
+        }
+        .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow b:after {
+            transform: rotate(180deg);
         }
     }
 }

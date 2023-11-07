@@ -6,28 +6,15 @@
 .rt-contact {
     &-info-wrapper {
         background: $color-white;
-        border: 1px solid #ECECEC;
         border-radius: 10px;
-        padding: 35px 40px 50px;
+        border: 1px solid #ECECEC;
+        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+        padding: 80px 40px;
         
         .title-area {
             .title {
-                font-family: $font-outfit;
-                font-weight: 600;
-                @include toRem(font-size, 24);
                 line-height: 30px;
-                color: $color-title;
-                position: relative;
-                margin-bottom: 40px;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    background: $color-primary;
-                    border-radius: 100px;
-                    width: 40px;
-                    height: 5px;
-                    bottom: -23px;
-                }
+                margin-bottom: 8px;
             }
             .para-text {
                 margin-bottom: 25px;
@@ -36,11 +23,10 @@
     }
     &-item {
         text-align: center;
-        margin-right: 40px;
-        gap: 20px;
+        gap: 18px;
         border-bottom: 1px solid #E4E8EF;
-        padding-bottom: 25px;
-        margin-bottom: 25px;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
         @include transition;
         &:last-child {
             border-bottom: none;
@@ -49,9 +35,10 @@
         }
         &:hover {
             .rt-contact-icon {
-                background: $color-primary;
-                svg {
-                    fill: $color-white;
+                background-color: $color-primary;
+                i {
+                    color: $color-white;
+                    @include transition;
                 }
             }
         }
@@ -62,25 +49,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 0.3s ease-in-out;
-        background: #EEECFD;
+        border: 1px solid $color-primary;
         @include transition;
+
+        i {
+            font-size: 26px;
+            color: $color-primary;
+        }
     }
     &-item-content {
         flex: 1;
         .contact-item-content-heading {
-            font-family: $font-outfit;
-            font-weight: 600;
-            @include toRem(font-size, 20);
             line-height: 26px;
-            color: $color-title;
+            font-weight: 600;
             margin-bottom: 6px;
         }
         .para-text {
-            font-family: 'Hind';
-            @include toRem(font-size, 16);
+            font-weight: 500;
             line-height: 26px;
-            text-transform: lowercase;
         }
     }
 }

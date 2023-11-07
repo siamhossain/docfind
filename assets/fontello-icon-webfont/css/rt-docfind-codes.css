@@ -24,7 +24,10 @@
 .icon-play:before { content: '\e816'; } /* '' */
 .icon-cart:before { content: '\e817'; } /* '' */
 .icon-clock:before { content: '\e818'; } /* '' */
+.icon-arrow-circle:before { content: '\e819'; } /* '' */
 .icon-phone:before { content: '\e81a'; } /* '' */
+.icon-user-2:before { content: '\e81b'; } /* '' */
+.icon-comment:before { content: '\e81c'; } /* '' */
 .icon-ei_user:before { content: '\e81e'; } /* '' */
 .icon-image:before { content: '\e823'; } /* '' */
 .icon-video:before { content: '\e824'; } /* '' */

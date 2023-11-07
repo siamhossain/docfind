@@ -1,8 +1,15 @@
+
+
 .tag-link {
-    border-radius: 6px;
-    padding: 9px 15px;
+    border-radius: 3px;
+    padding: 5px 16px;
     line-height: normal;
-    border: 1px solid #DCE0E1;
+    background-color: #F6F5FB;
+
+    color: #41396A;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
 
     &:hover {
         background: $color-primary;

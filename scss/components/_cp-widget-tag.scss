@@ -4,7 +4,9 @@
 
 .widget-tag {
     background-color: $color-white;
-    border-radius: 6px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    padding: 40px 58px;
     .sub-title {
         border-radius: 8px 8px 0px 0px;
         font-family: $title-font;
@@ -16,7 +18,7 @@
     }
     .tag-list-wrapper {
         ul.tag-list {
-            gap: 12px;
+            gap: 8px;
             flex-wrap: wrap;
         }
     }
