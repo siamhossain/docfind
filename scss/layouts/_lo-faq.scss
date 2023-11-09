@@ -1,36 +1,14 @@
 .faq-section {
     .faq-img-content {
         position: relative;
-        display: inline-block;
-        z-index: 0;
-        .title-wrapper {
-            position: absolute;
-            top: 96px;
-            width: 350px;
-            margin-bottom: 0;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-        }
-    }
-    &--style-2 {
-        background-color: #F1F8F8;
-        .faq-accordion-wrapper {
-            .accordion {
-                .accordion-item { 
-                    background-color: $color-primary;
-                    .accordion-header {
 
-                        .accordion-button {
-                            background-color: $color-white;
-                        }
-                        .accordion-button:not(.collapsed) {
-                            // color: $color-white;
-                        } 
-                    }
-                    .accordion-body {
-                        // color: red;
-                    }
+        .shape-parallax-list {
+            li {
+                position: absolute;
+                display: inline-block;
+                &:nth-child(1) {
+                    left: 30px;
+                    top: 40px;
                 }
             }
         }
@@ -38,44 +16,28 @@
 }
 
 .faq-accordion-wrapper {
-    padding-top: 12px;
-    .title-content {
-        .title {
-            color: $color-black;
-            font-weight: 700;
-            line-height: normal;
-        }
-        .para-text {
-
-        }
-    }
 
     .accordion {
         .accordion-item {
-            border-color: #D9D9D9;
+            // border: 1px solid #E0E0E0;
+            border-color: red;
             margin-bottom: 20px;
-            border-radius: 12px;
-            background-color: $color-primary;
             border: none;
+
+
+            border-radius: 5px;
+            border: 1px solid #E0E0E0;
             .accordion-header {
                 .accordion-button {
                     @include toRem(font-size, 20);
                     font-weight: 600;
-                    line-height: 150%;
-                    padding: 20px 30px;
-                    border-radius: 10px;
-                    color: $color-primary;
-                    // border: 1px solid #E6F0F1;
-                    background-color: #F1F8F8;
+                    line-height: 28px;
+                    padding: 26px 25px;
+                    color: $color-title;
+                    border-radius: 5px;
+                    
 
                     @include media-from-to(992px, min, 1200px, max) {
-                    }
-
-                    span {
-                        color:#667475;
-                        font-size: 20px;
-                        font-weight: 300;
-                        line-height: 150%;
                     }
 
                     &:focus {
@@ -83,35 +45,31 @@
                         outline: unset;
                         box-shadow: none;
                     }
+
                     &::after {
-                        background-image: url("../images/accordion-icon/down-angle.svg");
-                        height: 0.7rem;
+                        background-image: url("../images/accordion-icon/plus.svg");
                     }
                 }
                 .accordion-button:not(.collapsed) {
                     color: $color-white;
-                    background-color: transparent;
+                    background-color: $color-primary;
                     box-shadow: none;
                     border-color: transparent;
+                    border-radius: 5px 5px 0px 0px;
 
                     span {
                         color:#34868C;
                     }
 
                     &::after {
-                        background-image: url("../images/accordion-icon/up-angle.svg");
+                        background-image: url("../images/accordion-icon/minus.svg");
                         transform: rotate(0deg);
                     }
                 } 
             }
             .accordion-body {
-                padding: 22px 0 30px 0; 
-                border-top: 1px solid #34868C;
-                margin: 0 30px;
-                color: #E6F0F1;
-                ul {
-                    list-style: disc;
-                }
+                padding: 26px 28px;
+                border-radius: 5px;
             }
             .para-text {
                 font-weight: 400;
@@ -146,8 +104,55 @@
     }
 }
 
-@keyframes rt-draw {
-    to {
-        stroke-dashoffset: 0;
-    }
+
+
+
+
+
+// progressive scroll pointer
+
+.scroll-progress {
+    position: fixed;
+    right: 20px;
+    z-index: 11;
+    top: 50%;
+    transition: .3s linear;
+    // opacity: 0;
+}
+
+.scroll-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-progress .scroll-text {
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    margin-bottom: 15px;
+    color: red;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.scroll-progress .scroll-line {
+    width: 1px;
+    height: 60px;
+    position: relative;
+    background-color: purple;
+    color: inherit;
+    display: block;
+}
+
+.scroll-progress .scroll-point {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    border-radius: 9px;
+    background-color: red;
+    top: -4px;
+    left: -4px;
 }

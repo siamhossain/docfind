@@ -490,6 +490,24 @@
             });
         },
 
+        scrollProgress: function () {
+            let e = document.documentElement.scrollTop;
+            e > 200 ? $(".scroll-progress").addClass("visible") : $(".scroll-progress").removeClass("visible");
+            let t = document.documentElement.scrollHeight
+              , a = document.documentElement.clientHeight
+              , i = $(".scroll-line").outerHeight();
+            anime({
+        
+                
+                targets: ".scroll-point",
+                perspective: "500px",
+                translateX: 0,
+                translateY: e * i / (t - a),
+                translateZ: "0",
+                easing: "easeOutCirc"
+            })
+        },
+
 
 		bodyClass: function () {
 			$body.addClass('document-loaded');
@@ -514,6 +532,7 @@
         rtDocfind.functions.marqueeElement();
         rtDocfind.functions.fontSizeController();
         rtDocfind.functions.backToTop();
+        rtDocfind.functions.scrollProgress();
         
 	});
 
@@ -596,4 +615,11 @@
     //select2 initialize
     $('.select').select2();
 
+
+    
+    
+
+    
 })(jQuery);
+
+

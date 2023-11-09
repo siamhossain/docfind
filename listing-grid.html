@@ -414,18 +414,39 @@
                                 </div>
                             </div>
 
-                            <div class="col-xl-3 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="200ms">
+                            <div class="col-xl-3">
                                 <div class="sidebar-filter sidebar-filter--style-2">
                                     <div class="search-filter">
                                         <h5 class="title">
                                             Search Filter
                                         </h5>
 
-                                        <p class="">
+                                        <p class="type-text">
                                             Select Type
                                         </p>
 
-                                        <div class="widget-search wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="200ms">
+                                        <div class="radio-buttons-wrapper">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">
+                                                    All
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">
+                                                    Doctor
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">
+                                                    Clinic
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="widget-search">
                                             <div class="searchbox-wrapper d-flex align-items-center mb-0">
                                                 <div class="searchbox-textfield">
                                                     <form class="rt-searchbox-form" role="search" action="" method="get">
@@ -439,13 +460,29 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <select class="select" name="" id="">
-                                        <option value="">Test</option>
-                                        <option value="">Item 1</option>
-                                        <option value="">Item 2</option>
-                                    </select>
+                                        <select class="select category" name="" id="">
+                                            <option value="">Test</option>
+                                            <option value="">Item 1</option>
+                                            <option value="">Item 2</option>
+                                        </select>
+
+                                        <div class="widget-search location">
+                                            <div class="searchbox-wrapper d-flex align-items-center mb-0">
+                                                <div class="searchbox-textfield">
+                                                    <form class="rt-searchbox-form" role="search" action="" method="get">
+                                                        <input type="text" value="" placeholder="Type Location" class="searchbox-input">
+                                                    </form>
+                                                </div>
+                                                <div class="searchbox-submit">
+                                                    <button class="rt-searchbox-btn d-flex justify-content-center align-items-center" type="submit">
+                                                        <i class="icon-location-pointer-2"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
 
                                     <div class="review-filter">
                                         <h6 class="filter-title">
@@ -578,7 +615,6 @@
                                                 </ul>
                                             </label>
                                         </div>
-                                        
                                     </div>
 
                                     <div class="gender-filter">
@@ -639,14 +675,14 @@
 
                                     <div class="filter-btn-list d-flex flex-column align-items-center">
                                         <button class="apply-Filter-btn button button-transparent active">Apply Filter</button>
-                                        <button class="reset-filter-btn button button-transparent">Reset All</button>
+                                        <button class="reset-filter-btn button ">Reset All</button>
                                     </div>  
                                 </div>
                             </div>
                             <div class="col-xl-9">
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                        <div class="row wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="600ms">
+                                        <div class="row">
                                             <div class="col-md-6 col-lg-4 col-xl-4">
                                                 <div class="rt-card">
                                                     <div class="item-img">
@@ -1193,7 +1229,7 @@
                                     </div>
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <div class="row">
-                                            <div class="col-sm-12 col-md-6 col-xl-12 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="500ms">
+                                            <div class="col-sm-12 col-md-6 col-xl-12">
                                                 <div class="rt-card list-view-card d-flex flex-column flex-xl-row">
                                                     <div class="item-img">
                                                         <a href="">
@@ -1239,7 +1275,7 @@
                                                 </div>
                                             </div>
                                             <!-- col end -->
-                                            <div class="col-sm-12 col-md-6 col-xl-12 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="600ms">
+                                            <div class="col-sm-12 col-md-6 col-xl-12">
                                                 <div class="rt-card list-view-card d-flex flex-column flex-xl-row">
                                                     <div class="item-img">
                                                         <a href="">
@@ -1284,7 +1320,7 @@
                                                 </div>
                                             </div>
                                             <!-- col end -->
-                                            <div class="col-sm-12 col-md-6 col-xl-12 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="700ms">
+                                            <div class="col-sm-12 col-md-6 col-xl-12">
                                                 <div class="rt-card list-view-card d-flex flex-column flex-xl-row">
                                                     <div class="item-img">
                                                         <a href="">
@@ -1329,7 +1365,7 @@
                                                 </div>
                                             </div>
                                             <!-- col end -->
-                                            <div class="col-sm-12 col-md-6 col-xl-12 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="800ms">
+                                            <div class="col-sm-12 col-md-6 col-xl-12">
                                                 <div class="rt-card list-view-card d-flex flex-column flex-xl-row">
                                                     <div class="item-img">
                                                         <a href="">
@@ -1374,7 +1410,7 @@
                                                 </div>
                                             </div>
                                             <!-- col end -->
-                                            <div class="col-sm-12 col-md-6 col-xl-12 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="600ms">
+                                            <div class="col-sm-12 col-md-6 col-xl-12">
                                                 <div class="rt-card list-view-card d-flex flex-column flex-xl-row">
                                                     <div class="item-img">
                                                         <a href="">
@@ -1419,7 +1455,7 @@
                                                 </div>
                                             </div>
                                             <!-- col end -->
-                                            <div class="col-sm-12 col-md-6 col-xl-12 wow animate__fadeInUp" data-wow-duration="1200ms" data-wow-delay="700ms">
+                                            <div class="col-sm-12 col-md-6 col-xl-12">
                                                 <div class="rt-card list-view-card d-flex flex-column flex-xl-row">
                                                     <div class="item-img">
                                                         <a href="">

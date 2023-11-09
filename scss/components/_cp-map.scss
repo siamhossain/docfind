@@ -1,8 +1,9 @@
 .rt-map-section {
     padding-top: 0;
     .map {  
-        height: 600px;
+        height: 460px;
         overflow: hidden;
+        border-radius: 10px;
         iframe {
             height: 100%;
         }
