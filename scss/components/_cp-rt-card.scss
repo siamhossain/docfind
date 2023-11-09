@@ -234,6 +234,10 @@
 
             .card-btn {
                 padding: 12px 13px;
+                background-color: #F6F8FF;
+                &:hover {
+                    background-color: $color-primary;
+                }
             }
         }
     }

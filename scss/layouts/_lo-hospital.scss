@@ -21,4 +21,66 @@
         top: 0;
         z-index: -1;
     }
+
+    &--style-2 {
+        background-color: $color-white;
+        .rt-card {
+            border-radius: 10px;
+            border: 1px solid #E8E8E8;
+            background: $color-white;
+            box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+            gap: 60px;
+            .item-content {
+                padding: 0;
+                flex: unset;
+                display: inline-block;
+                .para-text {
+                    width: 306px;
+                }
+
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 180px;
+                    // top: 0;
+                    right: -25px;
+                    background-color: #D9D9D9;
+
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .item-action {
+                .favourite {
+                    position: unset;
+                    a {
+                        background-color: #F6F8FF;
+                        border-radius: 6px;
+                        width: 50px;
+                        height: 43px;
+                        i {
+                            @include transition;
+                            color: $color-primary;
+                        }
+
+                        &:hover {
+                            background-color: $color-primary;
+                            i {
+                                color: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &::before {
+            display: none;
+        }
+    }
 }
