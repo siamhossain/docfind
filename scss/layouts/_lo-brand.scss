@@ -30,6 +30,18 @@
         background-color: $color-white;
         padding-top: 0;
         padding-bottom: 120px;
+        
+        .brand-section-wrapper {
+            border-radius: 20px;
+            background: #FBFBFF;
+            padding-top: 78px;
+            padding-bottom: 54px;
+        }
+
+        .brand-list {
+            row-gap: 40px;
+            column-gap: 70px;
+        }
     }
 
 }

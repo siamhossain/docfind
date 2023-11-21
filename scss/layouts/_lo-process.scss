@@ -33,10 +33,25 @@
             }
         }
 
+        .shape {
+            position: absolute;
+            right: -17%;
+            top: 50%;
+            transform: translateY(-50%);
+            svg {
+                @include transition;
+            }
+        }
+
         &:hover {
             .icon {
                 svg {
                     fill: $color-white;
+                }
+            }
+            .shape {
+                svg {
+                    fill: $color-white; 
                 }
             }
         }
@@ -52,24 +67,24 @@
                     display: block;
                 }
             }
-            &:nth-child(1) {
-                &::after {
-                    content: url("../images/process/arrow-1.svg");
-                    position: absolute;
-                    right: -13%;
-                    top: 20%;
-                    z-index: -1;
-                }
-            }
-            &:nth-child(2) {
-                &::after {
-                    content: url("../images/process/arrow-2.svg");
-                    position: absolute;
-                    right: -13%;
-                    top: 20%;
-                    z-index: -1;
-                }
-            }
+            // &:nth-child(1) {
+            //     &::after {
+            //         content: url("../images/process/arrow-1.svg");
+            //         position: absolute;
+            //         right: -13%;
+            //         top: 20%;
+            //         z-index: -1;
+            //     }
+            // }
+            // &:nth-child(2) {
+            //     &::after {
+            //         content: url("../images/process/arrow-2.svg");
+            //         position: absolute;
+            //         right: -13%;
+            //         top: 20%;
+            //         z-index: -1;
+            //     }
+            // }
         }
     }
 

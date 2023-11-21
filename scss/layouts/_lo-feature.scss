@@ -34,9 +34,9 @@
 
     .find-doctor-btn {
         i {
-            margin-right: 8px;
+            margin-right: 5px;
         }
-        padding: 17px 30px;
+        padding: 17px 28px;
     }
     
     .shape-parallax-list {
@@ -55,13 +55,21 @@
             padding-left: 0;
             position: relative;
             z-index: 0;
+            width: 100%;
+            height: 604px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
 
             .experience-shape-wrapper {
                 position: relative;
                 display: inline-block;
                 position: absolute;
-                right: 0;
-                top: 30%;
+                right: 4%;
+                top: 31%;
                 z-index: 2;
                 border-radius: 50%;
                 padding: 17px;
@@ -80,8 +88,22 @@
                         color: $color-white;
                         margin-left: 3px;
                     }
+
+                    &:hover {
+                        background-color: black;
+                    }
                 }
             }
+
+            .shape-over {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+
 
             .splash {
                 content: "";
@@ -96,10 +118,16 @@
                 @include transition;
                 // opacity: 0.8 !important;
             }
+            
+            background: url("../images/feature/smile.jpg");
+            background-repeat: no-repeat, no-repeat;
+            // background-position: left 130px top 93px, right 104px top 0px;
+            background-position: left 0px top 86px, right 0px bottom 0px;
+            background-attachment: fixed;
+            background-size: contain;
         }
 
         .item-content {
-
             .subtitle {
                 color: #6347ED;
             }

@@ -29,6 +29,8 @@
             @include media-only ('lg', min) {
                 display: block;
             }
+
+            animation: zoomIn 2s forwards;
         }
     }
 
@@ -67,9 +69,8 @@
         }
     }
 
-
     &::before {
-        content: url("../../images/find-doctor/bg-shape.png");
+        content: url("../images/find-doctor/bg-shape.png");
         position: absolute;
         top: 0;
         left: 0;

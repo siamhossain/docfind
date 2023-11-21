@@ -38,9 +38,17 @@
             line-height: 24px;
             letter-spacing: 5.6px;
             position: absolute;
-            right: -41%;
+            right: -50%;
             top: 36%;
             transform: rotate(-90deg);
+            display: none;
+            
+            @include media-only ('sm', min) {
+                display: block;
+            }
+            @include media-only (1400px, min) {
+                right: -41%;
+            }
         }
 
         .patients {
@@ -84,6 +92,7 @@
             height: 80px;
             background-color: $color-primary;
             border-radius: 20px;
+            @include transition;
         }
         .item-content {
             flex: 1;
@@ -95,6 +104,14 @@
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &:hover {
+            .icon {
+                svg {
+                    animation: toBottomFromTop 0.5s forwards;
+                }
+            }
         }
     }
 

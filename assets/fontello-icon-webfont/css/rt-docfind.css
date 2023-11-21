@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'rt-docfind';
-  src: url('../font/rt-docfind.eot?3263594');
-  src: url('../font/rt-docfind.eot?3263594#iefix') format('embedded-opentype'),
-       url('../font/rt-docfind.woff2?3263594') format('woff2'),
-       url('../font/rt-docfind.woff?3263594') format('woff'),
-       url('../font/rt-docfind.ttf?3263594') format('truetype'),
-       url('../font/rt-docfind.svg?3263594#rt-docfind') format('svg');
+  src: url('../font/rt-docfind.eot?30701618');
+  src: url('../font/rt-docfind.eot?30701618#iefix') format('embedded-opentype'),
+       url('../font/rt-docfind.woff2?30701618') format('woff2'),
+       url('../font/rt-docfind.woff?30701618') format('woff'),
+       url('../font/rt-docfind.ttf?30701618') format('truetype'),
+       url('../font/rt-docfind.svg?30701618#rt-docfind') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'rt-docfind';
-    src: url('../font/rt-docfind.svg?3263594#rt-docfind') format('svg');
+    src: url('../font/rt-docfind.svg?30701618#rt-docfind') format('svg');
   }
 }
 */
@@ -27,7 +27,7 @@
 
   display: inline-block;
   text-decoration: inherit;
-  width: 1em;
+  /* width: 1em; */
   /* margin-right: .2em; */
   text-align: center;
   /* opacity: .8; */
@@ -55,7 +55,6 @@
 }
 
 .icon-filter:before { content: '\e800'; } /* '' */
-.icon-heart:before { content: '\e801'; } /* '' */
 .icon-flower:before { content: '\e802'; } /* '' */
 .icon-grid:before { content: '\e803'; } /* '' */
 .icon-minus:before { content: '\e804'; } /* '' */
@@ -83,23 +82,29 @@
 .icon-phone:before { content: '\e81a'; } /* '' */
 .icon-user-2:before { content: '\e81b'; } /* '' */
 .icon-comment:before { content: '\e81c'; } /* '' */
+.icon-medicine:before { content: '\e81d'; } /* '' */
 .icon-ei_user:before { content: '\e81e'; } /* '' */
+.icon-nimbus_marketing:before { content: '\e81f'; } /* '' */
+.icon-education:before { content: '\e820'; } /* '' */
+.icon-round-border-tick:before { content: '\e821'; } /* '' */
+.icon-award:before { content: '\e822'; } /* '' */
 .icon-image:before { content: '\e823'; } /* '' */
 .icon-video:before { content: '\e824'; } /* '' */
 .icon-share:before { content: '\e826'; } /* '' */
 .icon-icon-location-2:before { content: '\e827'; } /* '' */
 .icon-location-3:before { content: '\e828'; } /* '' */
 .icon-carbon_forum:before { content: '\e829'; } /* '' */
+.icon-comment-2:before { content: '\e82a'; } /* '' */
 .icon-check-2:before { content: '\e82b'; } /* '' */
 .icon-codicon_feedback:before { content: '\e82c'; } /* '' */
 .icon-doctor:before { content: '\e82d'; } /* '' */
+.icon-eye:before { content: '\e82e'; } /* '' */
 .icon-grid-2:before { content: '\e82f'; } /* '' */
 .icon-i:before { content: '\e830'; } /* '' */
 .icon-location-1:before { content: '\e831'; } /* '' */
 .icon-location-pointer:before { content: '\e832'; } /* '' */
 .icon-location-pointer-2:before { content: '\e833'; } /* '' */
 .icon-lock:before { content: '\e834'; } /* '' */
-.icon-medicine-pill:before { content: '\e835'; } /* '' */
 .icon-phone-2:before { content: '\e836'; } /* '' */
 .icon-round-tick:before { content: '\e837'; } /* '' */
 .icon-star:before { content: '\e838'; } /* '' */
@@ -113,5 +118,9 @@
 .icon-calender-4:before { content: '\e841'; } /* '' */
 .icon-plus-1:before { content: '\e842'; } /* '' */
 .icon-select-category:before { content: '\e843'; } /* '' */
+.icon-registration:before { content: '\e844'; } /* '' */
+.icon-pdf:before { content: '\e845'; } /* '' */
 .icon-arrow-right-1:before { content: '\e846'; } /* '' */
+.icon-like:before { content: '\e847'; } /* '' */
+.icon-heart:before { content: '\e848'; } /* '' */
 .icon-youtube:before { content: '\f315'; } /* '' */

@@ -22,6 +22,16 @@
         z-index: -1;
     }
 
+    .rt-card {
+        &:hover {
+            .item-img {
+                img {
+                    filter: blur(2px);
+                }
+            }
+        }
+    }
+
     &--style-2 {
         background-color: $color-white;
         .rt-card {

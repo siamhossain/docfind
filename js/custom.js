@@ -214,77 +214,7 @@
             })
         },
 
-        //nice-select
-        // niceSelect: function () {
-        //     $('select').niceSelect();
-        // },
-
-        dateCountdown: function () {
-
-            if(!$('#date-countdown').elExists()) {
-                return;
-            }
-
-            var countDownDate = new Date("May 16, 2023 23:50:25").getTime();
-            var x = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById("date-countdown").innerHTML = 
-            '<div>' + '<h3>' + days + '</h3>' +'<p>Days</p></div>' +
-            '<div>' + '<h3>' + hours + '</h3>' +'<p>Hours</p></div>' +
-            '<div>' + '<h3>' + minutes + '</h3>' +'<p>Mins</p></div>' +
-            '<div>' + '<h3>' + seconds + '</h3>' +'<p>Secs</p></div>';
-            }, 1000);
-        },
-
-        marqueeElement: function () {
-
-            var i = 1;
-            $('.marquee').each(function() {
-                var marqueeID = 'marquee-' + String(i)
-                // $(this).attr('id', customID)
-                var marqueeDirection = $(this).attr('id', marqueeID).attr("direction");
-                i++;
-                // console.log(marqueeDirection)
-                $(this).marquee({
-                    direction: marqueeDirection,
-                    duration: 50000,
-                    gap: 24,
-                    delayBeforeStart: 0,
-                    duplicated: true,
-                    startVisible: true,
-                    pauseOnCycle:true,
-                    pauseOnHover: true
-                });
-            });
-        },
-
-        //Font size controller
-        fontSizeController: function () {
-
-            var minusFont = $(".font-size-minus"); 
-            var plusFont = $(".font-size-plus");
-            var normalFont = $(".font-size-normal");
-
-            $( plusFont ).on( "click", function() {
-                $( ".content-wrapper .para-text" ).css({ "font-size": "+=2", "line-height" : "+=1px" });
-            });
-
-            $( normalFont ).on( "click", function() {
-                $( ".content-wrapper .para-text" ).css({ "font-size": "16px"});
-            });
-            
-            $( minusFont ).on( "click", function() {
-                $( ".content-wrapper .para-text" ).css({"font-size" : "-=2", "line-height" : "-=1px"  });
-            });
-
-        },
-
+        
         //Elements Carousel
         elementsCarousel: function () {
             if ($elCarousel.elExists()) {
@@ -307,6 +237,7 @@
                     var slideAutoPlayDelay = $this.attr("data-autoplay-delay") ? parseInt($this.attr("data-autoplay-delay"), 10) : 100000000;
                     var slideEffect = $this.attr("data-effect") ? $this.attr("data-effect") : 'slide';
                     var direction = $this.attr("data-direction") ? $this.attr("data-direction") : 'horizontal';
+                    // var effect = $this.attr('data-effect')? $this.attr('data-effect') : ''
 
                     // Adding slider and slider-nav instances to use multiple times in a page
                     $this.parent().find(".prev").addClass("prev-" + index);
@@ -317,20 +248,22 @@
                         spaceBetween: slideSpace,
                         speed: slideSpeed,
                         loop: slideLoop,
+                        direction: direction,
+                        effect: slideEffect,
 
                         // effect:'coverflow',
                         // coverflowEffect: {
                         //     rotate: 0,
                         //     stretch: 0,
                         //     depth: 100,
-                        //     modifier: 10,
+                        //     modifier: 12,
                         //     initialSlide: 3,
                         //     slideShadows: true
                         // },
                         // centeredSlides: true,
                         // initialSlide: 2,
                         // grabCursor: true,
-                        // centeredSlides: true,
+                        // centeredSlides: false,
 
                         observer: true,
                         observeParents: true,
@@ -490,28 +423,15 @@
             });
         },
 
-        scrollProgress: function () {
-            let e = document.documentElement.scrollTop;
-            e > 200 ? $(".scroll-progress").addClass("visible") : $(".scroll-progress").removeClass("visible");
-            let t = document.documentElement.scrollHeight
-              , a = document.documentElement.clientHeight
-              , i = $(".scroll-line").outerHeight();
-            anime({
-        
-                
-                targets: ".scroll-point",
-                perspective: "500px",
-                translateX: 0,
-                translateY: e * i / (t - a),
-                translateZ: "0",
-                easing: "easeOutCirc"
-            })
-        },
-
-
 		bodyClass: function () {
 			$body.addClass('document-loaded');
 		},
+
+        select2Dropdown: function() {
+            //select2 initialize
+            $('.select').select2();
+        }
+
 	};
 
     /**
@@ -528,11 +448,8 @@
         rtDocfind.functions.elementsCarousel();
         rtDocfind.functions.activeMenu();
         rtDocfind.functions.isotope();
-        rtDocfind.functions.dateCountdown();
-        rtDocfind.functions.marqueeElement();
-        rtDocfind.functions.fontSizeController();
         rtDocfind.functions.backToTop();
-        rtDocfind.functions.scrollProgress();
+        rtDocfind.functions.select2Dropdown();
         
 	});
 
@@ -568,55 +485,71 @@
 
 
 
-    // Menu expand on scroll and active/remove class on scroll content height
+    //docfind Home1 testimonial slider
+    
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+      direction: 'vertical',
+      
+    });
 
-    var sections = $('.single-element-section .content-wrapper section');
-    var parentLayout = $(".layout-area .widget-area");
+    var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        direction: 'vertical',
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
 
-    $(window).on('scroll', function () {
 
-        var current_position = $(this).scrollTop();
+    //docfind Home4 testimonial slider
 
-        //add active or remove class according content height
-        sections.each(function () {
-            var top = $(this).offset().top - 160;
-            var bottom = top + $(this).outerHeight();
-            var sectionId = $(this).attr('id');
+    var galleryThumbs = new Swiper('.swiper-container.gallery-thumbs', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        hashNavigation: {
+            watchState: true,
+        },
+        
+        coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 12,
+                slideShadows : false,
+            },
             
-            if (current_position >= top && current_position <= bottom) {
-                $(".parent-nav-item a[href*=" + sectionId + "]").parents('li').addClass("active");
-            } else {
-                $(".parent-nav-item a[href*=" + sectionId + "]").parents('li').removeClass("active");
-            }
-        })
-
-        //line on scroll
-        parentLayout.each(function() {
-            var divHeight = $(this).outerHeight();
-            var widgetTop = $(this).offset().top - 160;
-            var widgetBottom = widgetTop + divHeight;
-            var widthPercentage = 0;
-            var widgetId = $(this).attr('id');
-    
-            if (current_position >= widgetTop && current_position <= widgetBottom) {
-                var storeY = current_position - widgetTop;
-                widthPercentage = (storeY / divHeight) * 100;
-                $(".dropdown_nav li a[href*=" + widgetId + "]").addClass("active").css( "backgroundImage", "linear-gradient( to right, #15C590 "+widthPercentage+"%, #6B707F "+0+"% )" );
-                $(".active .progress-indicator").width(widthPercentage + "%");
-            } else {
-                $(".dropdown_nav li a[href*=" + widgetId + "]").removeClass("active").css( "backgroundImage", "unset" );
-            }
-        })
-    })
+        });
+        
+        
+        var galleryTop = new Swiper('.swiper-container.testimonial', {
+        speed: 400,
+        spaceBetween: 50,
+        direction: 'vertical',
+        pagination: {
+            clickable: true,
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        thumbs: {
+            swiper: galleryThumbs
+        }
+    });
 
 
-    //sidebar-filter-accordion
-
-    //select2 initialize
-    $('.select').select2();
-
-
-    
     
 
     

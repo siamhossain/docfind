@@ -10,11 +10,28 @@
             padding: 10px 22px;
             font-size: 14px;
             font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -100%;
+                background-color: $color-primary;
+                width: 100%;
+                height: 100%;
+                border-radius: 100px;
+                transition: all 0.2s ease-in-out;
+                z-index: -1;
+            }
         }
         li.active {
-            background: $color-primary;
+            &::before { 
+                bottom: 0;
+            }
             color: $color-white;
-            @include transition;
+            transition: all 0.5s ease-in-out;
         } 
 
     }

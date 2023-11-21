@@ -16,10 +16,18 @@
             font-weight: 500;
             line-height: normal;
             margin-bottom: 15px;
+            
             i {
                 color: #605982;
                 font-size: 19px;
                 margin-right: 7px;
+            }
+            
+            &:last-child {
+                color: $color-title;
+                i {
+                    color: $color-title;
+                }
             }
        }
     }

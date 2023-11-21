@@ -9,6 +9,9 @@
 
 
     &--style-3 {
+        .row {
+            --bs-gutter-y: 24px;
+        }
         .title-wrapper { 
             margin-bottom: 0;
         }
@@ -17,7 +20,7 @@
         background-image: url("../images/hospital-city/hospital-city-bg.jpg");
         @include background-content;
         background-attachment: fixed;
-        background-size: contain;
+        background-size: cover;
         position: relative;
         z-index: 0;
 

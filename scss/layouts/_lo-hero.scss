@@ -216,7 +216,7 @@
     &--style-4 {
         background: #F6F4FF;
         padding-top: 100px;
-        z-index: 0;
+        z-index: 1;
 
         .hero-content {
             padding: 123px 0;
@@ -256,19 +256,27 @@
         } 
 
         &::before {
-            content: url("../../images/hero/hero-img-4.png");
+            content: url("../images/hero/hero-img-4.png");
             position: absolute;
             left: 100px;
             bottom: 0;
             z-index: -1;
+            display: none;
+            @include media-only ('lg', min) {
+                display: block;
+            }
         }
 
         &::after {
-            content: url("../../images/hero/hero-img-5.png");
+            content: url("../images/hero/hero-img-5.png");
             position: absolute;
             right: 96px;
             bottom: 0;
             z-index: -1;
+            display: none;
+            @include media-only ('lg', min) {
+                display: block;
+            }
         }
     }
 }

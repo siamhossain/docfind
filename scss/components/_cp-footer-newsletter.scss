@@ -15,6 +15,12 @@
         
         &::placeholder {
             color: #717171;
+            @include transition;
+        }
+        &:focus {
+            &::placeholder {
+                color: $color-white ;
+            }
         }
     }
     .submit-btn {
@@ -50,6 +56,10 @@
 
             @include media-only (600px, min) {
                 padding: 18px 31px;
+            }
+
+            &::before {
+                border-radius: 0;
             }
         }
     }

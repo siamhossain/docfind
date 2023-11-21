@@ -18,6 +18,16 @@
         }
     }
 
+    .rt-card {
+        &:hover {
+            .item-img {
+                img {
+                    filter: blur(2px);
+                }
+            }
+        }
+    }
+
     &--style-2 {
         .title-wrapper {
             .section-title {

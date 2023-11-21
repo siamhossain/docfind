@@ -1,0 +1,113 @@
+.appointment-form {
+    border-radius: 10px;
+    background: #F9F8FF;
+    padding: 95px 66px;
+
+    .title {
+        margin-bottom: 24px;
+    }
+
+    .department {
+        margin-bottom: 27px !important;
+    }
+
+    .doctor {
+        margin-bottom: 12px;
+    }
+
+    .select2 {
+        width: 100% !important;
+        background-color: $color-white;
+        border-radius: 5px;
+
+        .select2-selection__rendered {
+            color: #797979;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            padding-left: 19px;
+            padding-right: 20px;
+        }
+
+        span {
+            border: none;
+            height: 50px;
+            padding-top: 5px;
+
+            .select2-selection {
+
+            }
+        }
+
+        .select2-selection__arrow {
+            b {
+                border-color: #A9A9A9 transparent transparent transparent;
+                border-width: 5px 5px 0 5px;
+                transform: translateY(10px);
+                left: 0;
+                &::after {
+                    
+                }
+            }
+        }
+    }
+
+    .input-area {
+        margin-bottom: 12px;
+        .input-box {
+            border: none;
+            border-radius: 5px;
+            background: $color-white;
+            width: 100%;
+            padding: 15px 19px 15px 19px;
+            height: 50px;
+            position: relative;
+
+            color: #797979;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+        .date {
+            position: relative;
+            z-index: 0;
+            &::after {
+                content: '\e83f';
+                color: black;
+                display: block;
+                background: none;
+                font-size: 18px;
+                position: absolute;
+                top:13px;
+                right: 19px;
+                font-family: "rt-docfind";
+                z-index: -1;
+            }
+        }
+
+        textarea {
+            border: none;
+            border-radius: 5px;
+            background: $color-white;
+            width: 100%;
+            padding: 15px 19px 15px 19px;
+            height: 128px;
+            position: relative;
+        }    
+    }
+
+    .submit-btn {
+        border: none;
+        color: $color-white;
+        width: 166px;
+        height: 55px;
+        margin-left: 12px;
+    }
+
+
+}

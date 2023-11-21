@@ -448,7 +448,13 @@
 
 // swiper
 .swiper-vertical {
-    max-height: 205px;
+    max-height: 500px;
+    @include media-only ('md', min) {
+        max-height: 400px;
+    }
+    @include media-only ('lg', min) {
+        max-height: 300px;
+    }
 }
 
 

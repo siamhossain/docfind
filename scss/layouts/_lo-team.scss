@@ -1,6 +1,12 @@
 .team-section {
     background-color: #120745;
 
+    .row {
+        --bs-gutter-y: 24px
+    }
+
+
+
     .title-wrapper {
         .subtitle {
             color: $color-white;

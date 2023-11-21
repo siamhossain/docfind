@@ -13,7 +13,7 @@
         width: 60px;
         height: 60px;
         border: 1px solid var(--border-color);
-        background-color: var(--color-white);
+        background-color: $color-primary;
         transition: all 0.4s ease-in-out;
         position: absolute;
         bottom: -15%;
@@ -32,18 +32,24 @@
         @include media-only (1400px, min) {
             top: 45%;
         }
+
+        i {
+            color: $color-white;
+        }
+        visibility: hidden;
+        opacity: 0;
     }
     .prev {
         left: 15.5%;
-        // @include media-only (1400px, min) {
-        //     left: -80px;
-        // }
+        @include media-only (1400px, min) {
+            left: -70px;
+        }
     }
     .next {
         right: 15.5%;
-        // @include media-only (1400px, min) {
-        //     right: -80px;
-        // }
+        @include media-only (1400px, min) {
+            right: -70px;
+        }
     }
 }
 

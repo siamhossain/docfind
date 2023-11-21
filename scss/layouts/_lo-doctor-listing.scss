@@ -2,9 +2,25 @@
 
     .row {
         --bs-gutter-y: 24px;
+        
+        &:hover {
+            .rt-card {
+                opacity: 0.6;
+            }
+        }
     }
 
-    padding-top: 0;
+
+    .rt-card {
+        &:hover {
+            opacity: 1 !important;
+        }
+    }
+    &--style-1 {
+    }
+    &--style-2 {
+        padding-top: 0;
+    }
     &--style-3 {
         .rt-card {
             border: none;

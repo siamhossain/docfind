@@ -1,0 +1,30 @@
+.schedule-wrapper {
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    background-color: $color-white;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+    padding: 10px 10px 16px 10px;
+
+    .item-img {
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .item-content {
+        padding: 20px 20px 0 20px;
+
+        .meta-list--style-2 {
+            margin-bottom: 18px;
+            li {
+                
+            }
+        }
+
+        .direction-btn {
+            width: 100%;
+            padding: 14px 0;
+        }
+    }
+}
