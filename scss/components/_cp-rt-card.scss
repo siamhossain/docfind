@@ -11,12 +11,14 @@
         position: relative;
         overflow: hidden;
         z-index: 0;
+        background-color: #EDEDED;
         
         a {
             width: 100%;
+            text-align: center;
             @include transition;
             img {
-                width: 100%;
+                // width: 100%;
                 @include transition;
             }
         }
@@ -110,8 +112,7 @@
     &:hover {
         .item-img {
             img {
-                transform: scale(1.18);
-                transform-origin: top;
+
             }
         }
         .card-btn { 
@@ -122,6 +123,20 @@
     }
 
     &--style-1 {
+        .item-img {
+            a {
+                img {
+                    @include media-only ('md') {
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+        &:hover {
+            // box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        }
     }
 
     &--style-2 {
@@ -182,7 +197,7 @@
                 }
                 &:hover {
                     background-color: $color-primary;
-                    color: $color-white;
+                    color: $color-white !important;
                     border-color: transparent;
                 }
             }
@@ -214,17 +229,25 @@
         }
 
         .item-img {
+            @include media-only ('sm', min) {
+                flex: 0 0 42.5%;
+                max-width: 42.5%;
+            }
             a {
-                height: 100%;
+                // height: 100%;
+                display: inline;
                 img {
+                    width: 100%;
                     height: 100%;
+                    object-fit: cover;
+                    // object-position: right;
                 }
             }
         }
         
         .item-content {
-            flex: 1;
-            padding: 22px 45px 27px 24px;
+            // flex: 1;
+            padding: 20px 45px 21px 24px;
             @include media-from-to (1200px, min, 1400px, max) {
                 padding: 22px 15px 27px 24px;
             }
@@ -638,7 +661,10 @@
         .item-img {
             img {
                 @include transition;
-                width: 100%;
+                // width: 100%;
+                @include media-only ('md') {
+                    max-width: unset;
+                }
             }
         }
         .item-content {
@@ -719,6 +745,14 @@
 
         &:hover {
             border-color: transparent;
+
+            .icon {
+                overflow: hidden;
+                svg {
+                    animation: toBottomFromTop 0.5s forwards;
+                }
+            }
+
             .item-content {
                 .title-content {
                     .title {

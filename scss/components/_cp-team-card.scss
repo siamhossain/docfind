@@ -3,7 +3,7 @@
     padding: 48px 58px;
     border-radius: 10px;
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
-    @include transition;
+    transition: all 0.3s ease-in-out;
     .item-img {
         width: 140px;
         height: 140px;

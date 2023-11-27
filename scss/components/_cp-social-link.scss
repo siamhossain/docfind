@@ -1,8 +1,8 @@
 .social-link {
     color: #8A8989;
     &:hover {
-        color: $color-primary;
-        background-color: $color-white;
+        color: $color-white;
+        // background-color: $color-white;
         border-color: transparent;
         i {
             animation: toBottomFromTop 0.5s forwards;

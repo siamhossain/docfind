@@ -126,39 +126,6 @@
             });
         },
 
-        //tab-function
-        rtTabs: function () {
-            // rt-tabs-wrapper
-            if ($rtTabWrappers.length) {
-                // for scoped
-                $rtTabWrappers.forEach((rtTabWrapper) => {
-                    var rtTabLabels = rtTabWrapper.querySelectorAll(".rt-tab-nav .rt-tab-nav-item");
-                    var rtTabPanes = rtTabWrapper.querySelectorAll(".rt-tab-pane-wrapper .rt-tab-pane");
-        
-                    if (rtTabLabels.length) {
-                        rtTabLabels.forEach(item => {
-                            item.addEventListener('click', function() {
-        
-                                // menu item 
-                                rtTabLabels.forEach(lableItem => {
-                                    lableItem.classList.remove('active');
-                                })
-        
-                                // tab pane item 
-                                rtTabPanes.forEach(paneItem => {
-                                    paneItem.classList.remove('active');
-                                })
-                                // matching by data-rt-tab-id and pass active class
-                                var valueMatchingTab = this.getAttribute('data-rt-tab-id');
-                                var getMatchingTab = rtTabWrapper.querySelectorAll(`[data-rt-tab-id="${valueMatchingTab}"]`)
-                                getMatchingTab.forEach(ele => ele.classList.add('active'))
-        
-                            })
-                        })
-                    }
-                })
-            }
-        },
 
         //mobile-menu-toggle
         mobileToggleMenu: function () {
@@ -441,7 +408,6 @@
 		rtDocfind.functions.scrollToTop();
         rtDocfind.functions.counterUp();
         rtDocfind.functions.mobileMenuDropdown();
-        rtDocfind.functions.rtTabs();
         rtDocfind.functions.mobileToggleMenu();
         rtDocfind.functions.searchOverlay();
         rtDocfind.functions.mouseParallax();
@@ -550,9 +516,9 @@
     });
 
 
-    
+    //cursor effect
 
-    
+    // $('.testimonial-section--style-2').css('cursor', 'none');
+
+
 })(jQuery);
-
-

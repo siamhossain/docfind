@@ -36,6 +36,16 @@
                 flex-wrap: unset;
             }
         }
+        .rt-card {
+            &:hover {
+                .icon {
+                    overflow: hidden;
+                    svg {
+                        animation: toBottomFromTop 0.5s forwards;
+                    }
+                }
+            }
+        }
     }
     &--style-3 {
         background-color: $color-white;

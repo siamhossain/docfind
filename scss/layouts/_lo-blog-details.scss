@@ -70,7 +70,10 @@
                     }
                     a {
                         &:hover {
-                            color: $color-primary;
+                            color: $color-title;
+                            i {
+                                color: $color-title;
+                            }
                         }
                     }
                 }

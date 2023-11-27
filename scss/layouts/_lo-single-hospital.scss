@@ -234,6 +234,11 @@
     .locations-tab-content {
         .rt-card {
             margin-bottom: 0;
+            .item-img {
+                @include media-only ('lg', min) {
+                    flex: unset;
+                }
+            }
             .item-content {
                 .title {
                     a {

@@ -5,7 +5,18 @@
 
 
     .item-img {
-        padding-right: 25px;
+        padding-left: 0;
+        position: relative;
+
+        @include media-only ('lg', min) {
+            padding-left: 128px;
+        }
+
+        .img-shape {
+            position: absolute;
+            right: -50px;
+            bottom: -13px;
+        }
     }
 
     .item-content {

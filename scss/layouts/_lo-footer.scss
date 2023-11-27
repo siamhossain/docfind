@@ -318,6 +318,7 @@
                 border: none;
                 padding: 0;
                 gap: 10px;
+                
                 input {
                     border-radius: 5px;
                     border: 1px solid #30343D;
@@ -326,6 +327,9 @@
                     font-size: 12px;
                     font-weight: 400;
                     line-height: normal;
+                    &:focus {
+                        border-color: $color-white;
+                    }
                 }
                 .submit-btn {
                     width: unset;

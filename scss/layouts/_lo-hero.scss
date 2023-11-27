@@ -265,8 +265,9 @@
             @include media-only ('lg', min) {
                 display: block;
             }
+            animation: fadeInLeft 1.5s forwards;
         }
-
+        
         &::after {
             content: url("../images/hero/hero-img-5.png");
             position: absolute;
@@ -277,6 +278,7 @@
             @include media-only ('lg', min) {
                 display: block;
             }
+            animation: fadeInRight 1.2s forwards;
         }
     }
 }

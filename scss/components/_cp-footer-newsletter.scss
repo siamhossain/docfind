@@ -6,6 +6,12 @@
     svg {
         margin-right: 8px;
     }
+
+    &:focus-within {
+        border-color: $color-white;
+        transition: all 0.3s ease-in-out;
+    }
+
     .newsletter-input {
         background-color: transparent;
         border: none;
@@ -16,11 +22,6 @@
         &::placeholder {
             color: #717171;
             @include transition;
-        }
-        &:focus {
-            &::placeholder {
-                color: $color-white ;
-            }
         }
     }
     .submit-btn {
@@ -64,3 +65,6 @@
         }
     }
 }
+
+
+

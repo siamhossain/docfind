@@ -462,3 +462,22 @@
     width: 100%;
     overflow: hidden;
 }
+
+.object-position-left {
+    @extend %object-position-left;
+}
+.object-position-right {
+    @extend %object-position-right;
+}
+.object-position-top {
+    @extend %object-position-top;
+}
+.object-position-bottom {
+    @extend %object-position-bottom;
+}
+.object-position-center {
+    @extend %object-position-center;
+}
+.flex-1 {
+    @extend %flex-1;
+}
