@@ -661,9 +661,12 @@
         .item-img {
             img {
                 @include transition;
-                // width: 100%;
-                @include media-only ('md') {
-                    max-width: unset;
+                width: 100%;
+                @include media-only ('sm', min) {
+                    width: unset;
+                }
+                @include media-only ('lg', min) {
+                    // max-width: unset;
                 }
             }
         }
