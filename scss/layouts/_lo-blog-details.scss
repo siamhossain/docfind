@@ -147,8 +147,8 @@
                     .tag-list {
                         gap: 12px;
                         .tag-link {
-                            font-size: 15;
-                            color: $color-primary;
+                            font-size: 15px;
+                            // color: $color-primary;
                         }
                     }
                 }
@@ -157,6 +157,12 @@
                         color: #B6B2C5;
                         font-size: 19px;
                     }
+                    &:hover {
+                        i {
+                            color: $color-primary;
+                        }
+                    }
+
                 }
             }
         }
